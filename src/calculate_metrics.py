@@ -1,8 +1,10 @@
 """
 calculate_metrics.py
 --------------------
-Calculates derived financial metrics from the validated Qualcomm
+Calculates derived financial metrics from a company's validated
 quarterly dataset and appends a new tab to the Excel workbook.
+
+Reads company metadata from config/companies.csv.
 
 Formulas:
     Gross Margin %              = Gross Profit / Revenue * 100
@@ -18,12 +20,9 @@ Formulas:
     TTM Operating Income        = sum of the most recent 4 quarters of Op Income
     TTM Free Cash Flow          = sum of the most recent 4 quarters of FCF
 
-Reads:   data/processed/qualcomm_financials_<date>.csv
-Writes:  data/processed/qualcomm_metrics.csv
-Updates: output/qualcomm_financial_history.xlsx (adds "Calculated Metrics" tab)
-
 Usage:
-    .venv/bin/python src/calculate_metrics.py
+    .venv/bin/python src/calculate_metrics.py QCOM
+    .venv/bin/python src/calculate_metrics.py QCOM --test
 """
 
 import csv
@@ -33,6 +32,8 @@ from pathlib import Path
 import openpyxl
 from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.utils import get_column_letter
+
+from config_loader import load_company, parse_ticker_arg
 
 # ---------------------------------------------------------------------------
 # Paths
@@ -59,6 +60,19 @@ CSV_COLUMNS = [
     "unit",
     "formula",
 ]
+
+
+def is_test_mode() -> bool:
+    return "--test" in sys.argv
+
+
+def resolve_paths(short_id: str) -> tuple[Path, Path]:
+    """Return (processed_dir, output_dir)."""
+    if is_test_mode():
+        data_base = PROJECT_ROOT / "data" / "test_outputs" / short_id
+        out_base = PROJECT_ROOT / "output" / "test_outputs" / short_id
+        return data_base, out_base
+    return PROCESSED_DIR, OUTPUT_DIR
 
 
 # ---------------------------------------------------------------------------
@@ -117,14 +131,14 @@ def prior_quarter(fy: int, fq: str, offset: int = 1):
 # Metric calculations
 # ---------------------------------------------------------------------------
 
-def calculate_all(lookup: dict) -> list[dict]:
+def calculate_all(lookup: dict, company_name: str) -> list[dict]:
     """Calculate all derived metrics and return as a list of row dicts."""
     periods = all_periods(lookup)
     rows = []
 
     def add(fy, fq, name, value, unit, formula):
         rows.append({
-            "company": "Qualcomm Incorporated",
+            "company": company_name,
             "fiscal_year": fy,
             "fiscal_quarter": fq,
             "metric_name": name,
@@ -222,7 +236,8 @@ def calculate_all(lookup: dict) -> list[dict]:
             ("TTM Revenue", "Revenue"),
             ("TTM Operating Income", "Operating Income"),
         ]:
-            vals = [get_val(lookup, base_metric, y, q) for y, q in ttm_quarters]
+            vals = [get_val(lookup, base_metric, y, q)
+                    for y, q in ttm_quarters]
             if all(v is not None for v in vals):
                 ttm = sum(vals)
                 quarters_str = " + ".join(
@@ -279,7 +294,6 @@ def add_calculated_metrics_tab(wb_path: Path, calc_rows: list[dict]):
 
     ws = wb.create_sheet("Calculated Metrics", 1)
 
-    # Build lookup and periods
     q_idx = {q: i for i, q in enumerate(Q_ORDER)}
     lookup = {}
     period_set = set()
@@ -289,7 +303,8 @@ def add_calculated_metrics_tab(wb_path: Path, calc_rows: list[dict]):
             lookup[key] = r
         period_set.add((r["fiscal_year"], r["fiscal_quarter"]))
 
-    periods = sorted(period_set, key=lambda p: (p[0], q_idx.get(p[1], 99)))
+    periods = sorted(period_set,
+                     key=lambda p: (p[0], q_idx.get(p[1], 99)))
 
     # Headers
     headers = ["Metric", "Unit"]
@@ -344,16 +359,25 @@ def add_calculated_metrics_tab(wb_path: Path, calc_rows: list[dict]):
 # ---------------------------------------------------------------------------
 
 def main():
-    csv_path = find_latest_file(PROCESSED_DIR, "qualcomm_financials_*.csv")
+    ticker = parse_ticker_arg()
+    company = load_company(ticker)
+
+    short_id = company["short_identifier"]
+    company_name = company["company_name"]
+
+    proc_dir, out_dir = resolve_paths(short_id)
+
+    csv_path = find_latest_file(proc_dir,
+                                f"{short_id}_financials_*.csv")
     print(f"Reading: {csv_path.name}")
 
     lookup = load_base_data(csv_path)
     print(f"Loaded {len(lookup)} base data points")
 
-    calc_rows = calculate_all(lookup)
+    calc_rows = calculate_all(lookup, company_name)
 
     # Write metrics CSV
-    out_csv = PROCESSED_DIR / "qualcomm_metrics.csv"
+    out_csv = proc_dir / f"{short_id}_metrics.csv"
     with open(out_csv, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=CSV_COLUMNS)
         writer.writeheader()
@@ -365,7 +389,8 @@ def main():
           f"{empty} missing) to: {out_csv}")
 
     # Update Excel workbook
-    xlsx_path = OUTPUT_DIR / "qualcomm_financial_history.xlsx"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    xlsx_path = out_dir / f"{short_id}_financial_history.xlsx"
     if not xlsx_path.exists():
         sys.exit(f"ERROR: Workbook not found at {xlsx_path}. "
                  "Run export_excel.py first.")

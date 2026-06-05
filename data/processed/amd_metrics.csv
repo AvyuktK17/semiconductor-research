@@ -1,0 +1,121 @@
+company,fiscal_year,fiscal_quarter,metric_name,value,unit,formula
+Advanced Micro Devices Inc.,2023,Q1,Gross Margin,0.44,%,"Gross Profit (2,359,000,000) / Revenue (5,353,000,000)"
+Advanced Micro Devices Inc.,2023,Q1,Operating Margin,-0.03,%,"Operating Income (-145,000,000) / Revenue (5,353,000,000)"
+Advanced Micro Devices Inc.,2023,Q1,Free Cash Flow,328000000.0,USD,"Operating Cash Flow (486,000,000) - Capital Expenditure (158,000,000)"
+Advanced Micro Devices Inc.,2023,Q1,Free-Cash-Flow Margin,0.06,%,"FCF (328,000,000) / Revenue (5,353,000,000)"
+Advanced Micro Devices Inc.,2023,Q1,R&D as % of Revenue,0.26,%,"R&D Expense (1,411,000,000) / Revenue (5,353,000,000)"
+Advanced Micro Devices Inc.,2023,Q1,Net Cash (Debt),,USD,Missing: Cash or Total Debt
+Advanced Micro Devices Inc.,2023,Q1,YoY Revenue Growth,,%,Missing: current or prior-year Revenue (FY2022 Q1)
+Advanced Micro Devices Inc.,2023,Q1,TTM Revenue,,USD,Missing: not enough trailing quarters
+Advanced Micro Devices Inc.,2023,Q1,TTM Operating Income,,USD,Missing: not enough trailing quarters
+Advanced Micro Devices Inc.,2023,Q1,TTM Free Cash Flow,,USD,Missing: not enough trailing OCF/CapEx quarters
+Advanced Micro Devices Inc.,2023,Q2,Gross Margin,0.46,%,"Gross Profit (2,443,000,000) / Revenue (5,359,000,000)"
+Advanced Micro Devices Inc.,2023,Q2,Operating Margin,-0.0,%,"Operating Income (-20,000,000) / Revenue (5,359,000,000)"
+Advanced Micro Devices Inc.,2023,Q2,Free Cash Flow,254000000.0,USD,"Operating Cash Flow (379,000,000) - Capital Expenditure (125,000,000)"
+Advanced Micro Devices Inc.,2023,Q2,Free-Cash-Flow Margin,0.05,%,"FCF (254,000,000) / Revenue (5,359,000,000)"
+Advanced Micro Devices Inc.,2023,Q2,R&D as % of Revenue,0.27,%,"R&D Expense (1,443,000,000) / Revenue (5,359,000,000)"
+Advanced Micro Devices Inc.,2023,Q2,Net Cash (Debt),1374000000.0,USD,"Cash (3,841,000,000) - Total Debt (2,467,000,000) = net cash"
+Advanced Micro Devices Inc.,2023,Q2,YoY Revenue Growth,,%,Missing: current or prior-year Revenue (FY2022 Q2)
+Advanced Micro Devices Inc.,2023,Q2,TTM Revenue,,USD,Missing: not enough trailing quarters
+Advanced Micro Devices Inc.,2023,Q2,TTM Operating Income,,USD,Missing: not enough trailing quarters
+Advanced Micro Devices Inc.,2023,Q2,TTM Free Cash Flow,,USD,Missing: not enough trailing OCF/CapEx quarters
+Advanced Micro Devices Inc.,2023,Q3,Gross Margin,0.47,%,"Gross Profit (2,747,000,000) / Revenue (5,800,000,000)"
+Advanced Micro Devices Inc.,2023,Q3,Operating Margin,0.04,%,"Operating Income (224,000,000) / Revenue (5,800,000,000)"
+Advanced Micro Devices Inc.,2023,Q3,Free Cash Flow,297000000.0,USD,"Operating Cash Flow (421,000,000) - Capital Expenditure (124,000,000)"
+Advanced Micro Devices Inc.,2023,Q3,Free-Cash-Flow Margin,0.05,%,"FCF (297,000,000) / Revenue (5,800,000,000)"
+Advanced Micro Devices Inc.,2023,Q3,R&D as % of Revenue,0.26,%,"R&D Expense (1,507,000,000) / Revenue (5,800,000,000)"
+Advanced Micro Devices Inc.,2023,Q3,Net Cash (Debt),1094000000.0,USD,"Cash (3,561,000,000) - Total Debt (2,467,000,000) = net cash"
+Advanced Micro Devices Inc.,2023,Q3,YoY Revenue Growth,,%,Missing: current or prior-year Revenue (FY2022 Q3)
+Advanced Micro Devices Inc.,2023,Q3,TTM Revenue,,USD,Missing: not enough trailing quarters
+Advanced Micro Devices Inc.,2023,Q3,TTM Operating Income,,USD,Missing: not enough trailing quarters
+Advanced Micro Devices Inc.,2023,Q3,TTM Free Cash Flow,,USD,Missing: not enough trailing OCF/CapEx quarters
+Advanced Micro Devices Inc.,2023,Q4,Gross Margin,0.47,%,"Gross Profit (2,911,000,000) / Revenue (6,168,000,000)"
+Advanced Micro Devices Inc.,2023,Q4,Operating Margin,0.06,%,"Operating Income (342,000,000) / Revenue (6,168,000,000)"
+Advanced Micro Devices Inc.,2023,Q4,Free Cash Flow,242000000.0,USD,"Operating Cash Flow (381,000,000) - Capital Expenditure (139,000,000)"
+Advanced Micro Devices Inc.,2023,Q4,Free-Cash-Flow Margin,0.04,%,"FCF (242,000,000) / Revenue (6,168,000,000)"
+Advanced Micro Devices Inc.,2023,Q4,R&D as % of Revenue,0.24,%,"R&D Expense (1,511,000,000) / Revenue (6,168,000,000)"
+Advanced Micro Devices Inc.,2023,Q4,Net Cash (Debt),1465000000.0,USD,"Cash (3,933,000,000) - Total Debt (2,468,000,000) = net cash"
+Advanced Micro Devices Inc.,2023,Q4,YoY Revenue Growth,,%,Missing: current or prior-year Revenue (FY2022 Q4)
+Advanced Micro Devices Inc.,2023,Q4,TTM Revenue,22680000000.0,USD,Sum of FY2023 Q1 + FY2023 Q2 + FY2023 Q3 + FY2023 Q4
+Advanced Micro Devices Inc.,2023,Q4,TTM Operating Income,401000000.0,USD,Sum of FY2023 Q1 + FY2023 Q2 + FY2023 Q3 + FY2023 Q4
+Advanced Micro Devices Inc.,2023,Q4,TTM Free Cash Flow,1121000000.0,USD,Sum of quarterly FCF for FY2023 Q1 + FY2023 Q2 + FY2023 Q3 + FY2023 Q4
+Advanced Micro Devices Inc.,2024,Q1,Gross Margin,0.47,%,"Gross Profit (2,560,000,000) / Revenue (5,473,000,000)"
+Advanced Micro Devices Inc.,2024,Q1,Operating Margin,0.01,%,"Operating Income (36,000,000) / Revenue (5,473,000,000)"
+Advanced Micro Devices Inc.,2024,Q1,Free Cash Flow,379000000.0,USD,"Operating Cash Flow (521,000,000) - Capital Expenditure (142,000,000)"
+Advanced Micro Devices Inc.,2024,Q1,Free-Cash-Flow Margin,0.07,%,"FCF (379,000,000) / Revenue (5,473,000,000)"
+Advanced Micro Devices Inc.,2024,Q1,R&D as % of Revenue,0.28,%,"R&D Expense (1,525,000,000) / Revenue (5,473,000,000)"
+Advanced Micro Devices Inc.,2024,Q1,Net Cash (Debt),1722000000.0,USD,"Cash (4,190,000,000) - Total Debt (2,468,000,000) = net cash"
+Advanced Micro Devices Inc.,2024,Q1,YoY Revenue Growth,0.02,%,"(Revenue 5,473,000,000 - Prior 5,353,000,000) / |Prior 5,353,000,000|"
+Advanced Micro Devices Inc.,2024,Q1,TTM Revenue,22800000000.0,USD,Sum of FY2023 Q2 + FY2023 Q3 + FY2023 Q4 + FY2024 Q1
+Advanced Micro Devices Inc.,2024,Q1,TTM Operating Income,582000000.0,USD,Sum of FY2023 Q2 + FY2023 Q3 + FY2023 Q4 + FY2024 Q1
+Advanced Micro Devices Inc.,2024,Q1,TTM Free Cash Flow,1172000000.0,USD,Sum of quarterly FCF for FY2023 Q2 + FY2023 Q3 + FY2023 Q4 + FY2024 Q1
+Advanced Micro Devices Inc.,2024,Q2,Gross Margin,0.49,%,"Gross Profit (2,864,000,000) / Revenue (5,835,000,000)"
+Advanced Micro Devices Inc.,2024,Q2,Operating Margin,0.05,%,"Operating Income (269,000,000) / Revenue (5,835,000,000)"
+Advanced Micro Devices Inc.,2024,Q2,Free Cash Flow,439000000.0,USD,"Operating Cash Flow (593,000,000) - Capital Expenditure (154,000,000)"
+Advanced Micro Devices Inc.,2024,Q2,Free-Cash-Flow Margin,0.08,%,"FCF (439,000,000) / Revenue (5,835,000,000)"
+Advanced Micro Devices Inc.,2024,Q2,R&D as % of Revenue,0.27,%,"R&D Expense (1,583,000,000) / Revenue (5,835,000,000)"
+Advanced Micro Devices Inc.,2024,Q2,Net Cash (Debt),2394000000.0,USD,"Cash (4,113,000,000) - Total Debt (1,719,000,000) = net cash"
+Advanced Micro Devices Inc.,2024,Q2,YoY Revenue Growth,0.09,%,"(Revenue 5,835,000,000 - Prior 5,359,000,000) / |Prior 5,359,000,000|"
+Advanced Micro Devices Inc.,2024,Q2,TTM Revenue,23276000000.0,USD,Sum of FY2023 Q3 + FY2023 Q4 + FY2024 Q1 + FY2024 Q2
+Advanced Micro Devices Inc.,2024,Q2,TTM Operating Income,871000000.0,USD,Sum of FY2023 Q3 + FY2023 Q4 + FY2024 Q1 + FY2024 Q2
+Advanced Micro Devices Inc.,2024,Q2,TTM Free Cash Flow,1357000000.0,USD,Sum of quarterly FCF for FY2023 Q3 + FY2023 Q4 + FY2024 Q1 + FY2024 Q2
+Advanced Micro Devices Inc.,2024,Q3,Gross Margin,0.5,%,"Gross Profit (3,419,000,000) / Revenue (6,819,000,000)"
+Advanced Micro Devices Inc.,2024,Q3,Operating Margin,0.11,%,"Operating Income (724,000,000) / Revenue (6,819,000,000)"
+Advanced Micro Devices Inc.,2024,Q3,Free Cash Flow,496000000.0,USD,"Operating Cash Flow (628,000,000) - Capital Expenditure (132,000,000)"
+Advanced Micro Devices Inc.,2024,Q3,Free-Cash-Flow Margin,0.07,%,"FCF (496,000,000) / Revenue (6,819,000,000)"
+Advanced Micro Devices Inc.,2024,Q3,R&D as % of Revenue,0.24,%,"R&D Expense (1,636,000,000) / Revenue (6,819,000,000)"
+Advanced Micro Devices Inc.,2024,Q3,Net Cash (Debt),2177000000.0,USD,"Cash (3,897,000,000) - Total Debt (1,720,000,000) = net cash"
+Advanced Micro Devices Inc.,2024,Q3,YoY Revenue Growth,0.18,%,"(Revenue 6,819,000,000 - Prior 5,800,000,000) / |Prior 5,800,000,000|"
+Advanced Micro Devices Inc.,2024,Q3,TTM Revenue,24295000000.0,USD,Sum of FY2023 Q4 + FY2024 Q1 + FY2024 Q2 + FY2024 Q3
+Advanced Micro Devices Inc.,2024,Q3,TTM Operating Income,1371000000.0,USD,Sum of FY2023 Q4 + FY2024 Q1 + FY2024 Q2 + FY2024 Q3
+Advanced Micro Devices Inc.,2024,Q3,TTM Free Cash Flow,1556000000.0,USD,Sum of quarterly FCF for FY2023 Q4 + FY2024 Q1 + FY2024 Q2 + FY2024 Q3
+Advanced Micro Devices Inc.,2024,Q4,Gross Margin,0.51,%,"Gross Profit (3,882,000,000) / Revenue (7,658,000,000)"
+Advanced Micro Devices Inc.,2024,Q4,Operating Margin,0.11,%,"Operating Income (871,000,000) / Revenue (7,658,000,000)"
+Advanced Micro Devices Inc.,2024,Q4,Free Cash Flow,1091000000.0,USD,"Operating Cash Flow (1,299,000,000) - Capital Expenditure (208,000,000)"
+Advanced Micro Devices Inc.,2024,Q4,Free-Cash-Flow Margin,0.14,%,"FCF (1,091,000,000) / Revenue (7,658,000,000)"
+Advanced Micro Devices Inc.,2024,Q4,R&D as % of Revenue,0.22,%,"R&D Expense (1,712,000,000) / Revenue (7,658,000,000)"
+Advanced Micro Devices Inc.,2024,Q4,Net Cash (Debt),2066000000.0,USD,"Cash (3,787,000,000) - Total Debt (1,721,000,000) = net cash"
+Advanced Micro Devices Inc.,2024,Q4,YoY Revenue Growth,0.24,%,"(Revenue 7,658,000,000 - Prior 6,168,000,000) / |Prior 6,168,000,000|"
+Advanced Micro Devices Inc.,2024,Q4,TTM Revenue,25785000000.0,USD,Sum of FY2024 Q1 + FY2024 Q2 + FY2024 Q3 + FY2024 Q4
+Advanced Micro Devices Inc.,2024,Q4,TTM Operating Income,1900000000.0,USD,Sum of FY2024 Q1 + FY2024 Q2 + FY2024 Q3 + FY2024 Q4
+Advanced Micro Devices Inc.,2024,Q4,TTM Free Cash Flow,2405000000.0,USD,Sum of quarterly FCF for FY2024 Q1 + FY2024 Q2 + FY2024 Q3 + FY2024 Q4
+Advanced Micro Devices Inc.,2025,Q1,Gross Margin,0.5,%,"Gross Profit (3,736,000,000) / Revenue (7,438,000,000)"
+Advanced Micro Devices Inc.,2025,Q1,Operating Margin,0.11,%,"Operating Income (806,000,000) / Revenue (7,438,000,000)"
+Advanced Micro Devices Inc.,2025,Q1,Free Cash Flow,727000000.0,USD,"Operating Cash Flow (939,000,000) - Capital Expenditure (212,000,000)"
+Advanced Micro Devices Inc.,2025,Q1,Free-Cash-Flow Margin,0.1,%,"FCF (727,000,000) / Revenue (7,438,000,000)"
+Advanced Micro Devices Inc.,2025,Q1,R&D as % of Revenue,0.23,%,"R&D Expense (1,728,000,000) / Revenue (7,438,000,000)"
+Advanced Micro Devices Inc.,2025,Q1,Net Cash (Debt),2832000000.0,USD,"Cash (6,049,000,000) - Total Debt (3,217,000,000) = net cash"
+Advanced Micro Devices Inc.,2025,Q1,YoY Revenue Growth,0.36,%,"(Revenue 7,438,000,000 - Prior 5,473,000,000) / |Prior 5,473,000,000|"
+Advanced Micro Devices Inc.,2025,Q1,TTM Revenue,27750000000.0,USD,Sum of FY2024 Q2 + FY2024 Q3 + FY2024 Q4 + FY2025 Q1
+Advanced Micro Devices Inc.,2025,Q1,TTM Operating Income,2670000000.0,USD,Sum of FY2024 Q2 + FY2024 Q3 + FY2024 Q4 + FY2025 Q1
+Advanced Micro Devices Inc.,2025,Q1,TTM Free Cash Flow,2753000000.0,USD,Sum of quarterly FCF for FY2024 Q2 + FY2024 Q3 + FY2024 Q4 + FY2025 Q1
+Advanced Micro Devices Inc.,2025,Q2,Gross Margin,0.4,%,"Gross Profit (3,059,000,000) / Revenue (7,685,000,000)"
+Advanced Micro Devices Inc.,2025,Q2,Operating Margin,-0.02,%,"Operating Income (-134,000,000) / Revenue (7,685,000,000)"
+Advanced Micro Devices Inc.,2025,Q2,Free Cash Flow,1729000000.0,USD,"Operating Cash Flow (2,011,000,000) - Capital Expenditure (282,000,000)"
+Advanced Micro Devices Inc.,2025,Q2,Free-Cash-Flow Margin,0.22,%,"FCF (1,729,000,000) / Revenue (7,685,000,000)"
+Advanced Micro Devices Inc.,2025,Q2,R&D as % of Revenue,0.25,%,"R&D Expense (1,894,000,000) / Revenue (7,685,000,000)"
+Advanced Micro Devices Inc.,2025,Q2,Net Cash (Debt),1224000000.0,USD,"Cash (4,442,000,000) - Total Debt (3,218,000,000) = net cash"
+Advanced Micro Devices Inc.,2025,Q2,YoY Revenue Growth,0.32,%,"(Revenue 7,685,000,000 - Prior 5,835,000,000) / |Prior 5,835,000,000|"
+Advanced Micro Devices Inc.,2025,Q2,TTM Revenue,29600000000.0,USD,Sum of FY2024 Q3 + FY2024 Q4 + FY2025 Q1 + FY2025 Q2
+Advanced Micro Devices Inc.,2025,Q2,TTM Operating Income,2267000000.0,USD,Sum of FY2024 Q3 + FY2024 Q4 + FY2025 Q1 + FY2025 Q2
+Advanced Micro Devices Inc.,2025,Q2,TTM Free Cash Flow,4043000000.0,USD,Sum of quarterly FCF for FY2024 Q3 + FY2024 Q4 + FY2025 Q1 + FY2025 Q2
+Advanced Micro Devices Inc.,2025,Q3,Gross Margin,0.52,%,"Gross Profit (4,780,000,000) / Revenue (9,246,000,000)"
+Advanced Micro Devices Inc.,2025,Q3,Operating Margin,0.14,%,"Operating Income (1,270,000,000) / Revenue (9,246,000,000)"
+Advanced Micro Devices Inc.,2025,Q3,Free Cash Flow,1901000000.0,USD,"Operating Cash Flow (2,159,000,000) - Capital Expenditure (258,000,000)"
+Advanced Micro Devices Inc.,2025,Q3,Free-Cash-Flow Margin,0.21,%,"FCF (1,901,000,000) / Revenue (9,246,000,000)"
+Advanced Micro Devices Inc.,2025,Q3,R&D as % of Revenue,0.23,%,"R&D Expense (2,139,000,000) / Revenue (9,246,000,000)"
+Advanced Micro Devices Inc.,2025,Q3,Net Cash (Debt),1588000000.0,USD,"Cash (4,808,000,000) - Total Debt (3,220,000,000) = net cash"
+Advanced Micro Devices Inc.,2025,Q3,YoY Revenue Growth,0.36,%,"(Revenue 9,246,000,000 - Prior 6,819,000,000) / |Prior 6,819,000,000|"
+Advanced Micro Devices Inc.,2025,Q3,TTM Revenue,32027000000.0,USD,Sum of FY2024 Q4 + FY2025 Q1 + FY2025 Q2 + FY2025 Q3
+Advanced Micro Devices Inc.,2025,Q3,TTM Operating Income,2813000000.0,USD,Sum of FY2024 Q4 + FY2025 Q1 + FY2025 Q2 + FY2025 Q3
+Advanced Micro Devices Inc.,2025,Q3,TTM Free Cash Flow,5448000000.0,USD,Sum of quarterly FCF for FY2024 Q4 + FY2025 Q1 + FY2025 Q2 + FY2025 Q3
+Advanced Micro Devices Inc.,2025,Q4,Gross Margin,0.54,%,"Gross Profit (5,577,000,000) / Revenue (10,270,000,000)"
+Advanced Micro Devices Inc.,2025,Q4,Operating Margin,0.17,%,"Operating Income (1,752,000,000) / Revenue (10,270,000,000)"
+Advanced Micro Devices Inc.,2025,Q4,Free Cash Flow,2378000000.0,USD,"Operating Cash Flow (2,600,000,000) - Capital Expenditure (222,000,000)"
+Advanced Micro Devices Inc.,2025,Q4,Free-Cash-Flow Margin,0.23,%,"FCF (2,378,000,000) / Revenue (10,270,000,000)"
+Advanced Micro Devices Inc.,2025,Q4,R&D as % of Revenue,0.23,%,"R&D Expense (2,330,000,000) / Revenue (10,270,000,000)"
+Advanced Micro Devices Inc.,2025,Q4,Net Cash (Debt),2317000000.0,USD,"Cash (5,539,000,000) - Total Debt (3,222,000,000) = net cash"
+Advanced Micro Devices Inc.,2025,Q4,YoY Revenue Growth,0.34,%,"(Revenue 10,270,000,000 - Prior 7,658,000,000) / |Prior 7,658,000,000|"
+Advanced Micro Devices Inc.,2025,Q4,TTM Revenue,34639000000.0,USD,Sum of FY2025 Q1 + FY2025 Q2 + FY2025 Q3 + FY2025 Q4
+Advanced Micro Devices Inc.,2025,Q4,TTM Operating Income,3694000000.0,USD,Sum of FY2025 Q1 + FY2025 Q2 + FY2025 Q3 + FY2025 Q4
+Advanced Micro Devices Inc.,2025,Q4,TTM Free Cash Flow,6735000000.0,USD,Sum of quarterly FCF for FY2025 Q1 + FY2025 Q2 + FY2025 Q3 + FY2025 Q4

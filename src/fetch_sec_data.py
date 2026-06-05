@@ -1,14 +1,17 @@
 """
 fetch_sec_data.py
 -----------------
-Downloads Qualcomm's company-facts JSON from the SEC EDGAR XBRL API
+Downloads a company's company-facts JSON from the SEC EDGAR XBRL API
 and saves the untouched response to data/raw/.
+
+Reads company metadata (CIK, name, etc.) from config/companies.csv.
 
 SEC EDGAR endpoint documentation:
 https://www.sec.gov/edgar/sec-api-documentation
 
 Usage:
-    .venv/bin/python src/fetch_sec_data.py
+    .venv/bin/python src/fetch_sec_data.py QCOM
+    .venv/bin/python src/fetch_sec_data.py AVGO
 """
 
 import json
@@ -20,19 +23,16 @@ from pathlib import Path
 import requests
 from dotenv import load_dotenv
 
+from config_loader import load_company, parse_ticker_arg
+
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
 
-# Qualcomm's SEC Central Index Key (CIK), zero-padded to 10 digits.
-QUALCOMM_CIK = "0000804328"
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+RAW_DIR = PROJECT_ROOT / "data" / "raw"
 
-# SEC EDGAR company-facts endpoint.  Returns every XBRL fact the company
-# has reported across all filings (10-K, 10-Q, etc.) in a single JSON.
-ENDPOINT = f"https://data.sec.gov/api/xbrl/companyfacts/CIK{QUALCOMM_CIK}.json"
-
-# Where to save the raw download (relative to the project root).
-RAW_DIR = Path(__file__).resolve().parent.parent / "data" / "raw"
+EDGAR_ENDPOINT = "https://data.sec.gov/api/xbrl/companyfacts/CIK{cik}.json"
 
 
 # ---------------------------------------------------------------------------
@@ -41,7 +41,7 @@ RAW_DIR = Path(__file__).resolve().parent.parent / "data" / "raw"
 
 def load_user_agent() -> str:
     """Read SEC_USER_AGENT from the .env file at the project root."""
-    env_path = Path(__file__).resolve().parent.parent / ".env"
+    env_path = PROJECT_ROOT / ".env"
     load_dotenv(env_path)
 
     user_agent = os.getenv("SEC_USER_AGENT")
@@ -54,21 +54,22 @@ def load_user_agent() -> str:
     return user_agent
 
 
-def build_output_path() -> Path:
+def build_output_path(short_id: str, cik: str) -> Path:
     """Return the file path for today's raw download."""
-    today = date.today().isoformat()  # e.g. 2026-06-04
-    filename = f"qualcomm_CIK{QUALCOMM_CIK}_{today}.json"
+    today = date.today().isoformat()
+    filename = f"{short_id}_CIK{cik}_{today}.json"
     return RAW_DIR / filename
 
 
-def fetch_company_facts(user_agent: str) -> dict:
+def fetch_company_facts(cik: str, user_agent: str) -> dict:
     """GET the company-facts JSON from SEC EDGAR."""
+    url = EDGAR_ENDPOINT.format(cik=cik)
     headers = {
         "User-Agent": user_agent,
         "Accept-Encoding": "gzip, deflate",
     }
 
-    response = requests.get(ENDPOINT, headers=headers, timeout=30)
+    response = requests.get(url, headers=headers, timeout=30)
     response.raise_for_status()
     return response.json()
 
@@ -81,19 +82,25 @@ def save_raw_json(data: dict, path: Path) -> None:
 
 
 def main():
-    output_path = build_output_path()
+    ticker = parse_ticker_arg()
+    company = load_company(ticker)
 
-    # Avoid redundant requests — if today's file already exists, skip.
+    short_id = company["short_identifier"]
+    cik = company["cik"]
+    name = company["company_name"]
+
+    output_path = build_output_path(short_id, cik)
+
     if output_path.exists():
         print(f"Already downloaded today: {output_path}")
         return
 
     user_agent = load_user_agent()
 
-    print(f"Requesting Qualcomm company facts from SEC EDGAR ...")
+    print(f"Requesting {name} ({ticker}) company facts from SEC EDGAR ...")
 
     try:
-        data = fetch_company_facts(user_agent)
+        data = fetch_company_facts(cik, user_agent)
     except requests.exceptions.HTTPError as e:
         sys.exit(f"HTTP error from SEC EDGAR: {e}")
     except requests.exceptions.ConnectionError:

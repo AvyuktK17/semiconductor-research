@@ -1,0 +1,121 @@
+company,fiscal_year,fiscal_quarter,metric_name,value,unit,formula
+Nvidia Corp.,2024,Q1,Gross Margin,0.65,%,"Gross Profit (4,648,000,000) / Revenue (7,192,000,000)"
+Nvidia Corp.,2024,Q1,Operating Margin,0.3,%,"Operating Income (2,140,000,000) / Revenue (7,192,000,000)"
+Nvidia Corp.,2024,Q1,Free Cash Flow,,USD,Missing: OCF or CapEx
+Nvidia Corp.,2024,Q1,Free-Cash-Flow Margin,,%,Missing: FCF components or Revenue
+Nvidia Corp.,2024,Q1,R&D as % of Revenue,0.26,%,"R&D Expense (1,875,000,000) / Revenue (7,192,000,000)"
+Nvidia Corp.,2024,Q1,Net Cash (Debt),-5875000000.0,USD,"Cash (5,079,000,000) - Total Debt (10,954,000,000) = net debt"
+Nvidia Corp.,2024,Q1,YoY Revenue Growth,,%,Missing: current or prior-year Revenue (FY2023 Q1)
+Nvidia Corp.,2024,Q1,TTM Revenue,,USD,Missing: not enough trailing quarters
+Nvidia Corp.,2024,Q1,TTM Operating Income,,USD,Missing: not enough trailing quarters
+Nvidia Corp.,2024,Q1,TTM Free Cash Flow,,USD,Missing: not enough trailing OCF/CapEx quarters
+Nvidia Corp.,2024,Q2,Gross Margin,0.7,%,"Gross Profit (9,462,000,000) / Revenue (13,507,000,000)"
+Nvidia Corp.,2024,Q2,Operating Margin,0.5,%,"Operating Income (6,800,000,000) / Revenue (13,507,000,000)"
+Nvidia Corp.,2024,Q2,Free Cash Flow,,USD,Missing: OCF or CapEx
+Nvidia Corp.,2024,Q2,Free-Cash-Flow Margin,,%,Missing: FCF components or Revenue
+Nvidia Corp.,2024,Q2,R&D as % of Revenue,0.15,%,"R&D Expense (2,040,000,000) / Revenue (13,507,000,000)"
+Nvidia Corp.,2024,Q2,Net Cash (Debt),-3922000000.0,USD,"Cash (5,783,000,000) - Total Debt (9,705,000,000) = net debt"
+Nvidia Corp.,2024,Q2,YoY Revenue Growth,,%,Missing: current or prior-year Revenue (FY2023 Q2)
+Nvidia Corp.,2024,Q2,TTM Revenue,,USD,Missing: not enough trailing quarters
+Nvidia Corp.,2024,Q2,TTM Operating Income,,USD,Missing: not enough trailing quarters
+Nvidia Corp.,2024,Q2,TTM Free Cash Flow,,USD,Missing: not enough trailing OCF/CapEx quarters
+Nvidia Corp.,2024,Q3,Gross Margin,0.74,%,"Gross Profit (13,400,000,000) / Revenue (18,120,000,000)"
+Nvidia Corp.,2024,Q3,Operating Margin,0.57,%,"Operating Income (10,417,000,000) / Revenue (18,120,000,000)"
+Nvidia Corp.,2024,Q3,Free Cash Flow,,USD,Missing: OCF or CapEx
+Nvidia Corp.,2024,Q3,Free-Cash-Flow Margin,,%,Missing: FCF components or Revenue
+Nvidia Corp.,2024,Q3,R&D as % of Revenue,0.13,%,"R&D Expense (2,294,000,000) / Revenue (18,120,000,000)"
+Nvidia Corp.,2024,Q3,Net Cash (Debt),-4187000000.0,USD,"Cash (5,519,000,000) - Total Debt (9,706,000,000) = net debt"
+Nvidia Corp.,2024,Q3,YoY Revenue Growth,,%,Missing: current or prior-year Revenue (FY2023 Q3)
+Nvidia Corp.,2024,Q3,TTM Revenue,,USD,Missing: not enough trailing quarters
+Nvidia Corp.,2024,Q3,TTM Operating Income,,USD,Missing: not enough trailing quarters
+Nvidia Corp.,2024,Q3,TTM Free Cash Flow,,USD,Missing: not enough trailing OCF/CapEx quarters
+Nvidia Corp.,2024,Q4,Gross Margin,0.76,%,"Gross Profit (16,791,000,000) / Revenue (22,103,000,000)"
+Nvidia Corp.,2024,Q4,Operating Margin,0.62,%,"Operating Income (13,614,000,000) / Revenue (22,103,000,000)"
+Nvidia Corp.,2024,Q4,Free Cash Flow,11245000000.0,USD,"Operating Cash Flow (11,499,000,000) - Capital Expenditure (254,000,000)"
+Nvidia Corp.,2024,Q4,Free-Cash-Flow Margin,0.51,%,"FCF (11,245,000,000) / Revenue (22,103,000,000)"
+Nvidia Corp.,2024,Q4,R&D as % of Revenue,0.11,%,"R&D Expense (2,465,000,000) / Revenue (22,103,000,000)"
+Nvidia Corp.,2024,Q4,Net Cash (Debt),-2429000000.0,USD,"Cash (7,280,000,000) - Total Debt (9,709,000,000) = net debt"
+Nvidia Corp.,2024,Q4,YoY Revenue Growth,,%,Missing: current or prior-year Revenue (FY2023 Q4)
+Nvidia Corp.,2024,Q4,TTM Revenue,60922000000.0,USD,Sum of FY2024 Q1 + FY2024 Q2 + FY2024 Q3 + FY2024 Q4
+Nvidia Corp.,2024,Q4,TTM Operating Income,32971000000.0,USD,Sum of FY2024 Q1 + FY2024 Q2 + FY2024 Q3 + FY2024 Q4
+Nvidia Corp.,2024,Q4,TTM Free Cash Flow,,USD,Missing: not enough trailing OCF/CapEx quarters
+Nvidia Corp.,2025,Q1,Gross Margin,0.78,%,"Gross Profit (20,406,000,000) / Revenue (26,044,000,000)"
+Nvidia Corp.,2025,Q1,Operating Margin,0.65,%,"Operating Income (16,909,000,000) / Revenue (26,044,000,000)"
+Nvidia Corp.,2025,Q1,Free Cash Flow,14976000000.0,USD,"Operating Cash Flow (15,345,000,000) - Capital Expenditure (369,000,000)"
+Nvidia Corp.,2025,Q1,Free-Cash-Flow Margin,0.58,%,"FCF (14,976,000,000) / Revenue (26,044,000,000)"
+Nvidia Corp.,2025,Q1,R&D as % of Revenue,0.1,%,"R&D Expense (2,720,000,000) / Revenue (26,044,000,000)"
+Nvidia Corp.,2025,Q1,Net Cash (Debt),-2123000000.0,USD,"Cash (7,587,000,000) - Total Debt (9,710,000,000) = net debt"
+Nvidia Corp.,2025,Q1,YoY Revenue Growth,2.62,%,"(Revenue 26,044,000,000 - Prior 7,192,000,000) / |Prior 7,192,000,000|"
+Nvidia Corp.,2025,Q1,TTM Revenue,79774000000.0,USD,Sum of FY2024 Q2 + FY2024 Q3 + FY2024 Q4 + FY2025 Q1
+Nvidia Corp.,2025,Q1,TTM Operating Income,47740000000.0,USD,Sum of FY2024 Q2 + FY2024 Q3 + FY2024 Q4 + FY2025 Q1
+Nvidia Corp.,2025,Q1,TTM Free Cash Flow,,USD,Missing: not enough trailing OCF/CapEx quarters
+Nvidia Corp.,2025,Q2,Gross Margin,0.75,%,"Gross Profit (22,574,000,000) / Revenue (30,040,000,000)"
+Nvidia Corp.,2025,Q2,Operating Margin,0.62,%,"Operating Income (18,642,000,000) / Revenue (30,040,000,000)"
+Nvidia Corp.,2025,Q2,Free Cash Flow,13511000000.0,USD,"Operating Cash Flow (14,488,000,000) - Capital Expenditure (977,000,000)"
+Nvidia Corp.,2025,Q2,Free-Cash-Flow Margin,0.45,%,"FCF (13,511,000,000) / Revenue (30,040,000,000)"
+Nvidia Corp.,2025,Q2,R&D as % of Revenue,0.1,%,"R&D Expense (3,090,000,000) / Revenue (30,040,000,000)"
+Nvidia Corp.,2025,Q2,Net Cash (Debt),102000000.0,USD,"Cash (8,563,000,000) - Total Debt (8,461,000,000) = net cash"
+Nvidia Corp.,2025,Q2,YoY Revenue Growth,1.22,%,"(Revenue 30,040,000,000 - Prior 13,507,000,000) / |Prior 13,507,000,000|"
+Nvidia Corp.,2025,Q2,TTM Revenue,96307000000.0,USD,Sum of FY2024 Q3 + FY2024 Q4 + FY2025 Q1 + FY2025 Q2
+Nvidia Corp.,2025,Q2,TTM Operating Income,59582000000.0,USD,Sum of FY2024 Q3 + FY2024 Q4 + FY2025 Q1 + FY2025 Q2
+Nvidia Corp.,2025,Q2,TTM Free Cash Flow,,USD,Missing: not enough trailing OCF/CapEx quarters
+Nvidia Corp.,2025,Q3,Gross Margin,0.75,%,"Gross Profit (26,156,000,000) / Revenue (35,082,000,000)"
+Nvidia Corp.,2025,Q3,Operating Margin,0.62,%,"Operating Income (21,869,000,000) / Revenue (35,082,000,000)"
+Nvidia Corp.,2025,Q3,Free Cash Flow,16814000000.0,USD,"Operating Cash Flow (17,627,000,000) - Capital Expenditure (813,000,000)"
+Nvidia Corp.,2025,Q3,Free-Cash-Flow Margin,0.48,%,"FCF (16,814,000,000) / Revenue (35,082,000,000)"
+Nvidia Corp.,2025,Q3,R&D as % of Revenue,0.1,%,"R&D Expense (3,390,000,000) / Revenue (35,082,000,000)"
+Nvidia Corp.,2025,Q3,Net Cash (Debt),645000000.0,USD,"Cash (9,107,000,000) - Total Debt (8,462,000,000) = net cash"
+Nvidia Corp.,2025,Q3,YoY Revenue Growth,0.94,%,"(Revenue 35,082,000,000 - Prior 18,120,000,000) / |Prior 18,120,000,000|"
+Nvidia Corp.,2025,Q3,TTM Revenue,113269000000.0,USD,Sum of FY2024 Q4 + FY2025 Q1 + FY2025 Q2 + FY2025 Q3
+Nvidia Corp.,2025,Q3,TTM Operating Income,71034000000.0,USD,Sum of FY2024 Q4 + FY2025 Q1 + FY2025 Q2 + FY2025 Q3
+Nvidia Corp.,2025,Q3,TTM Free Cash Flow,56546000000.0,USD,Sum of quarterly FCF for FY2024 Q4 + FY2025 Q1 + FY2025 Q2 + FY2025 Q3
+Nvidia Corp.,2025,Q4,Gross Margin,0.73,%,"Gross Profit (28,723,000,000) / Revenue (39,331,000,000)"
+Nvidia Corp.,2025,Q4,Operating Margin,0.61,%,"Operating Income (24,034,000,000) / Revenue (39,331,000,000)"
+Nvidia Corp.,2025,Q4,Free Cash Flow,15552000000.0,USD,"Operating Cash Flow (16,629,000,000) - Capital Expenditure (1,077,000,000)"
+Nvidia Corp.,2025,Q4,Free-Cash-Flow Margin,0.4,%,"FCF (15,552,000,000) / Revenue (39,331,000,000)"
+Nvidia Corp.,2025,Q4,R&D as % of Revenue,0.09,%,"R&D Expense (3,714,000,000) / Revenue (39,331,000,000)"
+Nvidia Corp.,2025,Q4,Net Cash (Debt),126000000.0,USD,"Cash (8,589,000,000) - Total Debt (8,463,000,000) = net cash"
+Nvidia Corp.,2025,Q4,YoY Revenue Growth,0.78,%,"(Revenue 39,331,000,000 - Prior 22,103,000,000) / |Prior 22,103,000,000|"
+Nvidia Corp.,2025,Q4,TTM Revenue,130497000000.0,USD,Sum of FY2025 Q1 + FY2025 Q2 + FY2025 Q3 + FY2025 Q4
+Nvidia Corp.,2025,Q4,TTM Operating Income,81454000000.0,USD,Sum of FY2025 Q1 + FY2025 Q2 + FY2025 Q3 + FY2025 Q4
+Nvidia Corp.,2025,Q4,TTM Free Cash Flow,60853000000.0,USD,Sum of quarterly FCF for FY2025 Q1 + FY2025 Q2 + FY2025 Q3 + FY2025 Q4
+Nvidia Corp.,2026,Q1,Gross Margin,0.61,%,"Gross Profit (26,668,000,000) / Revenue (44,062,000,000)"
+Nvidia Corp.,2026,Q1,Operating Margin,0.49,%,"Operating Income (21,638,000,000) / Revenue (44,062,000,000)"
+Nvidia Corp.,2026,Q1,Free Cash Flow,26187000000.0,USD,"Operating Cash Flow (27,414,000,000) - Capital Expenditure (1,227,000,000)"
+Nvidia Corp.,2026,Q1,Free-Cash-Flow Margin,0.59,%,"FCF (26,187,000,000) / Revenue (44,062,000,000)"
+Nvidia Corp.,2026,Q1,R&D as % of Revenue,0.09,%,"R&D Expense (3,989,000,000) / Revenue (44,062,000,000)"
+Nvidia Corp.,2026,Q1,Net Cash (Debt),6770000000.0,USD,"Cash (15,234,000,000) - Total Debt (8,464,000,000) = net cash"
+Nvidia Corp.,2026,Q1,YoY Revenue Growth,0.69,%,"(Revenue 44,062,000,000 - Prior 26,044,000,000) / |Prior 26,044,000,000|"
+Nvidia Corp.,2026,Q1,TTM Revenue,148515000000.0,USD,Sum of FY2025 Q2 + FY2025 Q3 + FY2025 Q4 + FY2026 Q1
+Nvidia Corp.,2026,Q1,TTM Operating Income,86183000000.0,USD,Sum of FY2025 Q2 + FY2025 Q3 + FY2025 Q4 + FY2026 Q1
+Nvidia Corp.,2026,Q1,TTM Free Cash Flow,72064000000.0,USD,Sum of quarterly FCF for FY2025 Q2 + FY2025 Q3 + FY2025 Q4 + FY2026 Q1
+Nvidia Corp.,2026,Q2,Gross Margin,0.72,%,"Gross Profit (33,853,000,000) / Revenue (46,743,000,000)"
+Nvidia Corp.,2026,Q2,Operating Margin,0.61,%,"Operating Income (28,440,000,000) / Revenue (46,743,000,000)"
+Nvidia Corp.,2026,Q2,Free Cash Flow,13470000000.0,USD,"Operating Cash Flow (15,365,000,000) - Capital Expenditure (1,895,000,000)"
+Nvidia Corp.,2026,Q2,Free-Cash-Flow Margin,0.29,%,"FCF (13,470,000,000) / Revenue (46,743,000,000)"
+Nvidia Corp.,2026,Q2,R&D as % of Revenue,0.09,%,"R&D Expense (4,291,000,000) / Revenue (46,743,000,000)"
+Nvidia Corp.,2026,Q2,Net Cash (Debt),3173000000.0,USD,"Cash (11,639,000,000) - Total Debt (8,466,000,000) = net cash"
+Nvidia Corp.,2026,Q2,YoY Revenue Growth,0.56,%,"(Revenue 46,743,000,000 - Prior 30,040,000,000) / |Prior 30,040,000,000|"
+Nvidia Corp.,2026,Q2,TTM Revenue,165218000000.0,USD,Sum of FY2025 Q3 + FY2025 Q4 + FY2026 Q1 + FY2026 Q2
+Nvidia Corp.,2026,Q2,TTM Operating Income,95981000000.0,USD,Sum of FY2025 Q3 + FY2025 Q4 + FY2026 Q1 + FY2026 Q2
+Nvidia Corp.,2026,Q2,TTM Free Cash Flow,72023000000.0,USD,Sum of quarterly FCF for FY2025 Q3 + FY2025 Q4 + FY2026 Q1 + FY2026 Q2
+Nvidia Corp.,2026,Q3,Gross Margin,0.73,%,"Gross Profit (41,849,000,000) / Revenue (57,006,000,000)"
+Nvidia Corp.,2026,Q3,Operating Margin,0.63,%,"Operating Income (36,010,000,000) / Revenue (57,006,000,000)"
+Nvidia Corp.,2026,Q3,Free Cash Flow,22115000000.0,USD,"Operating Cash Flow (23,751,000,000) - Capital Expenditure (1,636,000,000)"
+Nvidia Corp.,2026,Q3,Free-Cash-Flow Margin,0.39,%,"FCF (22,115,000,000) / Revenue (57,006,000,000)"
+Nvidia Corp.,2026,Q3,R&D as % of Revenue,0.08,%,"R&D Expense (4,705,000,000) / Revenue (57,006,000,000)"
+Nvidia Corp.,2026,Q3,Net Cash (Debt),3019000000.0,USD,"Cash (11,486,000,000) - Total Debt (8,467,000,000) = net cash"
+Nvidia Corp.,2026,Q3,YoY Revenue Growth,0.62,%,"(Revenue 57,006,000,000 - Prior 35,082,000,000) / |Prior 35,082,000,000|"
+Nvidia Corp.,2026,Q3,TTM Revenue,187142000000.0,USD,Sum of FY2025 Q4 + FY2026 Q1 + FY2026 Q2 + FY2026 Q3
+Nvidia Corp.,2026,Q3,TTM Operating Income,110122000000.0,USD,Sum of FY2025 Q4 + FY2026 Q1 + FY2026 Q2 + FY2026 Q3
+Nvidia Corp.,2026,Q3,TTM Free Cash Flow,77324000000.0,USD,Sum of quarterly FCF for FY2025 Q4 + FY2026 Q1 + FY2026 Q2 + FY2026 Q3
+Nvidia Corp.,2026,Q4,Gross Margin,0.75,%,"Gross Profit (51,093,000,000) / Revenue (68,127,000,000)"
+Nvidia Corp.,2026,Q4,Operating Margin,0.65,%,"Operating Income (44,299,000,000) / Revenue (68,127,000,000)"
+Nvidia Corp.,2026,Q4,Free Cash Flow,34904000000.0,USD,"Operating Cash Flow (36,188,000,000) - Capital Expenditure (1,284,000,000)"
+Nvidia Corp.,2026,Q4,Free-Cash-Flow Margin,0.51,%,"FCF (34,904,000,000) / Revenue (68,127,000,000)"
+Nvidia Corp.,2026,Q4,R&D as % of Revenue,0.08,%,"R&D Expense (5,512,000,000) / Revenue (68,127,000,000)"
+Nvidia Corp.,2026,Q4,Net Cash (Debt),2137000000.0,USD,"Cash (10,605,000,000) - Total Debt (8,468,000,000) = net cash"
+Nvidia Corp.,2026,Q4,YoY Revenue Growth,0.73,%,"(Revenue 68,127,000,000 - Prior 39,331,000,000) / |Prior 39,331,000,000|"
+Nvidia Corp.,2026,Q4,TTM Revenue,215938000000.0,USD,Sum of FY2026 Q1 + FY2026 Q2 + FY2026 Q3 + FY2026 Q4
+Nvidia Corp.,2026,Q4,TTM Operating Income,130387000000.0,USD,Sum of FY2026 Q1 + FY2026 Q2 + FY2026 Q3 + FY2026 Q4
+Nvidia Corp.,2026,Q4,TTM Free Cash Flow,96676000000.0,USD,Sum of quarterly FCF for FY2026 Q1 + FY2026 Q2 + FY2026 Q3 + FY2026 Q4

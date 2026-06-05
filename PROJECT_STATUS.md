@@ -1,6 +1,6 @@
 # Project Status — Semiconductor Research Terminal
 
-Last updated: 2026-06-04
+Last updated: 2026-06-05
 
 ## Project objective
 
@@ -20,153 +20,232 @@ The user is a finance graduate learning Python. Code should be modular, clearly 
 | 6 | Backup of pre-Q4-fix scripts and outputs | Done |
 | 7 | Full rewrite of cleaning script — Q4 derivation, YTD subtraction, new metrics, bug fixes | Done |
 | 8 | Calculated metrics — margins, FCF, net debt, YoY growth, TTM aggregates | Done |
+| 9A | Multi-company refactor — config system, parameterized scripts, regression testing | Done |
+| 9B | AMD pipeline — tag discovery, cleaning, metrics, Excel export, validation | Done |
+| 9C | Nvidia pipeline — tag discovery, cleaning, metrics, Excel export, validation | Done |
+
+## Stage 9 architecture
+
+### Configuration system
+
+All scripts read company metadata from `config/companies.csv` and XBRL tag definitions from `config/xbrl_tags/<short_id>.json`. Each script accepts a ticker argument:
+
+```
+.venv/bin/python src/fetch_sec_data.py QCOM
+.venv/bin/python src/clean_financials.py AMD
+.venv/bin/python src/export_excel.py NVDA
+.venv/bin/python src/calculate_metrics.py QCOM
+```
+
+A `--test` flag writes output to `data/test_outputs/` and `output/test_outputs/` instead of production directories.
+
+### Company registry
+
+| Company | Ticker | CIK | Short ID | FY-End Month | FY-End Day (approx) | Status |
+|---------|--------|-----|----------|--------------|---------------------|--------|
+| Qualcomm Incorporated | QCOM | 0000804328 | qualcomm | 9 | 29 | Complete, regression-tested |
+| Advanced Micro Devices Inc. | AMD | 0000002488 | amd | 12 | 28 | Complete |
+| Nvidia Corp. | NVDA | 0001045810 | nvidia | 1 | 26 | Complete |
+| Intel Corp. | INTC | 0000050863 | intel | 12 | 28 | Not started |
+| Broadcom Inc. | AVGO | 0001730168 | broadcom | 11 | 3 | Not started |
+
+### Scripts (6 files in `src/`)
+
+| Script | Purpose |
+|--------|---------|
+| `src/config_loader.py` | Shared utility — reads company config, XBRL tag maps, parses ticker args, builds SEC filing URLs |
+| `src/fetch_sec_data.py` | Downloads a company's company-facts JSON from SEC EDGAR |
+| `src/clean_financials.py` | Extracts and structures quarterly financial data with Q4 derivation |
+| `src/export_excel.py` | Generates analyst-ready multi-tab Excel workbook |
+| `src/calculate_metrics.py` | Calculates financial ratios, margins, FCF, TTM aggregates |
+| `src/regression_check.py` | Compares test outputs against immutable Qualcomm benchmarks |
+
+### Tag-map files
+
+| File | Notes |
+|------|-------|
+| `config/xbrl_tags/qualcomm.json` | Uses `Revenues`, `CostOfRevenue`, `PaymentsToAcquireProductiveAssets`; Total Debt = `LongTermDebt` + `DebtCurrent` (instant_sum) |
+| `config/xbrl_tags/amd.json` | Uses `RevenueFromContractWithCustomerExcludingAssessedTax`, `CostOfGoodsAndServicesSold`, `PaymentsToAcquirePropertyPlantAndEquipment`; Total Debt = `DebtLongtermAndShorttermCombinedAmount` (single instant) |
+| `config/xbrl_tags/nvidia.json` | Uses `Revenues`, `CostOfRevenue`, `PaymentsToAcquireProductiveAssets`; Total Debt = `LongTermDebt` (single instant, includes noncurrent + current portion) |
 
 ## Qualcomm pipeline
 
-### Raw data source
+### Refactor and regression test
 
-SEC EDGAR XBRL company-facts API. One GET request returns every financial fact Qualcomm has filed across all 10-K and 10-Q filings as a single JSON (~8.4 MB).
+The original Qualcomm-only scripts were refactored into the multi-company architecture. Immutable benchmark copies of the validated Qualcomm output are stored in `data/benchmarks/qualcomm/` and `output/benchmarks/qualcomm/`. The regression checker (`src/regression_check.py`) confirmed that the refactored pipeline produces **identical** output:
 
-- Endpoint: `https://data.sec.gov/api/xbrl/companyfacts/CIK0000804328.json`
-- CIK: `0000804328` (Qualcomm Incorporated)
-- Requires `User-Agent` header (stored in `.env`)
+- Financials CSV: 132 rows match
+- Missing Metrics CSV: 3 rows match
+- Calculated Metrics CSV: 120 rows match
 
-### Cleaning workflow
+### Data summary
 
-`src/clean_financials.py` reads the raw JSON and produces a structured CSV with one row per (metric, fiscal_year, quarter). The script handles three classes of metric differently:
+- **Raw:** `data/raw/qualcomm_CIK0000804328_2026-06-04.json` (8.4 MB)
+- **Processed:** `data/processed/qualcomm_financials_2026-06-04.csv` (132 rows, 11 metrics, FY2023–FY2025)
+- **Metrics:** `data/processed/qualcomm_metrics.csv` (120 rows; 107 calculated, 13 missing)
+- **Workbook:** `output/qualcomm_financial_history.xlsx` (6 tabs)
+- **Flagged:** 3 items (Diluted EPS Q4 × 3)
 
-- **Duration metrics with standalone quarters** (Revenue, Cost of Revenue, Operating Income, Net Income, R&D Expense): Q1–Q3 use standalone entries directly. Q4 = FY (10-K) minus 9M YTD (Q3 10-Q).
-- **Duration metrics with cumulative-only reporting** (Operating Cash Flow, Capital Expenditure): SEC only reports cumulative YTD for Q2/Q3. Q1 is standalone. Q2 = YTD_Q2 minus Q1. Q3 = YTD_Q3 minus YTD_Q2. Q4 = FY minus YTD_Q3.
-- **Instant (balance-sheet) metrics** (Cash and Cash Equivalents, Total Debt): Per-quarter snapshots from 10-Q filings. Q4 uses the fiscal-year-end balance from the 10-K.
+### Qualcomm-specific notes
 
-Gross Profit is derived as Revenue minus Cost of Revenue each quarter.
+- Fiscal year ends last Sunday of September (~Sep 29)
+- FY2025 Q4 Net Income = −$3.1B — arithmetic correct but likely one-time charge
+- CapEx uses broader `PaymentsToAcquireProductiveAssets` tag (Qualcomm does not file the narrower PP&E tag)
+- Total Debt = `LongTermDebt` + `DebtCurrent` (instant_sum approach)
 
-Total Debt is the sum of `LongTermDebt` and `DebtCurrent` XBRL tags.
+## AMD pipeline
 
-Diluted EPS Q4 is left blank and flagged — it cannot be derived by subtraction because diluted share counts change across quarters.
+### Data summary
 
-### Excel export workflow
+- **Raw:** `data/raw/amd_CIK0000002488_2026-06-04.json` (4.0 MB)
+- **Processed:** `data/processed/amd_financials_2026-06-04.csv` (132 rows, 11 metrics, FY2023–FY2025)
+- **Metrics:** `data/processed/amd_metrics.csv` (120 rows; 106 calculated, 14 missing)
+- **Workbook:** `output/amd_financial_history.xlsx` (6 tabs)
+- **Validation:** `data/manual_checks/amd_validation_checklist.csv` (20 checks)
+- **Flagged:** 4 items
 
-`src/export_excel.py` reads the processed CSV and produces a multi-tab workbook:
+### AMD validation results
 
-1. **Quarterly Financials** — pivot grid, 11 metrics x 12 quarters. Derived cells shaded yellow, review cells shaded pink.
-2. **Detail View** — full row-level data with all metadata columns visible.
-3. **Missing Metrics** — flagged items plus not-yet-implemented ratios.
-4. **Data Dictionary** — column definitions, extraction method meanings, metric-to-XBRL-tag mapping.
-5. **Manual Checks** — 7 audit items documenting assumptions.
+- All 24 FY total reconciliations pass (8 duration metrics × 3 fiscal years)
+- Derived Gross Profit matches reported `GrossProfit` XBRL tag exactly for all 3 FYs
+- Total Debt cross-check: `DebtLongtermAndShorttermCombinedAmount` matches `LongTermDebtNoncurrent` + `LongTermDebtCurrent` sum
 
-### Ratio calculation workflow
+### AMD manual-review items
 
-`src/calculate_metrics.py` reads the base financial CSV and calculates 10 derived metrics:
+1. **Total Debt FY2023 Q1** — `DebtLongtermAndShorttermCombinedAmount` has no Q1 entry for fy=2023 (tag coverage begins Q2 FY2023, after Xilinx acquisition accounting settled)
+2. **Diluted EPS Q4** (×3) — cannot derive by subtraction
+3. **Gross Profit cross-check** — AMD reports `GrossProfit` directly; derived values match exactly but should be re-verified if tag map changes
 
-- Gross Margin, Operating Margin, FCF Margin, R&D as % of Revenue (all percentage ratios)
-- Free Cash Flow, Net Cash (Debt) (USD values)
-- YoY Revenue Growth (same-quarter comparison)
-- TTM Revenue, TTM Operating Income, TTM Free Cash Flow (trailing 4-quarter sums)
+### AMD-specific notes
 
-Output is saved to `data/processed/qualcomm_metrics.csv` and appended as a "Calculated Metrics" tab in the Excel workbook.
+- Fiscal year ends last Saturday of December (~Dec 28); 52/53-week calendar (FY2022 was 370 days)
+- Uses ASC 606 revenue tag (`RevenueFromContractWithCustomerExcludingAssessedTax`)
+- Uses narrower PP&E CapEx tag (`PaymentsToAcquirePropertyPlantAndEquipment`)
+- Total Debt uses single combined tag (not a sum of components)
 
-### Validation workflow
+## Nvidia pipeline
 
-`data/manual_checks/qualcomm_q4_validation.csv` contains a line-by-line reconciliation for FY2025 Q4: 10-K full-year value, Q3 YTD value, derived Q4 value, and whether they reconcile. All duration-metric derivations are arithmetically correct. No standalone Q4 values exist in XBRL to cross-check against.
+### Data summary
 
-## Important accounting logic
+- **Raw:** `data/raw/nvidia_CIK0001045810_2026-06-05.json`
+- **Processed:** `data/processed/nvidia_financials_2026-06-05.csv` (132 rows, 11 metrics, FY2024–FY2026)
+- **Metrics:** `data/processed/nvidia_metrics.csv` (120 rows; 98 calculated, 22 missing)
+- **Workbook:** `output/nvidia_financial_history.xlsx` (6 tabs)
+- **Validation:** `data/manual_checks/nvidia_validation_checklist.csv` (22 checks)
+- **Flagged:** 6 items
 
-1. **Qualcomm does not file a separate Q4 10-Q.** The annual 10-K contains full-year totals but no standalone Q4 breakdown.
+### Nvidia validation results
 
-2. **Q4 duration metrics are derived:** Q4 = full-year 10-K value minus 9-month YTD from the Q3 10-Q filing. This applies to Revenue, Cost of Revenue, Operating Income, Net Income, R&D Expense, Operating Cash Flow, and Capital Expenditure.
+- Revenue: all 3 FY totals reconcile exactly
+- 5 metrics have $1M rounding gaps between quarterly sums and FY totals (Cost of Revenue FY2025, Operating Income FY2024/FY2025, Net Income FY2024, R&D FY2024). These are XBRL data artifacts — standalone quarterly values and cumulative YTD values differ by $1M in the filed data. Not pipeline errors.
+- Derived Gross Profit matches reported `GrossProfit` tag (FY2024 exact, FY2025 ±$1M from same rounding, FY2026 exact)
+- Total Debt cross-check: `LongTermDebt` $8,468M = `LongTermDebtNoncurrent` $7,469M + `LongTermDebtCurrent` $999M for FY2026
 
-3. **Q4 balance-sheet values use the fiscal-year-end snapshot** from the 10-K directly. Cash and Total Debt Q4 values are not derived by subtraction.
+### Nvidia manual-review items
 
-4. **EPS must not be derived by subtraction.** Diluted share counts change across quarters, making YTD subtraction invalid. Q4 EPS is flagged `missing_requires_review`.
+1. **Capital Expenditure FY2024 Q1–Q3** — `PaymentsToAcquireProductiveAssets` has no Q1/Q2 YTD entries for fy=2024; tag quarterly coverage begins fy=2025. Q4 FY2024 is present (derived from Q3 YTD and FY). This causes FCF and TTM FCF to have additional missing values.
+2. **Diluted EPS Q4** (×3) — cannot derive by subtraction
+3. **$1M rounding gaps** (×5) — documented in validation checklist; XBRL-level artifacts
+4. **CapEx tag scope** — `PaymentsToAcquireProductiveAssets` is broader than PP&E; `PaymentsToAcquirePropertyPlantAndEquipment` has no data after FY2012
 
-5. **Prior-year comparison data must be filtered out.** SEC XBRL tags prior-year comparison figures with the same `fy` as the filing year. The cleaning script anchors on the FY entry with the latest end date and only accepts entries whose dates are consistent with that fiscal year.
+### Nvidia-specific notes
 
-6. **Cash-flow metrics only have cumulative YTD entries** for Q2 and Q3 in SEC XBRL. Standalone Q2 and Q3 must be derived by YTD subtraction.
+- Fiscal year ends last Sunday of **January** (~Jan 26); FY numbering is offset +1 from calendar year (FY2026 = Feb 2025 – Jan 2026)
+- Uses same Revenue, CostOfRevenue, and CapEx tags as Qualcomm
+- Total Debt uses `LongTermDebt` as a single instant tag (includes both noncurrent and current portion)
+- Revenue scale is dramatically larger ($216B FY2026) — this does not affect extraction logic but matters for peer comparison
 
-7. **Reported and derived values are visibly distinguished** via the `extraction_method` column (`reported_standalone`, `derived_ytd_difference`, `fiscal_year_end_balance`, `missing_requires_review`) and yellow/pink shading in Excel.
+## Important accounting rules
 
-## Existing scripts
+1. **Do not assume calendar quarters.** Each company has a different fiscal year-end (Sep for Qualcomm, Dec for AMD/Intel, Jan for Nvidia, Nov for Broadcom). The pipeline uses SEC `fy`/`fp` fields and date-range filters (340–400 days for FY, 60–115 for standalone quarter, etc.) rather than calendar-date matching.
 
-### src/fetch_sec_data.py
-- **Purpose:** Download Qualcomm's company-facts JSON from SEC EDGAR
-- **Inputs:** `.env` (SEC_USER_AGENT)
-- **Outputs:** `data/raw/qualcomm_CIK0000804328_<date>.json`
-- **Notes:** Skips download if today's file already exists
+2. **Q4 duration metrics are derived:** Q4 = full-year 10-K value minus 9-month YTD from the Q3 10-Q. None of the companies processed so far file a standalone Q4 10-Q.
 
-### src/clean_financials.py
-- **Purpose:** Extract and structure quarterly financial data with Q4 derivation
-- **Inputs:** Latest file in `data/raw/qualcomm_CIK*.json`
-- **Outputs:** `data/processed/qualcomm_financials_<date>.csv`, `data/manual_checks/qualcomm_missing_metrics_<date>.csv`
-- **Notes:** 132 rows (11 metrics x 12 quarters across FY2023–FY2025)
+3. **Q4 balance-sheet values use the fiscal-year-end snapshot** from the 10-K directly. Not derived by subtraction.
 
-### src/export_excel.py
-- **Purpose:** Generate analyst-ready Excel workbook with 5 tabs
-- **Inputs:** Latest files in `data/processed/qualcomm_financials_*.csv` and `data/manual_checks/qualcomm_missing_metrics_*.csv`
-- **Outputs:** `output/qualcomm_financial_history.xlsx`
+4. **EPS must not be derived by subtraction.** Diluted share counts change across quarters. Q4 EPS is always flagged `missing_requires_review`.
 
-### src/calculate_metrics.py
-- **Purpose:** Calculate financial ratios, margins, FCF, TTM aggregates
-- **Inputs:** Latest file in `data/processed/qualcomm_financials_*.csv`
-- **Outputs:** `data/processed/qualcomm_metrics.csv`, adds "Calculated Metrics" tab to `output/qualcomm_financial_history.xlsx`
-- **Notes:** 120 rows (10 metrics x 12 quarters; 107 calculated, 13 missing due to insufficient prior-year data)
+5. **Prior-year comparison data must be filtered out.** The cleaning script anchors on the FY entry with the latest end date and rejects entries inconsistent with that anchor.
+
+6. **Cash-flow metrics only have cumulative YTD entries** for Q2/Q3. Standalone Q2/Q3 must be derived by YTD subtraction.
+
+7. **Reported and derived values are visibly distinguished** via `extraction_method` labels and yellow/pink shading in Excel.
+
+8. **Each company may use different XBRL tags** for the same financial concept. Tag selections are documented in `config/xbrl_tags/<short_id>.json` with explanations in the validation checklists.
 
 ## Existing data files
 
 ### data/raw/
-- `qualcomm_CIK0000804328_2026-06-04.json` (8.4 MB) — untouched SEC EDGAR response
+- `qualcomm_CIK0000804328_2026-06-04.json` (8.4 MB)
+- `amd_CIK0000002488_2026-06-04.json` (4.0 MB)
+- `nvidia_CIK0001045810_2026-06-05.json`
 
 ### data/processed/
-- `qualcomm_financials_2026-06-04.csv` (29 KB) — 132 rows, 11 base metrics, FY2023–FY2025
-- `qualcomm_metrics.csv` (14 KB) — 120 rows, 10 calculated metrics
+- `qualcomm_financials_2026-06-04.csv` — 132 rows, FY2023–FY2025
+- `qualcomm_metrics.csv` — 120 rows
+- `amd_financials_2026-06-04.csv` — 132 rows, FY2023–FY2025
+- `amd_metrics.csv` — 120 rows
+- `nvidia_financials_2026-06-05.csv` — 132 rows, FY2024–FY2026
+- `nvidia_metrics.csv` — 120 rows
 
 ### data/manual_checks/
-- `qualcomm_missing_metrics_2026-06-04.csv` — 3 items (Diluted EPS Q4 for each fiscal year)
-- `qualcomm_q4_validation.csv` — FY2025 Q4 reconciliation checklist (7 metrics)
+- `qualcomm_missing_metrics_2026-06-04.csv` — 3 flagged items
+- `qualcomm_q4_validation.csv` — FY2025 Q4 reconciliation
+- `amd_missing_metrics_2026-06-04.csv` — 4 flagged items
+- `amd_validation_checklist.csv` — 20 checks
+- `nvidia_missing_metrics_2026-06-05.csv` — 6 flagged items
+- `nvidia_validation_checklist.csv` — 22 checks
+
+### data/benchmarks/qualcomm/
+- Immutable copies of validated Qualcomm output (financials CSV, missing-metrics CSV, metrics CSV). Used by `src/regression_check.py`. Do not modify.
 
 ### output/
-- `qualcomm_financial_history.xlsx` (20 KB) — 6-tab workbook (Quarterly Financials, Calculated Metrics, Detail View, Missing Metrics, Data Dictionary, Manual Checks)
-- `q4_logic_audit.csv` (30 KB) — pre-fix audit of the old extraction logic (historical reference)
+- `qualcomm_financial_history.xlsx` — 6-tab workbook
+- `amd_financial_history.xlsx` — 6-tab workbook
+- `nvidia_financial_history.xlsx` — 6-tab workbook
+- `q4_logic_audit.csv` — historical reference from Stage 5
+
+### output/benchmarks/qualcomm/
+- Immutable copy of validated Qualcomm workbook. Do not modify.
+
+### config/
+- `companies.csv` — company metadata (name, ticker, CIK, short_id, FY-end month/day)
+- `xbrl_tags/qualcomm.json` — Qualcomm XBRL tag map
+- `xbrl_tags/amd.json` — AMD XBRL tag map
+- `xbrl_tags/nvidia.json` — Nvidia XBRL tag map
 
 ### archive/pre_q4_fix/
-- Backup of scripts and outputs from before the Q4 derivation rewrite. Safe to delete once Stage 9 is stable.
+- Backup of pre-Stage-7 scripts and outputs. Safe to delete once Stage 9 is stable.
 
-## Validation status
+## Next objective — Stage 9D: Intel
 
-### Completed
-- FY2025 Q4 arithmetic reconciliation (all duration metrics sum to FY total)
-- Balance-sheet Q4 values match 10-K fiscal-year-end snapshots
-- Cash-flow YTD subtraction logic verified for FY2023–FY2025
-- Prior-year comparison filtering verified (no cross-contamination of fiscal years)
-- All calculated ratios produce reasonable values consistent with Qualcomm's public financials
+Add Intel as the fourth company:
 
-### Flagged for manual review
-- **Diluted EPS Q4** (3 instances) — cannot be derived; needs earnings press release
-- **FY2025 Q4 Net Income = -$3.1B** — arithmetic is correct (FY $5.5B minus 9M $8.7B) but the large Q4 loss likely reflects a one-time charge; verify against 10-K notes
-- **Capital Expenditure tag** — uses `PaymentsToAcquireProductiveAssets` which is broader than the typical `PaymentsToAcquirePropertyPlantAndEquipment`; Qualcomm doesn't file the narrower tag
+1. Download raw SEC JSON: `.venv/bin/python src/fetch_sec_data.py INTC`
+2. Run XBRL tag discovery against the Intel raw JSON
+3. Create `config/xbrl_tags/intel.json`
+4. Validate Intel tag selections and fiscal calendar (FY ends last Saturday of December, ~Dec 28)
+5. Run the pipeline: clean → export → calculate
+6. Create `data/manual_checks/intel_validation_checklist.csv`
+7. Verify Qualcomm/AMD/Nvidia outputs are unchanged
 
-### Known limitations
-- Only 3 fiscal years of data (FY2023–FY2025); YoY growth and TTM metrics are unavailable for FY2023 Q1–Q3
-- No Q4 standalone cross-check source in XBRL; earnings press releases would provide independent verification but are not in the SEC API
-- Qualcomm's fiscal year ends in late September, not December; calendar-quarter comparisons with peers will require date alignment
+After Intel is validated, proceed to Broadcom (the final company, FY ends first Sunday of November).
 
-## Stage 9 objective
+## Unresolved issues
 
-Generalize the tested Qualcomm pipeline into a configurable multi-company system covering five semiconductor companies:
+1. **Nvidia CapEx FY2024 Q1–Q3 missing** — `PaymentsToAcquireProductiveAssets` has no Q1/Q2 YTD entries for fy=2024. This cascades into missing FCF and TTM FCF values. The `PaymentsToAcquirePropertyPlantAndEquipment` tag has no data after FY2012, so there is no alternative in XBRL. Could potentially be sourced from Nvidia's earnings press releases.
 
-| Company | Ticker | CIK |
-|---------|--------|-----|
-| Qualcomm | QCOM | 0000804328 |
-| Broadcom | AVGO | TBD — look up |
-| AMD | AMD | TBD — look up |
-| Nvidia | NVDA | TBD — look up |
-| Intel | INTC | TBD — look up |
+2. **Nvidia $1M rounding gaps** — Five instances where quarterly sums differ from FY totals by exactly $1M. Documented in the validation checklist. These are XBRL data artifacts, not pipeline errors. No action required unless exact reconciliation is needed for audit purposes.
 
-Key considerations for Stage 9:
-- Each company may use different XBRL tags for the same concept (e.g., different revenue or capex tags)
-- Fiscal year-end dates vary (Broadcom ends in October, others in December or January)
-- The Q4 derivation logic applies to any company that does not file a standalone Q4 10-Q
-- The existing Qualcomm output must be preserved as a regression benchmark — any refactored pipeline should produce identical Qualcomm results
+3. **AMD Total Debt FY2023 Q1 missing** — `DebtLongtermAndShorttermCombinedAmount` tag coverage begins Q2 FY2023. Could be manually sourced from the FY2023 Q1 10-Q filing.
+
+4. **Diluted EPS Q4** — Missing for all companies (9 instances total). Cannot be derived from XBRL data. Requires earnings press releases as an independent source.
+
+5. **Qualcomm FY2025 Q4 Net Income = −$3.1B** — Arithmetic is correct but the large Q4 loss likely reflects a one-time charge. Not verified against 10-K notes.
+
+6. **Cross-company peer comparison** — Fiscal year-end dates differ significantly (Sep, Dec, Jan, Nov). Direct FY-label comparison is misleading. Calendar-quarter alignment is not yet implemented.
+
+7. **Broadcom fiscal year-end may have changed** — Broadcom's FY traditionally ended in the first week of November, but may have shifted after the VMware acquisition. Verify during Broadcom tag discovery.
 
 ## Non-negotiable rules
 
@@ -175,5 +254,6 @@ Key considerations for Stage 9:
 3. **Maintain source references.** Every extracted value must carry an SEC filing URL.
 4. **Distinguish reported, derived, and manually reviewed values** via the `extraction_method` column.
 5. **Explain proposed changes before editing files.** The user is learning and needs to understand what will change and why.
-6. **Run validation checks after refactoring.** Verify that Qualcomm output is unchanged before adding new companies.
-7. **Preserve the working Qualcomm output as a regression benchmark.** Save current outputs before making structural changes.
+6. **Run validation checks after refactoring.** Verify that prior company outputs are unchanged before adding new companies.
+7. **Preserve the working Qualcomm output as a regression benchmark.** Immutable copies in `data/benchmarks/qualcomm/`.
+8. **Use company-specific fiscal calendars.** Do not assume calendar quarters or December year-ends.

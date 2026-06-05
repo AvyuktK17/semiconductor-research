@@ -1,0 +1,63 @@
+{
+  "metric_map": {
+    "Revenue": {
+      "tag": "Revenues",
+      "unit": "USD",
+      "metric_type": "duration"
+    },
+    "Cost of Revenue": {
+      "tag": "CostOfRevenue",
+      "unit": "USD",
+      "metric_type": "duration"
+    },
+    "Operating Income": {
+      "tag": "OperatingIncomeLoss",
+      "unit": "USD",
+      "metric_type": "duration"
+    },
+    "Net Income": {
+      "tag": "NetIncomeLoss",
+      "unit": "USD",
+      "metric_type": "duration"
+    },
+    "Diluted EPS": {
+      "tag": "EarningsPerShareDiluted",
+      "unit": "USD/shares",
+      "metric_type": "eps"
+    },
+    "R&D Expense": {
+      "tag": "ResearchAndDevelopmentExpense",
+      "unit": "USD",
+      "metric_type": "duration"
+    },
+    "Operating Cash Flow": {
+      "tag": "NetCashProvidedByUsedInOperatingActivities",
+      "unit": "USD",
+      "metric_type": "duration_cashflow"
+    },
+    "Capital Expenditure": {
+      "tag": "PaymentsToAcquireProductiveAssets",
+      "unit": "USD",
+      "metric_type": "duration_cashflow"
+    },
+    "Cash and Cash Equivalents": {
+      "tag": "CashAndCashEquivalentsAtCarryingValue",
+      "unit": "USD",
+      "metric_type": "instant"
+    },
+    "Total Debt": {
+      "tag": "LongTermDebt",
+      "unit": "USD",
+      "metric_type": "instant"
+    }
+  },
+  "derived_metrics": {
+    "Gross Profit": {
+      "formula": "Revenue minus Cost of Revenue",
+      "plus": "Revenue",
+      "minus": "Cost of Revenue",
+      "unit": "USD",
+      "note": "Nvidia also reports GrossProfit directly in XBRL (301 entries) — derived value should be cross-checked against the reported tag"
+    }
+  }
+}

@@ -1,19 +1,23 @@
 """
 export_excel.py
 ---------------
-Reads the processed Qualcomm CSV and missing-metrics flag file,
+Reads a company's processed CSV and missing-metrics flag file,
 then produces a clean multi-tab Excel workbook for analyst review.
+
+Reads company metadata from config/companies.csv.
 
 Tabs:
     1. Quarterly Financials — pivot grid: metrics as rows, quarters as columns
-    2. Missing Metrics      — rows flagged for manual review + remaining gaps
-    3. Data Dictionary      — column definitions and XBRL tag reference
-    4. Manual Checks        — known assumptions and audit items
+    2. Detail View          — full row-level data with all metadata columns
+    3. Missing Metrics      — rows flagged for manual review + remaining gaps
+    4. Data Dictionary      — column definitions and XBRL tag reference
+    5. Manual Checks        — known assumptions and audit items
 
-Output:  output/qualcomm_financial_history.xlsx
+Output:  output/<short_id>_financial_history.xlsx
 
 Usage:
-    .venv/bin/python src/export_excel.py
+    .venv/bin/python src/export_excel.py QCOM
+    .venv/bin/python src/export_excel.py QCOM --test
 """
 
 import csv
@@ -23,6 +27,8 @@ from pathlib import Path
 import openpyxl
 from openpyxl.utils import get_column_letter
 from openpyxl.styles import Alignment, Font, PatternFill
+
+from config_loader import load_company, load_xbrl_tags, parse_ticker_arg
 
 # ---------------------------------------------------------------------------
 # Paths
@@ -44,6 +50,19 @@ USD_FORMAT = '#,##0'
 EPS_FORMAT = '#,##0.00'
 WRAP_TOP = Alignment(wrap_text=True, vertical="top")
 WRAP_BOTTOM = Alignment(wrap_text=True, vertical="bottom")
+
+
+def is_test_mode() -> bool:
+    return "--test" in sys.argv
+
+
+def resolve_paths(short_id: str) -> tuple[Path, Path, Path]:
+    """Return (processed_dir, manual_checks_dir, output_dir)."""
+    if is_test_mode():
+        data_base = PROJECT_ROOT / "data" / "test_outputs" / short_id
+        out_base = PROJECT_ROOT / "output" / "test_outputs" / short_id
+        return data_base, data_base, out_base
+    return PROCESSED_DIR, MANUAL_CHECKS_DIR, OUTPUT_DIR
 
 
 # ---------------------------------------------------------------------------
@@ -91,8 +110,6 @@ def build_quarterly_financials(wb, rows: list[dict]):
     ws = wb.active
     ws.title = "Quarterly Financials"
 
-    # Build ordered list of quarter columns from the data.
-    # Use (fiscal_year, quarter_sort_key) for ordering.
     q_sort = {"Q1": 1, "Q2": 2, "Q3": 3, "Q4": 4}
     seen = {}
     for r in rows:
@@ -102,7 +119,6 @@ def build_quarterly_financials(wb, rows: list[dict]):
 
     periods = sorted(seen.keys(), key=lambda k: (k[0], q_sort.get(k[1], 9)))
 
-    # Build lookup: (metric_name, fy, fq) -> row
     lookup = {}
     for r in rows:
         key = (r["metric_name"], int(r["fiscal_year"]), r["fiscal_quarter"])
@@ -140,7 +156,6 @@ def build_quarterly_financials(wb, rows: list[dict]):
         widths[i] = 16
     set_column_widths(ws, widths)
 
-    # Number formats and background shading for derived/review cells
     for row_idx in range(2, ws.max_row + 1):
         metric_name = ws.cell(row=row_idx, column=1).value
         for col_idx in range(3, ws.max_column + 1):
@@ -170,7 +185,6 @@ def build_quarterly_financials(wb, rows: list[dict]):
     ws.cell(row=legend_row, column=3,
             value="Pink = requires manual review").fill = REVIEW_FILL
 
-    # Source row
     ws.cell(row=legend_row + 1, column=1,
             value="Source: SEC EDGAR XBRL company-facts API").font = ITALIC_FONT
 
@@ -218,14 +232,13 @@ def build_detail_view(wb, rows: list[dict]):
         6: 24, 7: 48, 8: 22, 9: 12, 10: 14, 11: 60,
     })
 
-    # Number format for value column
     for row_idx in range(2, ws.max_row + 1):
         cell = ws.cell(row=row_idx, column=4)
         metric = ws.cell(row=row_idx, column=3).value
         if isinstance(cell.value, (int, float)):
-            cell.number_format = EPS_FORMAT if metric == "Diluted EPS" else USD_FORMAT
+            cell.number_format = (EPS_FORMAT if metric == "Diluted EPS"
+                                  else USD_FORMAT)
 
-        # Highlight review rows
         if ws.cell(row=row_idx, column=8).value == "Yes":
             for col in range(1, 12):
                 ws.cell(row=row_idx, column=col).fill = REVIEW_FILL
@@ -245,7 +258,6 @@ def build_missing_metrics(wb, missing_path: Path, rows: list[dict]):
     ws.append(["Metric", "Fiscal Year", "Fiscal Quarter",
                "Extraction Method", "Reason"])
 
-    # Items flagged in the processed data
     with open(missing_path, "r", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for r in reader:
@@ -257,7 +269,6 @@ def build_missing_metrics(wb, missing_path: Path, rows: list[dict]):
                 r.get("reason", ""),
             ])
 
-    # Metrics from CLAUDE.md not yet in the pipeline
     remaining_gaps = [
         ["Free Cash Flow", "", "", "not_yet_implemented",
          "Derived metric: Operating Cash Flow minus Capital Expenditure"],
@@ -287,24 +298,28 @@ def build_missing_metrics(wb, missing_path: Path, rows: list[dict]):
 # Tab 3: Data Dictionary
 # ---------------------------------------------------------------------------
 
-def build_data_dictionary(wb):
+def build_data_dictionary(wb, company_name: str, tags_config: dict):
     ws = wb.create_sheet("Data Dictionary")
 
     ws.append(["Field", "Description"])
 
     dictionary = [
-        ["company", "Legal entity name (Qualcomm Incorporated)"],
-        ["fiscal_year", "Qualcomm fiscal year (ends late September)"],
-        ["fiscal_quarter", "Q1-Q4; Q4 is always derived since no Q4 10-Q is filed"],
+        ["company", f"Legal entity name ({company_name})"],
+        ["fiscal_year", "Company fiscal year (see company config for FY-end date)"],
+        ["fiscal_quarter",
+         "Q1-Q4; Q4 is derived if the company does not file a standalone Q4 10-Q"],
         ["metric_name", "Financial metric label (see Metric Reference below)"],
         ["value", "Reported or derived value in the unit shown"],
         ["unit", "USD or USD/shares"],
         ["filing_date", "Date the SEC filing was submitted"],
         ["form_type", "10-Q, 10-K, or '10-K + 10-Q' for derived Q4 values"],
         ["source_reference", "URL to the specific SEC filing on EDGAR"],
-        ["extraction_method", "How the value was obtained (see Extraction Methods below)"],
-        ["derived_from", "Formula and source values used for derived metrics"],
-        ["requires_manual_review", "'Yes' if the value could not be extracted or verified"],
+        ["extraction_method",
+         "How the value was obtained (see Extraction Methods below)"],
+        ["derived_from",
+         "Formula and source values used for derived metrics"],
+        ["requires_manual_review",
+         "'Yes' if the value could not be extracted or verified"],
     ]
 
     for row in dictionary:
@@ -329,33 +344,24 @@ def build_data_dictionary(wb):
     for row in methods:
         ws.append(row)
 
-    # Metric reference
+    # Metric reference — built from the XBRL tag config
     ws.append([])
     ws.append(["Metric Reference", "XBRL Tag(s) Used"])
 
-    metric_tags = [
-        ["Revenue", "us-gaap:Revenues"],
-        ["Cost of Revenue", "us-gaap:CostOfRevenue"],
-        ["Gross Profit", "Derived: Revenue minus Cost of Revenue"],
-        ["Operating Income", "us-gaap:OperatingIncomeLoss"],
-        ["Net Income", "us-gaap:NetIncomeLoss"],
-        ["Diluted EPS", "us-gaap:EarningsPerShareDiluted"],
-        ["R&D Expense", "us-gaap:ResearchAndDevelopmentExpense"],
-        ["Operating Cash Flow",
-         "us-gaap:NetCashProvidedByUsedInOperatingActivities"],
-        ["Capital Expenditure", "us-gaap:PaymentsToAcquireProductiveAssets"],
-        ["Cash and Cash Equivalents",
-         "us-gaap:CashAndCashEquivalentsAtCarryingValue"],
-        ["Total Debt", "us-gaap:LongTermDebt + us-gaap:DebtCurrent"],
-    ]
+    for metric_name, cfg in tags_config["metric_map"].items():
+        tag = cfg["tag"]
+        if isinstance(tag, list):
+            tag_str = " + ".join(f"us-gaap:{t}" for t in tag)
+        else:
+            tag_str = f"us-gaap:{tag}"
+        ws.append([metric_name, tag_str])
 
-    for row in metric_tags:
-        ws.append(row)
+    for metric_name, cfg in tags_config.get("derived_metrics", {}).items():
+        ws.append([metric_name, f"Derived: {cfg['formula']}"])
 
     style_header_row(ws)
     set_column_widths(ws, {1: 30, 2: 60})
 
-    # Bold sub-headers
     for row in ws.iter_rows():
         if row[0].value in ("Extraction Method", "Metric Reference"):
             row[0].font = HEADER_FONT
@@ -366,7 +372,8 @@ def build_data_dictionary(wb):
 # Tab 4: Manual Checks
 # ---------------------------------------------------------------------------
 
-def build_manual_checks(wb, rows: list[dict]):
+def build_manual_checks(wb, company_name: str, ticker: str,
+                        rows: list[dict]):
     ws = wb.create_sheet("Manual Checks")
 
     ws.append(["Item", "Detail", "Action Required"])
@@ -374,11 +381,12 @@ def build_manual_checks(wb, rows: list[dict]):
     checks = [
         [
             "Q4 values are derived",
-            "Qualcomm does not file a Q4 10-Q. All Q4 duration metrics are "
-            "calculated as FY (10-K) minus 9-month YTD (Q3 10-Q). "
-            "Q4 balance-sheet items use the fiscal-year-end snapshot.",
-            "Cross-check derived Q4 values against Qualcomm's earnings "
-            "press releases for each fiscal year",
+            f"{company_name} does not file a Q4 10-Q. All Q4 duration "
+            "metrics are calculated as FY (10-K) minus 9-month YTD "
+            "(Q3 10-Q). Q4 balance-sheet items use the fiscal-year-end "
+            "snapshot.",
+            f"Cross-check derived Q4 values against {company_name}'s "
+            "earnings press releases for each fiscal year",
         ],
         [
             "Cash-flow Q2/Q3 are derived",
@@ -388,21 +396,20 @@ def build_manual_checks(wb, rows: list[dict]):
         ],
         [
             "Gross Profit is derived",
-            "Qualcomm does not file a GrossProfit XBRL tag. "
+            f"{company_name} does not file a GrossProfit XBRL tag. "
             "Calculated as Revenue minus CostOfRevenue each quarter.",
             "Verify against the income statement in a recent 10-Q",
         ],
         [
             "Total Debt is a sum",
-            "Total Debt = LongTermDebt + DebtCurrent. Qualcomm does not "
-            "file a single TotalDebt XBRL tag.",
+            "Total Debt = LongTermDebt + DebtCurrent. Most companies "
+            "do not file a single TotalDebt XBRL tag.",
             "Verify the sum matches the balance sheet in a recent 10-Q/10-K",
         ],
         [
             "Capital Expenditure tag",
-            "Uses PaymentsToAcquireProductiveAssets — Qualcomm does not file "
-            "PaymentsToAcquirePropertyPlantAndEquipment. This broader tag "
-            "may include non-PP&E productive assets.",
+            "The XBRL tag used for CapEx varies by company. Check "
+            "the Data Dictionary tab for the specific tag used.",
             "Cross-check against the cash flow statement in a recent 10-Q",
         ],
         [
@@ -410,16 +417,19 @@ def build_manual_checks(wb, rows: list[dict]):
             "EPS cannot be derived by subtracting YTD values because "
             "diluted share counts change across quarters. Q4 EPS is "
             "left blank and flagged for manual review.",
-            "Source Q4 EPS from Qualcomm's earnings press release",
+            f"Source Q4 EPS from {company_name}'s earnings press release",
         ],
-        [
+    ]
+
+    # Qualcomm-specific note
+    if ticker == "QCOM":
+        checks.append([
             "FY2025 Q4 Net Income is negative",
             "The derived Q4 value is -$3.1B (FY total $5.5B minus "
             "9-month YTD $8.7B). This likely reflects a one-time "
             "charge or impairment.",
             "Verify against the FY2025 10-K notes and earnings release",
-        ],
-    ]
+        ])
 
     for row in checks:
         ws.append(row)
@@ -437,9 +447,19 @@ def build_manual_checks(wb, rows: list[dict]):
 # ---------------------------------------------------------------------------
 
 def main():
-    csv_path = find_latest_file(PROCESSED_DIR, "qualcomm_financials_*.csv")
-    missing_path = find_latest_file(MANUAL_CHECKS_DIR,
-                                    "qualcomm_missing_metrics_*.csv")
+    ticker = parse_ticker_arg()
+    company = load_company(ticker)
+
+    short_id = company["short_identifier"]
+    company_name = company["company_name"]
+    tags_config = load_xbrl_tags(short_id)
+
+    proc_dir, checks_dir, out_dir = resolve_paths(short_id)
+
+    csv_path = find_latest_file(proc_dir,
+                                f"{short_id}_financials_*.csv")
+    missing_path = find_latest_file(checks_dir,
+                                    f"{short_id}_missing_metrics_*.csv")
 
     print(f"Reading: {csv_path.name}")
     print(f"Reading: {missing_path.name}")
@@ -452,11 +472,11 @@ def main():
     build_quarterly_financials(wb, rows)
     build_detail_view(wb, rows)
     build_missing_metrics(wb, missing_path, rows)
-    build_data_dictionary(wb)
-    build_manual_checks(wb, rows)
+    build_data_dictionary(wb, company_name, tags_config)
+    build_manual_checks(wb, company_name, ticker, rows)
 
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    out_path = OUTPUT_DIR / "qualcomm_financial_history.xlsx"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_path = out_dir / f"{short_id}_financial_history.xlsx"
     wb.save(out_path)
 
     print(f"\nWorkbook saved to: {out_path}")

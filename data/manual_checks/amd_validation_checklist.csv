@@ -1,0 +1,21 @@
+check_id,category,item,status,detail
+1,Q4 derivation,Revenue FY2023 Q4 = FY minus YTD_Q3,PASS,"FY 22,680M - YTD_Q3 16,512M = Q4 6,168M; quarterly sum = FY total"
+2,Q4 derivation,Revenue FY2024 Q4 = FY minus YTD_Q3,PASS,"FY 25,785M - YTD_Q3 18,127M = Q4 7,658M; quarterly sum = FY total"
+3,Q4 derivation,Revenue FY2025 Q4 = FY minus YTD_Q3,PASS,"FY 34,639M - YTD_Q3 24,369M = Q4 10,270M; quarterly sum = FY total"
+4,Q4 derivation,Cost of Revenue FY2023-2025 Q4,PASS,All three FY totals reconcile exactly
+5,Q4 derivation,Operating Income FY2023-2025 Q4,PASS,All three FY totals reconcile exactly
+6,Q4 derivation,Net Income FY2023-2025 Q4,PASS,All three FY totals reconcile exactly
+7,Q4 derivation,R&D Expense FY2023-2025 Q4,PASS,All three FY totals reconcile exactly
+8,Q4 derivation,Operating Cash Flow FY2023-2025 Q4,PASS,All three FY totals reconcile exactly (cumulative YTD subtraction)
+9,Q4 derivation,Capital Expenditure FY2023-2025 Q4,PASS,All three FY totals reconcile exactly (cumulative YTD subtraction)
+10,Gross Profit cross-check,Derived GP vs reported GrossProfit XBRL tag,PASS,"FY2023 diff=0, FY2024 diff=0, FY2025 diff=0; Revenue minus CostOfGoodsAndServicesSold matches GrossProfit tag exactly"
+11,Balance sheet Q4,Cash and Cash Equivalents Q4 uses FY-end balance,PASS,"FY2023=$3,933M, FY2024=$3,787M, FY2025=$5,539M; all from 10-K fiscal_year_end_balance"
+12,Balance sheet Q4,Total Debt Q4 uses FY-end balance,PASS,"FY2023=$2,468M, FY2024=$1,721M, FY2025=$3,222M; all from 10-K fiscal_year_end_balance"
+13,Missing metric,Total Debt FY2023 Q1,FLAG,"DebtLongtermAndShorttermCombinedAmount has no Q1 entry for fy=2023; tag starts at Q2. The tag was first reported in Q2 FY2023 filings (after Xilinx acquisition accounting settled). Manual lookup required."
+14,Missing metric,Diluted EPS Q4 (FY2023-2025),FLAG,"EPS cannot be derived by subtraction; 3 quarters flagged missing_requires_review. Source from AMD earnings press releases."
+15,Tag selection,Revenue tag: RevenueFromContractWithCustomerExcludingAssessedTax,OK,"ASC 606 standard tag; AMD's primary revenue tag since FY2018. Different from Qualcomm's simpler Revenues tag."
+16,Tag selection,Cost of Revenue tag: CostOfGoodsAndServicesSold,OK,"Standard COGS tag. Alternative CostOfGoodsAndServiceExcludingDepreciationDepletionAndAmortization is a sub-component (excludes D&A)."
+17,Tag selection,CapEx tag: PaymentsToAcquirePropertyPlantAndEquipment,OK,"Standard narrow PP&E tag. AMD files this (unlike Qualcomm which uses the broader PaymentsToAcquireProductiveAssets)."
+18,Tag selection,Total Debt tag: DebtLongtermAndShorttermCombinedAmount,OK,"Single combined tag with consistent coverage. Cross-check: FY2025 combined $3,222M = noncurrent $2,348M + current $874M."
+19,Fiscal calendar,AMD uses 52/53-week fiscal year ending last Saturday of December,OK,"FY2023 ended 2023-12-30 (363 days), FY2024 ended 2024-12-28 (363 days), FY2025 ended 2025-12-27 (363 days). FY2022 was a 53-week year (370 days ending 2022-12-31)."
+20,Fiscal calendar,AMD does not file a standalone Q4 10-Q,OK,"Same pattern as Qualcomm: three 10-Qs (Q1-Q3) plus one 10-K. Q4 derived as FY minus 9M YTD."
