@@ -1,0 +1,41 @@
+check_id,category,metric,fiscal_year,result,validation_status,notes
+1,latest_quarter_vs_raw,Revenue,2025,FY2025 Q3: pipeline matches raw XBRL exactly,pass,Standalone reported value from 10-Q ending 2025-08-03
+2,latest_quarter_vs_raw,Operating Income,2025,FY2025 Q3: pipeline matches raw XBRL exactly,pass,Standalone reported value from 10-Q ending 2025-08-03
+3,latest_quarter_vs_raw,Net Income,2025,FY2025 Q3: pipeline matches raw XBRL exactly,pass,Standalone reported value from 10-Q ending 2025-08-03
+4,latest_quarter_vs_raw,Diluted EPS,2025,FY2025 Q3: pipeline matches raw XBRL exactly,pass,Standalone reported value from 10-Q ending 2025-08-03
+5,latest_quarter_vs_raw,R&D Expense,2025,FY2025 Q3: pipeline matches raw XBRL exactly,pass,Standalone reported value from 10-Q ending 2025-08-03
+6,latest_quarter_vs_raw,Cash and Cash Equivalents,2025,FY2025 Q3: pipeline matches raw XBRL exactly,pass,Standalone reported value from 10-Q ending 2025-08-03
+7,latest_quarter_vs_raw,Total Debt,2025,FY2025 Q3: pipeline matches raw XBRL exactly,pass,Standalone reported value from 10-Q ending 2025-08-03
+8,latest_quarter_vs_raw,Gross Profit,2025,"FY2025 Q3: derived $10,703M = reported GrossProfit $10,703M",pass,Derived as Revenue minus CostOfRevenue; cross-checked vs reported GrossProfit tag
+9,latest_quarter_derivation,Operating Cash Flow,2025,"FY2025 Q3: YTD_Q3($19,834M) - YTD_Q2($12,668M) = $7,166M matches pipeline",pass,Cash-flow metric — Q3 derived from YTD subtraction as expected
+10,latest_quarter_derivation,Capital Expenditure,2025,FY2025 Q3: YTD_Q3($386M) - YTD_Q2($244M) = $142M matches pipeline,pass,Cash-flow metric — Q3 derived from YTD subtraction as expected
+11,annual_reconciliation,Revenue,2025,FY2025: quarterly sum matches 10-K FY total exactly (zero diff),pass,363-day fiscal year ending 2025-11-02
+12,annual_reconciliation,Cost of Revenue,2025,FY2025: quarterly sum matches 10-K FY total exactly (zero diff),pass,363-day fiscal year ending 2025-11-02
+13,annual_reconciliation,Gross Profit,2025,FY2025: quarterly sum matches 10-K FY total exactly (zero diff),pass,363-day fiscal year ending 2025-11-02
+14,annual_reconciliation,Operating Income,2025,FY2025: quarterly sum matches 10-K FY total exactly (zero diff),pass,363-day fiscal year ending 2025-11-02
+15,annual_reconciliation,Net Income,2025,FY2025: quarterly sum matches 10-K FY total exactly (zero diff),pass,363-day fiscal year ending 2025-11-02
+16,annual_reconciliation,R&D Expense,2025,FY2025: quarterly sum matches 10-K FY total exactly (zero diff),pass,363-day fiscal year ending 2025-11-02
+17,annual_reconciliation,Operating Cash Flow,2025,FY2025: quarterly sum matches 10-K FY total exactly (zero diff),pass,363-day fiscal year ending 2025-11-02
+18,annual_reconciliation,Capital Expenditure,2025,FY2025: quarterly sum matches 10-K FY total exactly (zero diff),pass,363-day fiscal year ending 2025-11-02
+19,q4_derivation,Revenue,2025,"Q4 = FY($63,887M) - YTD_Q3($45,872M) = $18,015M matches pipeline",pass,Standard Q4 derivation; Broadcom has no standalone Q4 10-Q
+20,q4_derivation,Operating Income,2025,"Q4 = FY($25,484M) - YTD_Q3($17,976M) = $7,508M matches pipeline",pass,Standard Q4 derivation; Broadcom has no standalone Q4 10-Q
+21,q4_derivation,Operating Cash Flow,2025,"Q4 = FY($27,537M) - YTD_Q3($19,834M) = $7,703M matches pipeline",pass,Standard Q4 derivation; Broadcom has no standalone Q4 10-Q
+22,q4_derivation,Capital Expenditure,2025,Q4 = FY($623M) - YTD_Q3($386M) = $237M matches pipeline,pass,Standard Q4 derivation; Broadcom has no standalone Q4 10-Q
+23,fy_end_balance,Cash and Cash Equivalents,2025,"FY2025 Q4: pipeline $16,178M = 10-K fiscal-year-end balance $16,178M",pass,Point-in-time balance-sheet metric; uses fiscal_year_end_balance extraction method
+24,debt_components,Total Debt,2025,"DIC=$67,120M = Combined=$67,120M; LTDNoncurrent=$61,984M + LTDCurrent=$3,152M = $65,136M (net); LongTermDebt(net)=$65,136M",pass,"Pipeline uses DebtInstrumentCarryingAmount (gross principal $67,120M). Differs from carrying value ($65,136M) by ~$1,984M unamortized discounts/issuance costs. Matches DebtLongtermAndShorttermCombinedAmount exactly."
+25,debt_components,Total Debt,2023,"DIC=$40,815M; DebtLongtermAndShorttermCombinedAmount not available pre-VMware",info,Pre-VMware FY; combined tag starts post-acquisition. DIC provides consistent coverage across all 3 FYs.
+26,sign_convention,Capital Expenditure,all,All 12 quarterly values positive; PaymentsToAcquirePropertyPlantAndEquipment is a cash outflow reported as positive,pass,FCF = Operating Cash Flow - CapEx uses subtraction in calculate_metrics.py
+27,consolidation,Revenue,all,No segment-dimension revenue tags found in XBRL; RevenueFromContractWithCustomerExcludingAssessedTax is the consolidated total,pass,ASC 606 tag; no segment filter applied
+28,method_verification,Gross Profit,all,Derived as Revenue minus CostOfRevenue; cross-checked vs reported GrossProfit tag: exact match for all 3 FYs,pass,"FY2023 exact, FY2024 exact, FY2025 exact"
+29,missing_data,Diluted EPS,2023,Q4 EPS cannot be derived by subtraction,expected_missing,Diluted share count changes across quarters; flagged for manual sourcing from earnings press release
+30,missing_data,Diluted EPS,2024,Q4 EPS cannot be derived by subtraction,expected_missing,Diluted share count changes across quarters; flagged for manual sourcing from earnings press release
+31,missing_data,Diluted EPS,2025,Q4 EPS cannot be derived by subtraction,expected_missing,Diluted share count changes across quarters; flagged for manual sourcing from earnings press release
+32,tag_selection,Net Income,all,Uses ProfitLoss (includes NCI); NetIncomeLoss has FY-only data in XBRL,info,NoncontrollingInterest = $0 for all recent periods. ProfitLoss FY totals match NetIncomeLoss exactly for FY2023-2025. First company to require this tag.
+33,tag_selection,Total Debt,all,Uses DebtInstrumentCarryingAmount (gross principal ~$2B above carrying value),info,"Unamortized discounts/issuance costs ~$1.9-2.0B. Inconsistent with other 4 companies which use carrying value. For peer comparison, note Broadcom debt is ~3% higher on a gross basis."
+34,comparability,All metrics,2024,FY2024 is 370-day (53-week) transitional year post-VMware acquisition (closed Nov 2023),warning,Q1 FY2024 was 97 days. Revenue $35.8B->.6B (+44%) includes ~$16B VMware contribution. Cost of Revenue nearly doubled ($11.1B->$19.1B) due to VMware software amortization. Direct YoY comparison to FY2023 or peers is misleading.
+35,comparability,Net Income,2024,"Q3 FY2024 = -$1,875M; Q1 FY2024 = $1,325M (vs normal ~$3-5B/quarter)",warning,"Large VMware integration charges, acquired intangible amortization, and restructuring costs depress net income throughout FY2024. FY2024 total $5.9B vs FY2023 $14.1B and FY2025 $23.1B."
+36,comparability,Operating Income,2024,FY2024 OpInc $13.5B despite Revenue +44% — margin compressed from 45% to 26%,warning,VMware-related amortization of acquired intangibles (~$8-10B/year) significantly impacts operating income. Margins recover in FY2025 (40%) as amortization declines.
+37,comparability,Total Debt,2024,Total Debt jumped from $40.8B (FY2023) to $69.8B (FY2024 Q1) due to VMware acquisition financing,warning,Broadcom issued ~$30B in new debt to fund the $69B VMware acquisition. Debt has been gradually reduced: $69.8B -> $67.1B by FY2025.
+38,comparability,Capital Expenditure,all,CapEx $452-623M/year — Broadcom is fabless (like QCOM/AMD/NVDA) but VMware software adds minimal CapEx,info,CapEx is comparable to other fabless peers. Unlike Intel IDM model.
+39,data_quality,ProfitLoss tag,all,SEC re-tags prior-period comparison data with current fp label; fix applied to classify_entries(),info,Standalone Q2/Q3 selection changed from latest filing date to latest end date. Prevents Q1 data appearing as Q2/Q3. Qualcomm regression passes. AMD/NVDA/INTC output unchanged.
+40,fiscal_calendar,All,all,FY ends first Sunday of November (~Nov 3); 52/53-week fiscal year,info,Pre-VMware FY ended late October (~Oct 29). Post-VMware shifted to early November. FY2024 was 53 weeks (370 days). FY2023/2025 are 363 days.

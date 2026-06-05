@@ -1,0 +1,121 @@
+company,fiscal_year,fiscal_quarter,metric_name,value,unit,formula
+Intel Corp.,2023,Q1,Gross Margin,0.34,%,"Gross Profit (4,008,000,000) / Revenue (11,715,000,000)"
+Intel Corp.,2023,Q1,Operating Margin,-0.13,%,"Operating Income (-1,468,000,000) / Revenue (11,715,000,000)"
+Intel Corp.,2023,Q1,Free Cash Flow,-9198000000.0,USD,"Operating Cash Flow (-1,785,000,000) - Capital Expenditure (7,413,000,000)"
+Intel Corp.,2023,Q1,Free-Cash-Flow Margin,-0.79,%,"FCF (-9,198,000,000) / Revenue (11,715,000,000)"
+Intel Corp.,2023,Q1,R&D as % of Revenue,0.35,%,"R&D Expense (4,109,000,000) / Revenue (11,715,000,000)"
+Intel Corp.,2023,Q1,Net Cash (Debt),-42041000000.0,USD,"Cash (8,232,000,000) - Total Debt (50,273,000,000) = net debt"
+Intel Corp.,2023,Q1,YoY Revenue Growth,,%,Missing: current or prior-year Revenue (FY2022 Q1)
+Intel Corp.,2023,Q1,TTM Revenue,,USD,Missing: not enough trailing quarters
+Intel Corp.,2023,Q1,TTM Operating Income,,USD,Missing: not enough trailing quarters
+Intel Corp.,2023,Q1,TTM Free Cash Flow,,USD,Missing: not enough trailing OCF/CapEx quarters
+Intel Corp.,2023,Q2,Gross Margin,0.36,%,"Gross Profit (4,638,000,000) / Revenue (12,949,000,000)"
+Intel Corp.,2023,Q2,Operating Margin,-0.08,%,"Operating Income (-1,016,000,000) / Revenue (12,949,000,000)"
+Intel Corp.,2023,Q2,Free Cash Flow,-3080000000.0,USD,"Operating Cash Flow (2,808,000,000) - Capital Expenditure (5,888,000,000)"
+Intel Corp.,2023,Q2,Free-Cash-Flow Margin,-0.24,%,"FCF (-3,080,000,000) / Revenue (12,949,000,000)"
+Intel Corp.,2023,Q2,R&D as % of Revenue,0.32,%,"R&D Expense (4,080,000,000) / Revenue (12,949,000,000)"
+Intel Corp.,2023,Q2,Net Cash (Debt),-40697000000.0,USD,"Cash (8,349,000,000) - Total Debt (49,046,000,000) = net debt"
+Intel Corp.,2023,Q2,YoY Revenue Growth,,%,Missing: current or prior-year Revenue (FY2022 Q2)
+Intel Corp.,2023,Q2,TTM Revenue,,USD,Missing: not enough trailing quarters
+Intel Corp.,2023,Q2,TTM Operating Income,,USD,Missing: not enough trailing quarters
+Intel Corp.,2023,Q2,TTM Free Cash Flow,,USD,Missing: not enough trailing OCF/CapEx quarters
+Intel Corp.,2023,Q3,Gross Margin,0.43,%,"Gross Profit (6,018,000,000) / Revenue (14,158,000,000)"
+Intel Corp.,2023,Q3,Operating Margin,-0.0,%,"Operating Income (-8,000,000) / Revenue (14,158,000,000)"
+Intel Corp.,2023,Q3,Free Cash Flow,71000000.0,USD,"Operating Cash Flow (5,824,000,000) - Capital Expenditure (5,753,000,000)"
+Intel Corp.,2023,Q3,Free-Cash-Flow Margin,0.01,%,"FCF (71,000,000) / Revenue (14,158,000,000)"
+Intel Corp.,2023,Q3,R&D as % of Revenue,0.27,%,"R&D Expense (3,870,000,000) / Revenue (14,158,000,000)"
+Intel Corp.,2023,Q3,Net Cash (Debt),-41258000000.0,USD,"Cash (7,621,000,000) - Total Debt (48,879,000,000) = net debt"
+Intel Corp.,2023,Q3,YoY Revenue Growth,,%,Missing: current or prior-year Revenue (FY2022 Q3)
+Intel Corp.,2023,Q3,TTM Revenue,,USD,Missing: not enough trailing quarters
+Intel Corp.,2023,Q3,TTM Operating Income,,USD,Missing: not enough trailing quarters
+Intel Corp.,2023,Q3,TTM Free Cash Flow,,USD,Missing: not enough trailing OCF/CapEx quarters
+Intel Corp.,2023,Q4,Gross Margin,0.46,%,"Gross Profit (7,047,000,000) / Revenue (15,406,000,000)"
+Intel Corp.,2023,Q4,Operating Margin,0.17,%,"Operating Income (2,585,000,000) / Revenue (15,406,000,000)"
+Intel Corp.,2023,Q4,Free Cash Flow,-2072000000.0,USD,"Operating Cash Flow (4,624,000,000) - Capital Expenditure (6,696,000,000)"
+Intel Corp.,2023,Q4,Free-Cash-Flow Margin,-0.13,%,"FCF (-2,072,000,000) / Revenue (15,406,000,000)"
+Intel Corp.,2023,Q4,R&D as % of Revenue,0.26,%,"R&D Expense (3,987,000,000) / Revenue (15,406,000,000)"
+Intel Corp.,2023,Q4,Net Cash (Debt),-42187000000.0,USD,"Cash (7,079,000,000) - Total Debt (49,266,000,000) = net debt"
+Intel Corp.,2023,Q4,YoY Revenue Growth,,%,Missing: current or prior-year Revenue (FY2022 Q4)
+Intel Corp.,2023,Q4,TTM Revenue,54228000000.0,USD,Sum of FY2023 Q1 + FY2023 Q2 + FY2023 Q3 + FY2023 Q4
+Intel Corp.,2023,Q4,TTM Operating Income,93000000.0,USD,Sum of FY2023 Q1 + FY2023 Q2 + FY2023 Q3 + FY2023 Q4
+Intel Corp.,2023,Q4,TTM Free Cash Flow,-14279000000.0,USD,Sum of quarterly FCF for FY2023 Q1 + FY2023 Q2 + FY2023 Q3 + FY2023 Q4
+Intel Corp.,2024,Q1,Gross Margin,0.41,%,"Gross Profit (5,217,000,000) / Revenue (12,724,000,000)"
+Intel Corp.,2024,Q1,Operating Margin,-0.08,%,"Operating Income (-1,069,000,000) / Revenue (12,724,000,000)"
+Intel Corp.,2024,Q1,Free Cash Flow,-7193000000.0,USD,"Operating Cash Flow (-1,223,000,000) - Capital Expenditure (5,970,000,000)"
+Intel Corp.,2024,Q1,Free-Cash-Flow Margin,-0.57,%,"FCF (-7,193,000,000) / Revenue (12,724,000,000)"
+Intel Corp.,2024,Q1,R&D as % of Revenue,0.34,%,"R&D Expense (4,382,000,000) / Revenue (12,724,000,000)"
+Intel Corp.,2024,Q1,Net Cash (Debt),-45527000000.0,USD,"Cash (6,923,000,000) - Total Debt (52,450,000,000) = net debt"
+Intel Corp.,2024,Q1,YoY Revenue Growth,0.09,%,"(Revenue 12,724,000,000 - Prior 11,715,000,000) / |Prior 11,715,000,000|"
+Intel Corp.,2024,Q1,TTM Revenue,55237000000.0,USD,Sum of FY2023 Q2 + FY2023 Q3 + FY2023 Q4 + FY2024 Q1
+Intel Corp.,2024,Q1,TTM Operating Income,492000000.0,USD,Sum of FY2023 Q2 + FY2023 Q3 + FY2023 Q4 + FY2024 Q1
+Intel Corp.,2024,Q1,TTM Free Cash Flow,-12274000000.0,USD,Sum of quarterly FCF for FY2023 Q2 + FY2023 Q3 + FY2023 Q4 + FY2024 Q1
+Intel Corp.,2024,Q2,Gross Margin,0.35,%,"Gross Profit (4,547,000,000) / Revenue (12,833,000,000)"
+Intel Corp.,2024,Q2,Operating Margin,-0.15,%,"Operating Income (-1,964,000,000) / Revenue (12,833,000,000)"
+Intel Corp.,2024,Q2,Free Cash Flow,-3390000000.0,USD,"Operating Cash Flow (2,292,000,000) - Capital Expenditure (5,682,000,000)"
+Intel Corp.,2024,Q2,Free-Cash-Flow Margin,-0.26,%,"FCF (-3,390,000,000) / Revenue (12,833,000,000)"
+Intel Corp.,2024,Q2,R&D as % of Revenue,0.33,%,"R&D Expense (4,239,000,000) / Revenue (12,833,000,000)"
+Intel Corp.,2024,Q2,Net Cash (Debt),-41742000000.0,USD,"Cash (11,287,000,000) - Total Debt (53,029,000,000) = net debt"
+Intel Corp.,2024,Q2,YoY Revenue Growth,-0.01,%,"(Revenue 12,833,000,000 - Prior 12,949,000,000) / |Prior 12,949,000,000|"
+Intel Corp.,2024,Q2,TTM Revenue,55121000000.0,USD,Sum of FY2023 Q3 + FY2023 Q4 + FY2024 Q1 + FY2024 Q2
+Intel Corp.,2024,Q2,TTM Operating Income,-456000000.0,USD,Sum of FY2023 Q3 + FY2023 Q4 + FY2024 Q1 + FY2024 Q2
+Intel Corp.,2024,Q2,TTM Free Cash Flow,-12584000000.0,USD,Sum of quarterly FCF for FY2023 Q3 + FY2023 Q4 + FY2024 Q1 + FY2024 Q2
+Intel Corp.,2024,Q3,Gross Margin,0.15,%,"Gross Profit (1,997,000,000) / Revenue (13,284,000,000)"
+Intel Corp.,2024,Q3,Operating Margin,-0.68,%,"Operating Income (-9,057,000,000) / Revenue (13,284,000,000)"
+Intel Corp.,2024,Q3,Free Cash Flow,-2404000000.0,USD,"Operating Cash Flow (4,054,000,000) - Capital Expenditure (6,458,000,000)"
+Intel Corp.,2024,Q3,Free-Cash-Flow Margin,-0.18,%,"FCF (-2,404,000,000) / Revenue (13,284,000,000)"
+Intel Corp.,2024,Q3,R&D as % of Revenue,0.3,%,"R&D Expense (4,049,000,000) / Revenue (13,284,000,000)"
+Intel Corp.,2024,Q3,Net Cash (Debt),-41451000000.0,USD,"Cash (8,785,000,000) - Total Debt (50,236,000,000) = net debt"
+Intel Corp.,2024,Q3,YoY Revenue Growth,-0.06,%,"(Revenue 13,284,000,000 - Prior 14,158,000,000) / |Prior 14,158,000,000|"
+Intel Corp.,2024,Q3,TTM Revenue,54247000000.0,USD,Sum of FY2023 Q4 + FY2024 Q1 + FY2024 Q2 + FY2024 Q3
+Intel Corp.,2024,Q3,TTM Operating Income,-9505000000.0,USD,Sum of FY2023 Q4 + FY2024 Q1 + FY2024 Q2 + FY2024 Q3
+Intel Corp.,2024,Q3,TTM Free Cash Flow,-15059000000.0,USD,Sum of quarterly FCF for FY2023 Q4 + FY2024 Q1 + FY2024 Q2 + FY2024 Q3
+Intel Corp.,2024,Q4,Gross Margin,0.39,%,"Gross Profit (5,584,000,000) / Revenue (14,260,000,000)"
+Intel Corp.,2024,Q4,Operating Margin,0.03,%,"Operating Income (412,000,000) / Revenue (14,260,000,000)"
+Intel Corp.,2024,Q4,Free Cash Flow,-2669000000.0,USD,"Operating Cash Flow (3,165,000,000) - Capital Expenditure (5,834,000,000)"
+Intel Corp.,2024,Q4,Free-Cash-Flow Margin,-0.19,%,"FCF (-2,669,000,000) / Revenue (14,260,000,000)"
+Intel Corp.,2024,Q4,R&D as % of Revenue,0.27,%,"R&D Expense (3,876,000,000) / Revenue (14,260,000,000)"
+Intel Corp.,2024,Q4,Net Cash (Debt),-41762000000.0,USD,"Cash (8,249,000,000) - Total Debt (50,011,000,000) = net debt"
+Intel Corp.,2024,Q4,YoY Revenue Growth,-0.07,%,"(Revenue 14,260,000,000 - Prior 15,406,000,000) / |Prior 15,406,000,000|"
+Intel Corp.,2024,Q4,TTM Revenue,53101000000.0,USD,Sum of FY2024 Q1 + FY2024 Q2 + FY2024 Q3 + FY2024 Q4
+Intel Corp.,2024,Q4,TTM Operating Income,-11678000000.0,USD,Sum of FY2024 Q1 + FY2024 Q2 + FY2024 Q3 + FY2024 Q4
+Intel Corp.,2024,Q4,TTM Free Cash Flow,-15656000000.0,USD,Sum of quarterly FCF for FY2024 Q1 + FY2024 Q2 + FY2024 Q3 + FY2024 Q4
+Intel Corp.,2025,Q1,Gross Margin,0.37,%,"Gross Profit (4,672,000,000) / Revenue (12,667,000,000)"
+Intel Corp.,2025,Q1,Operating Margin,-0.02,%,"Operating Income (-301,000,000) / Revenue (12,667,000,000)"
+Intel Corp.,2025,Q1,Free Cash Flow,-4370000000.0,USD,"Operating Cash Flow (813,000,000) - Capital Expenditure (5,183,000,000)"
+Intel Corp.,2025,Q1,Free-Cash-Flow Margin,-0.34,%,"FCF (-4,370,000,000) / Revenue (12,667,000,000)"
+Intel Corp.,2025,Q1,R&D as % of Revenue,0.29,%,"R&D Expense (3,640,000,000) / Revenue (12,667,000,000)"
+Intel Corp.,2025,Q1,Net Cash (Debt),-41204000000.0,USD,"Cash (8,947,000,000) - Total Debt (50,151,000,000) = net debt"
+Intel Corp.,2025,Q1,YoY Revenue Growth,-0.0,%,"(Revenue 12,667,000,000 - Prior 12,724,000,000) / |Prior 12,724,000,000|"
+Intel Corp.,2025,Q1,TTM Revenue,53044000000.0,USD,Sum of FY2024 Q2 + FY2024 Q3 + FY2024 Q4 + FY2025 Q1
+Intel Corp.,2025,Q1,TTM Operating Income,-10910000000.0,USD,Sum of FY2024 Q2 + FY2024 Q3 + FY2024 Q4 + FY2025 Q1
+Intel Corp.,2025,Q1,TTM Free Cash Flow,-12833000000.0,USD,Sum of quarterly FCF for FY2024 Q2 + FY2024 Q3 + FY2024 Q4 + FY2025 Q1
+Intel Corp.,2025,Q2,Gross Margin,0.28,%,"Gross Profit (3,542,000,000) / Revenue (12,859,000,000)"
+Intel Corp.,2025,Q2,Operating Margin,-0.25,%,"Operating Income (-3,176,000,000) / Revenue (12,859,000,000)"
+Intel Corp.,2025,Q2,Free Cash Flow,-1500000000.0,USD,"Operating Cash Flow (2,050,000,000) - Capital Expenditure (3,550,000,000)"
+Intel Corp.,2025,Q2,Free-Cash-Flow Margin,-0.12,%,"FCF (-1,500,000,000) / Revenue (12,859,000,000)"
+Intel Corp.,2025,Q2,R&D as % of Revenue,0.29,%,"R&D Expense (3,684,000,000) / Revenue (12,859,000,000)"
+Intel Corp.,2025,Q2,Net Cash (Debt),,USD,Missing: Cash or Total Debt
+Intel Corp.,2025,Q2,YoY Revenue Growth,0.0,%,"(Revenue 12,859,000,000 - Prior 12,833,000,000) / |Prior 12,833,000,000|"
+Intel Corp.,2025,Q2,TTM Revenue,53070000000.0,USD,Sum of FY2024 Q3 + FY2024 Q4 + FY2025 Q1 + FY2025 Q2
+Intel Corp.,2025,Q2,TTM Operating Income,-12122000000.0,USD,Sum of FY2024 Q3 + FY2024 Q4 + FY2025 Q1 + FY2025 Q2
+Intel Corp.,2025,Q2,TTM Free Cash Flow,-10943000000.0,USD,Sum of quarterly FCF for FY2024 Q3 + FY2024 Q4 + FY2025 Q1 + FY2025 Q2
+Intel Corp.,2025,Q3,Gross Margin,0.38,%,"Gross Profit (5,218,000,000) / Revenue (13,653,000,000)"
+Intel Corp.,2025,Q3,Operating Margin,0.05,%,"Operating Income (683,000,000) / Revenue (13,653,000,000)"
+Intel Corp.,2025,Q3,Free Cash Flow,121000000.0,USD,"Operating Cash Flow (2,546,000,000) - Capital Expenditure (2,425,000,000)"
+Intel Corp.,2025,Q3,Free-Cash-Flow Margin,0.01,%,"FCF (121,000,000) / Revenue (13,653,000,000)"
+Intel Corp.,2025,Q3,R&D as % of Revenue,0.24,%,"R&D Expense (3,231,000,000) / Revenue (13,653,000,000)"
+Intel Corp.,2025,Q3,Net Cash (Debt),,USD,Missing: Cash or Total Debt
+Intel Corp.,2025,Q3,YoY Revenue Growth,0.03,%,"(Revenue 13,653,000,000 - Prior 13,284,000,000) / |Prior 13,284,000,000|"
+Intel Corp.,2025,Q3,TTM Revenue,53439000000.0,USD,Sum of FY2024 Q4 + FY2025 Q1 + FY2025 Q2 + FY2025 Q3
+Intel Corp.,2025,Q3,TTM Operating Income,-2382000000.0,USD,Sum of FY2024 Q4 + FY2025 Q1 + FY2025 Q2 + FY2025 Q3
+Intel Corp.,2025,Q3,TTM Free Cash Flow,-8418000000.0,USD,Sum of quarterly FCF for FY2024 Q4 + FY2025 Q1 + FY2025 Q2 + FY2025 Q3
+Intel Corp.,2025,Q4,Gross Margin,0.36,%,"Gross Profit (4,943,000,000) / Revenue (13,674,000,000)"
+Intel Corp.,2025,Q4,Operating Margin,0.04,%,"Operating Income (580,000,000) / Revenue (13,674,000,000)"
+Intel Corp.,2025,Q4,Free Cash Flow,800000000.0,USD,"Operating Cash Flow (4,288,000,000) - Capital Expenditure (3,488,000,000)"
+Intel Corp.,2025,Q4,Free-Cash-Flow Margin,0.06,%,"FCF (800,000,000) / Revenue (13,674,000,000)"
+Intel Corp.,2025,Q4,R&D as % of Revenue,0.24,%,"R&D Expense (3,219,000,000) / Revenue (13,674,000,000)"
+Intel Corp.,2025,Q4,Net Cash (Debt),-31873000000.0,USD,"Cash (14,712,000,000) - Total Debt (46,585,000,000) = net debt"
+Intel Corp.,2025,Q4,YoY Revenue Growth,-0.04,%,"(Revenue 13,674,000,000 - Prior 14,260,000,000) / |Prior 14,260,000,000|"
+Intel Corp.,2025,Q4,TTM Revenue,52853000000.0,USD,Sum of FY2025 Q1 + FY2025 Q2 + FY2025 Q3 + FY2025 Q4
+Intel Corp.,2025,Q4,TTM Operating Income,-2214000000.0,USD,Sum of FY2025 Q1 + FY2025 Q2 + FY2025 Q3 + FY2025 Q4
+Intel Corp.,2025,Q4,TTM Free Cash Flow,-4949000000.0,USD,Sum of quarterly FCF for FY2025 Q1 + FY2025 Q2 + FY2025 Q3 + FY2025 Q4

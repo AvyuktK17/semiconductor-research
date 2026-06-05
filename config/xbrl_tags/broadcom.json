@@ -1,0 +1,63 @@
+{
+  "metric_map": {
+    "Revenue": {
+      "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "unit": "USD",
+      "metric_type": "duration"
+    },
+    "Cost of Revenue": {
+      "tag": "CostOfRevenue",
+      "unit": "USD",
+      "metric_type": "duration"
+    },
+    "Operating Income": {
+      "tag": "OperatingIncomeLoss",
+      "unit": "USD",
+      "metric_type": "duration"
+    },
+    "Net Income": {
+      "tag": "ProfitLoss",
+      "unit": "USD",
+      "metric_type": "duration"
+    },
+    "Diluted EPS": {
+      "tag": "EarningsPerShareDiluted",
+      "unit": "USD/shares",
+      "metric_type": "eps"
+    },
+    "R&D Expense": {
+      "tag": "ResearchAndDevelopmentExpense",
+      "unit": "USD",
+      "metric_type": "duration"
+    },
+    "Operating Cash Flow": {
+      "tag": "NetCashProvidedByUsedInOperatingActivities",
+      "unit": "USD",
+      "metric_type": "duration_cashflow"
+    },
+    "Capital Expenditure": {
+      "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "unit": "USD",
+      "metric_type": "duration_cashflow"
+    },
+    "Cash and Cash Equivalents": {
+      "tag": "CashAndCashEquivalentsAtCarryingValue",
+      "unit": "USD",
+      "metric_type": "instant"
+    },
+    "Total Debt": {
+      "tag": "DebtInstrumentCarryingAmount",
+      "unit": "USD",
+      "metric_type": "instant"
+    }
+  },
+  "derived_metrics": {
+    "Gross Profit": {
+      "formula": "Revenue minus Cost of Revenue",
+      "plus": "Revenue",
+      "minus": "Cost of Revenue",
+      "unit": "USD",
+      "note": "Broadcom also reports GrossProfit directly in XBRL — derived value should be cross-checked against the reported tag"
+    }
+  }
+}

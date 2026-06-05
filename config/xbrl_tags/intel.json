@@ -1,0 +1,63 @@
+{
+  "metric_map": {
+    "Revenue": {
+      "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "unit": "USD",
+      "metric_type": "duration"
+    },
+    "Cost of Revenue": {
+      "tag": "CostOfGoodsAndServicesSold",
+      "unit": "USD",
+      "metric_type": "duration"
+    },
+    "Operating Income": {
+      "tag": "OperatingIncomeLoss",
+      "unit": "USD",
+      "metric_type": "duration"
+    },
+    "Net Income": {
+      "tag": "NetIncomeLoss",
+      "unit": "USD",
+      "metric_type": "duration"
+    },
+    "Diluted EPS": {
+      "tag": "EarningsPerShareDiluted",
+      "unit": "USD/shares",
+      "metric_type": "eps"
+    },
+    "R&D Expense": {
+      "tag": "ResearchAndDevelopmentExpense",
+      "unit": "USD",
+      "metric_type": "duration"
+    },
+    "Operating Cash Flow": {
+      "tag": "NetCashProvidedByUsedInOperatingActivities",
+      "unit": "USD",
+      "metric_type": "duration_cashflow"
+    },
+    "Capital Expenditure": {
+      "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "unit": "USD",
+      "metric_type": "duration_cashflow"
+    },
+    "Cash and Cash Equivalents": {
+      "tag": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+      "unit": "USD",
+      "metric_type": "instant"
+    },
+    "Total Debt": {
+      "tag": ["LongTermDebtNoncurrent", "DebtCurrent"],
+      "unit": "USD",
+      "metric_type": "instant_sum"
+    }
+  },
+  "derived_metrics": {
+    "Gross Profit": {
+      "formula": "Revenue minus Cost of Revenue",
+      "plus": "Revenue",
+      "minus": "Cost of Revenue",
+      "unit": "USD",
+      "note": "Intel also reports GrossProfit directly in XBRL — derived value should be cross-checked against the reported tag"
+    }
+  }
+}

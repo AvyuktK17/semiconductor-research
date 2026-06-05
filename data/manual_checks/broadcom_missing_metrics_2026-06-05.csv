@@ -1,4 +1,4 @@
 metric,fiscal_year,fiscal_quarter,extraction_method,reason
-Diluted EPS,2026,Q4,missing_requires_review,EPS cannot be derived by subtraction due to changing share counts across quarters
 Diluted EPS,2025,Q4,missing_requires_review,EPS cannot be derived by subtraction due to changing share counts across quarters
 Diluted EPS,2024,Q4,missing_requires_review,EPS cannot be derived by subtraction due to changing share counts across quarters
+Diluted EPS,2023,Q4,missing_requires_review,EPS cannot be derived by subtraction due to changing share counts across quarters

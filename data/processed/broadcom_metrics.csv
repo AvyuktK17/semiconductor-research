@@ -1,0 +1,121 @@
+company,fiscal_year,fiscal_quarter,metric_name,value,unit,formula
+Broadcom Inc.,2023,Q1,Gross Margin,0.67,%,"Gross Profit (6,004,000,000) / Revenue (8,915,000,000)"
+Broadcom Inc.,2023,Q1,Operating Margin,0.46,%,"Operating Income (4,103,000,000) / Revenue (8,915,000,000)"
+Broadcom Inc.,2023,Q1,Free Cash Flow,3933000000.0,USD,"Operating Cash Flow (4,036,000,000) - Capital Expenditure (103,000,000)"
+Broadcom Inc.,2023,Q1,Free-Cash-Flow Margin,0.44,%,"FCF (3,933,000,000) / Revenue (8,915,000,000)"
+Broadcom Inc.,2023,Q1,R&D as % of Revenue,0.13,%,"R&D Expense (1,195,000,000) / Revenue (8,915,000,000)"
+Broadcom Inc.,2023,Q1,Net Cash (Debt),-28311000000.0,USD,"Cash (12,647,000,000) - Total Debt (40,958,000,000) = net debt"
+Broadcom Inc.,2023,Q1,YoY Revenue Growth,,%,Missing: current or prior-year Revenue (FY2022 Q1)
+Broadcom Inc.,2023,Q1,TTM Revenue,,USD,Missing: not enough trailing quarters
+Broadcom Inc.,2023,Q1,TTM Operating Income,,USD,Missing: not enough trailing quarters
+Broadcom Inc.,2023,Q1,TTM Free Cash Flow,,USD,Missing: not enough trailing OCF/CapEx quarters
+Broadcom Inc.,2023,Q2,Gross Margin,0.7,%,"Gross Profit (6,115,000,000) / Revenue (8,733,000,000)"
+Broadcom Inc.,2023,Q2,Operating Margin,0.46,%,"Operating Income (4,008,000,000) / Revenue (8,733,000,000)"
+Broadcom Inc.,2023,Q2,Free Cash Flow,4380000000.0,USD,"Operating Cash Flow (4,502,000,000) - Capital Expenditure (122,000,000)"
+Broadcom Inc.,2023,Q2,Free-Cash-Flow Margin,0.5,%,"FCF (4,380,000,000) / Revenue (8,733,000,000)"
+Broadcom Inc.,2023,Q2,R&D as % of Revenue,0.15,%,"R&D Expense (1,312,000,000) / Revenue (8,733,000,000)"
+Broadcom Inc.,2023,Q2,Net Cash (Debt),-29405000000.0,USD,"Cash (11,553,000,000) - Total Debt (40,958,000,000) = net debt"
+Broadcom Inc.,2023,Q2,YoY Revenue Growth,,%,Missing: current or prior-year Revenue (FY2022 Q2)
+Broadcom Inc.,2023,Q2,TTM Revenue,,USD,Missing: not enough trailing quarters
+Broadcom Inc.,2023,Q2,TTM Operating Income,,USD,Missing: not enough trailing quarters
+Broadcom Inc.,2023,Q2,TTM Free Cash Flow,,USD,Missing: not enough trailing OCF/CapEx quarters
+Broadcom Inc.,2023,Q3,Gross Margin,0.69,%,"Gross Profit (6,164,000,000) / Revenue (8,876,000,000)"
+Broadcom Inc.,2023,Q3,Operating Margin,0.43,%,"Operating Income (3,856,000,000) / Revenue (8,876,000,000)"
+Broadcom Inc.,2023,Q3,Free Cash Flow,4597000000.0,USD,"Operating Cash Flow (4,719,000,000) - Capital Expenditure (122,000,000)"
+Broadcom Inc.,2023,Q3,Free-Cash-Flow Margin,0.52,%,"FCF (4,597,000,000) / Revenue (8,876,000,000)"
+Broadcom Inc.,2023,Q3,R&D as % of Revenue,0.15,%,"R&D Expense (1,358,000,000) / Revenue (8,876,000,000)"
+Broadcom Inc.,2023,Q3,Net Cash (Debt),-28903000000.0,USD,"Cash (12,055,000,000) - Total Debt (40,958,000,000) = net debt"
+Broadcom Inc.,2023,Q3,YoY Revenue Growth,,%,Missing: current or prior-year Revenue (FY2022 Q3)
+Broadcom Inc.,2023,Q3,TTM Revenue,,USD,Missing: not enough trailing quarters
+Broadcom Inc.,2023,Q3,TTM Operating Income,,USD,Missing: not enough trailing quarters
+Broadcom Inc.,2023,Q3,TTM Free Cash Flow,,USD,Missing: not enough trailing OCF/CapEx quarters
+Broadcom Inc.,2023,Q4,Gross Margin,0.69,%,"Gross Profit (6,407,000,000) / Revenue (9,295,000,000)"
+Broadcom Inc.,2023,Q4,Operating Margin,0.46,%,"Operating Income (4,240,000,000) / Revenue (9,295,000,000)"
+Broadcom Inc.,2023,Q4,Free Cash Flow,4723000000.0,USD,"Operating Cash Flow (4,828,000,000) - Capital Expenditure (105,000,000)"
+Broadcom Inc.,2023,Q4,Free-Cash-Flow Margin,0.51,%,"FCF (4,723,000,000) / Revenue (9,295,000,000)"
+Broadcom Inc.,2023,Q4,R&D as % of Revenue,0.15,%,"R&D Expense (1,388,000,000) / Revenue (9,295,000,000)"
+Broadcom Inc.,2023,Q4,Net Cash (Debt),-26626000000.0,USD,"Cash (14,189,000,000) - Total Debt (40,815,000,000) = net debt"
+Broadcom Inc.,2023,Q4,YoY Revenue Growth,,%,Missing: current or prior-year Revenue (FY2022 Q4)
+Broadcom Inc.,2023,Q4,TTM Revenue,35819000000.0,USD,Sum of FY2023 Q1 + FY2023 Q2 + FY2023 Q3 + FY2023 Q4
+Broadcom Inc.,2023,Q4,TTM Operating Income,16207000000.0,USD,Sum of FY2023 Q1 + FY2023 Q2 + FY2023 Q3 + FY2023 Q4
+Broadcom Inc.,2023,Q4,TTM Free Cash Flow,17633000000.0,USD,Sum of quarterly FCF for FY2023 Q1 + FY2023 Q2 + FY2023 Q3 + FY2023 Q4
+Broadcom Inc.,2024,Q1,Gross Margin,0.62,%,"Gross Profit (7,375,000,000) / Revenue (11,961,000,000)"
+Broadcom Inc.,2024,Q1,Operating Margin,0.17,%,"Operating Income (2,083,000,000) / Revenue (11,961,000,000)"
+Broadcom Inc.,2024,Q1,Free Cash Flow,4693000000.0,USD,"Operating Cash Flow (4,815,000,000) - Capital Expenditure (122,000,000)"
+Broadcom Inc.,2024,Q1,Free-Cash-Flow Margin,0.39,%,"FCF (4,693,000,000) / Revenue (11,961,000,000)"
+Broadcom Inc.,2024,Q1,R&D as % of Revenue,0.19,%,"R&D Expense (2,308,000,000) / Revenue (11,961,000,000)"
+Broadcom Inc.,2024,Q1,Net Cash (Debt),-66657000000.0,USD,"Cash (11,864,000,000) - Total Debt (78,521,000,000) = net debt"
+Broadcom Inc.,2024,Q1,YoY Revenue Growth,0.34,%,"(Revenue 11,961,000,000 - Prior 8,915,000,000) / |Prior 8,915,000,000|"
+Broadcom Inc.,2024,Q1,TTM Revenue,38865000000.0,USD,Sum of FY2023 Q2 + FY2023 Q3 + FY2023 Q4 + FY2024 Q1
+Broadcom Inc.,2024,Q1,TTM Operating Income,14187000000.0,USD,Sum of FY2023 Q2 + FY2023 Q3 + FY2023 Q4 + FY2024 Q1
+Broadcom Inc.,2024,Q1,TTM Free Cash Flow,18393000000.0,USD,Sum of quarterly FCF for FY2023 Q2 + FY2023 Q3 + FY2023 Q4 + FY2024 Q1
+Broadcom Inc.,2024,Q2,Gross Margin,0.62,%,"Gross Profit (7,776,000,000) / Revenue (12,487,000,000)"
+Broadcom Inc.,2024,Q2,Operating Margin,0.24,%,"Operating Income (2,965,000,000) / Revenue (12,487,000,000)"
+Broadcom Inc.,2024,Q2,Free Cash Flow,4448000000.0,USD,"Operating Cash Flow (4,580,000,000) - Capital Expenditure (132,000,000)"
+Broadcom Inc.,2024,Q2,Free-Cash-Flow Margin,0.36,%,"FCF (4,448,000,000) / Revenue (12,487,000,000)"
+Broadcom Inc.,2024,Q2,R&D as % of Revenue,0.19,%,"R&D Expense (2,415,000,000) / Revenue (12,487,000,000)"
+Broadcom Inc.,2024,Q2,Net Cash (Debt),-66712000000.0,USD,"Cash (9,809,000,000) - Total Debt (76,521,000,000) = net debt"
+Broadcom Inc.,2024,Q2,YoY Revenue Growth,0.43,%,"(Revenue 12,487,000,000 - Prior 8,733,000,000) / |Prior 8,733,000,000|"
+Broadcom Inc.,2024,Q2,TTM Revenue,42619000000.0,USD,Sum of FY2023 Q3 + FY2023 Q4 + FY2024 Q1 + FY2024 Q2
+Broadcom Inc.,2024,Q2,TTM Operating Income,13144000000.0,USD,Sum of FY2023 Q3 + FY2023 Q4 + FY2024 Q1 + FY2024 Q2
+Broadcom Inc.,2024,Q2,TTM Free Cash Flow,18461000000.0,USD,Sum of quarterly FCF for FY2023 Q3 + FY2023 Q4 + FY2024 Q1 + FY2024 Q2
+Broadcom Inc.,2024,Q3,Gross Margin,0.64,%,"Gross Profit (8,356,000,000) / Revenue (13,072,000,000)"
+Broadcom Inc.,2024,Q3,Operating Margin,0.29,%,"Operating Income (3,788,000,000) / Revenue (13,072,000,000)"
+Broadcom Inc.,2024,Q3,Free Cash Flow,4791000000.0,USD,"Operating Cash Flow (4,963,000,000) - Capital Expenditure (172,000,000)"
+Broadcom Inc.,2024,Q3,Free-Cash-Flow Margin,0.37,%,"FCF (4,791,000,000) / Revenue (13,072,000,000)"
+Broadcom Inc.,2024,Q3,R&D as % of Revenue,0.18,%,"R&D Expense (2,353,000,000) / Revenue (13,072,000,000)"
+Broadcom Inc.,2024,Q3,Net Cash (Debt),-62367000000.0,USD,"Cash (9,952,000,000) - Total Debt (72,319,000,000) = net debt"
+Broadcom Inc.,2024,Q3,YoY Revenue Growth,0.47,%,"(Revenue 13,072,000,000 - Prior 8,876,000,000) / |Prior 8,876,000,000|"
+Broadcom Inc.,2024,Q3,TTM Revenue,46815000000.0,USD,Sum of FY2023 Q4 + FY2024 Q1 + FY2024 Q2 + FY2024 Q3
+Broadcom Inc.,2024,Q3,TTM Operating Income,13076000000.0,USD,Sum of FY2023 Q4 + FY2024 Q1 + FY2024 Q2 + FY2024 Q3
+Broadcom Inc.,2024,Q3,TTM Free Cash Flow,18655000000.0,USD,Sum of quarterly FCF for FY2023 Q4 + FY2024 Q1 + FY2024 Q2 + FY2024 Q3
+Broadcom Inc.,2024,Q4,Gross Margin,0.64,%,"Gross Profit (9,002,000,000) / Revenue (14,054,000,000)"
+Broadcom Inc.,2024,Q4,Operating Margin,0.33,%,"Operating Income (4,627,000,000) / Revenue (14,054,000,000)"
+Broadcom Inc.,2024,Q4,Free Cash Flow,5482000000.0,USD,"Operating Cash Flow (5,604,000,000) - Capital Expenditure (122,000,000)"
+Broadcom Inc.,2024,Q4,Free-Cash-Flow Margin,0.39,%,"FCF (5,482,000,000) / Revenue (14,054,000,000)"
+Broadcom Inc.,2024,Q4,R&D as % of Revenue,0.16,%,"R&D Expense (2,234,000,000) / Revenue (14,054,000,000)"
+Broadcom Inc.,2024,Q4,Net Cash (Debt),-60499000000.0,USD,"Cash (9,348,000,000) - Total Debt (69,847,000,000) = net debt"
+Broadcom Inc.,2024,Q4,YoY Revenue Growth,0.51,%,"(Revenue 14,054,000,000 - Prior 9,295,000,000) / |Prior 9,295,000,000|"
+Broadcom Inc.,2024,Q4,TTM Revenue,51574000000.0,USD,Sum of FY2024 Q1 + FY2024 Q2 + FY2024 Q3 + FY2024 Q4
+Broadcom Inc.,2024,Q4,TTM Operating Income,13463000000.0,USD,Sum of FY2024 Q1 + FY2024 Q2 + FY2024 Q3 + FY2024 Q4
+Broadcom Inc.,2024,Q4,TTM Free Cash Flow,19414000000.0,USD,Sum of quarterly FCF for FY2024 Q1 + FY2024 Q2 + FY2024 Q3 + FY2024 Q4
+Broadcom Inc.,2025,Q1,Gross Margin,0.68,%,"Gross Profit (10,145,000,000) / Revenue (14,916,000,000)"
+Broadcom Inc.,2025,Q1,Operating Margin,0.42,%,"Operating Income (6,260,000,000) / Revenue (14,916,000,000)"
+Broadcom Inc.,2025,Q1,Free Cash Flow,6013000000.0,USD,"Operating Cash Flow (6,113,000,000) - Capital Expenditure (100,000,000)"
+Broadcom Inc.,2025,Q1,Free-Cash-Flow Margin,0.4,%,"FCF (6,013,000,000) / Revenue (14,916,000,000)"
+Broadcom Inc.,2025,Q1,R&D as % of Revenue,0.15,%,"R&D Expense (2,253,000,000) / Revenue (14,916,000,000)"
+Broadcom Inc.,2025,Q1,Net Cash (Debt),-55450000000.0,USD,"Cash (9,307,000,000) - Total Debt (64,757,000,000) = net debt"
+Broadcom Inc.,2025,Q1,YoY Revenue Growth,0.25,%,"(Revenue 14,916,000,000 - Prior 11,961,000,000) / |Prior 11,961,000,000|"
+Broadcom Inc.,2025,Q1,TTM Revenue,54529000000.0,USD,Sum of FY2024 Q2 + FY2024 Q3 + FY2024 Q4 + FY2025 Q1
+Broadcom Inc.,2025,Q1,TTM Operating Income,17640000000.0,USD,Sum of FY2024 Q2 + FY2024 Q3 + FY2024 Q4 + FY2025 Q1
+Broadcom Inc.,2025,Q1,TTM Free Cash Flow,20734000000.0,USD,Sum of quarterly FCF for FY2024 Q2 + FY2024 Q3 + FY2024 Q4 + FY2025 Q1
+Broadcom Inc.,2025,Q2,Gross Margin,0.68,%,"Gross Profit (10,197,000,000) / Revenue (15,004,000,000)"
+Broadcom Inc.,2025,Q2,Operating Margin,0.39,%,"Operating Income (5,829,000,000) / Revenue (15,004,000,000)"
+Broadcom Inc.,2025,Q2,Free Cash Flow,6411000000.0,USD,"Operating Cash Flow (6,555,000,000) - Capital Expenditure (144,000,000)"
+Broadcom Inc.,2025,Q2,Free-Cash-Flow Margin,0.43,%,"FCF (6,411,000,000) / Revenue (15,004,000,000)"
+Broadcom Inc.,2025,Q2,R&D as % of Revenue,0.18,%,"R&D Expense (2,693,000,000) / Revenue (15,004,000,000)"
+Broadcom Inc.,2025,Q2,Net Cash (Debt),-56035000000.0,USD,"Cash (9,472,000,000) - Total Debt (65,507,000,000) = net debt"
+Broadcom Inc.,2025,Q2,YoY Revenue Growth,0.2,%,"(Revenue 15,004,000,000 - Prior 12,487,000,000) / |Prior 12,487,000,000|"
+Broadcom Inc.,2025,Q2,TTM Revenue,57046000000.0,USD,Sum of FY2024 Q3 + FY2024 Q4 + FY2025 Q1 + FY2025 Q2
+Broadcom Inc.,2025,Q2,TTM Operating Income,20504000000.0,USD,Sum of FY2024 Q3 + FY2024 Q4 + FY2025 Q1 + FY2025 Q2
+Broadcom Inc.,2025,Q2,TTM Free Cash Flow,22697000000.0,USD,Sum of quarterly FCF for FY2024 Q3 + FY2024 Q4 + FY2025 Q1 + FY2025 Q2
+Broadcom Inc.,2025,Q3,Gross Margin,0.67,%,"Gross Profit (10,703,000,000) / Revenue (15,952,000,000)"
+Broadcom Inc.,2025,Q3,Operating Margin,0.37,%,"Operating Income (5,887,000,000) / Revenue (15,952,000,000)"
+Broadcom Inc.,2025,Q3,Free Cash Flow,7024000000.0,USD,"Operating Cash Flow (7,166,000,000) - Capital Expenditure (142,000,000)"
+Broadcom Inc.,2025,Q3,Free-Cash-Flow Margin,0.44,%,"FCF (7,024,000,000) / Revenue (15,952,000,000)"
+Broadcom Inc.,2025,Q3,R&D as % of Revenue,0.19,%,"R&D Expense (3,050,000,000) / Revenue (15,952,000,000)"
+Broadcom Inc.,2025,Q3,Net Cash (Debt),-55039000000.0,USD,"Cash (10,718,000,000) - Total Debt (65,757,000,000) = net debt"
+Broadcom Inc.,2025,Q3,YoY Revenue Growth,0.22,%,"(Revenue 15,952,000,000 - Prior 13,072,000,000) / |Prior 13,072,000,000|"
+Broadcom Inc.,2025,Q3,TTM Revenue,59926000000.0,USD,Sum of FY2024 Q4 + FY2025 Q1 + FY2025 Q2 + FY2025 Q3
+Broadcom Inc.,2025,Q3,TTM Operating Income,22603000000.0,USD,Sum of FY2024 Q4 + FY2025 Q1 + FY2025 Q2 + FY2025 Q3
+Broadcom Inc.,2025,Q3,TTM Free Cash Flow,24930000000.0,USD,Sum of quarterly FCF for FY2024 Q4 + FY2025 Q1 + FY2025 Q2 + FY2025 Q3
+Broadcom Inc.,2025,Q4,Gross Margin,0.68,%,"Gross Profit (12,249,000,000) / Revenue (18,015,000,000)"
+Broadcom Inc.,2025,Q4,Operating Margin,0.42,%,"Operating Income (7,508,000,000) / Revenue (18,015,000,000)"
+Broadcom Inc.,2025,Q4,Free Cash Flow,7466000000.0,USD,"Operating Cash Flow (7,703,000,000) - Capital Expenditure (237,000,000)"
+Broadcom Inc.,2025,Q4,Free-Cash-Flow Margin,0.41,%,"FCF (7,466,000,000) / Revenue (18,015,000,000)"
+Broadcom Inc.,2025,Q4,R&D as % of Revenue,0.17,%,"R&D Expense (2,981,000,000) / Revenue (18,015,000,000)"
+Broadcom Inc.,2025,Q4,Net Cash (Debt),-50942000000.0,USD,"Cash (16,178,000,000) - Total Debt (67,120,000,000) = net debt"
+Broadcom Inc.,2025,Q4,YoY Revenue Growth,0.28,%,"(Revenue 18,015,000,000 - Prior 14,054,000,000) / |Prior 14,054,000,000|"
+Broadcom Inc.,2025,Q4,TTM Revenue,63887000000.0,USD,Sum of FY2025 Q1 + FY2025 Q2 + FY2025 Q3 + FY2025 Q4
+Broadcom Inc.,2025,Q4,TTM Operating Income,25484000000.0,USD,Sum of FY2025 Q1 + FY2025 Q2 + FY2025 Q3 + FY2025 Q4
+Broadcom Inc.,2025,Q4,TTM Free Cash Flow,26914000000.0,USD,Sum of quarterly FCF for FY2025 Q1 + FY2025 Q2 + FY2025 Q3 + FY2025 Q4

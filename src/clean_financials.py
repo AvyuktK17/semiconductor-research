@@ -195,7 +195,16 @@ def classify_entries(entries: list[dict]) -> dict:
         for key in ("q2", "q3"):
             matching = [e for e in buckets[key]
                         if anchor_start <= e["start"] and e["end"] <= anchor_end]
-            by_fy[fy][key] = best_entry(matching)
+            # Pick the entry with the latest end date first (actual quarter),
+            # then latest filing date as tiebreaker.  This avoids selecting
+            # prior-period comparison data that SEC re-tags with the current
+            # filing's fp label (e.g. Q1 data re-reported in the Q3 10-Q
+            # as fp=Q3 but with Q1's end date).
+            if matching:
+                by_fy[fy][key] = max(matching,
+                                      key=lambda e: (e["end"], e["filed"]))
+            else:
+                by_fy[fy][key] = None
 
     return by_fy
 
