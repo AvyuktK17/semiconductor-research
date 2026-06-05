@@ -1,0 +1,26 @@
+check_id,category,check_description,result,details
+1,Structure,valuation_inputs.csv has 5 rows (one per ticker),PASS,"QCOM, AMD, NVDA, INTC, AVGO"
+2,Structure,All 13 required columns present,PASS,"ticker, share_price_date, share_price, shares_outstanding, shares_outstanding_source_date, market_cap, cash, total_debt, enterprise_value, debt_measure, source, manually_reviewed, notes"
+3,Cash - QCOM,Cash populated from FY2025 Q4 validated financials,PASS,"$5,520M (fiscal_year_end_balance, CashAndCashEquivalentsAtCarryingValue)"
+4,Cash - AMD,Cash populated from FY2025 Q4 validated financials,PASS,"$5,539M (fiscal_year_end_balance, CashAndCashEquivalentsAtCarryingValue)"
+5,Cash - NVDA,Cash populated from FY2026 Q4 validated financials,PASS,"$10,605M (fiscal_year_end_balance, CashAndCashEquivalentsAtCarryingValue)"
+6,Cash - INTC,Cash populated from FY2025 Q4 with restricted-cash limitation,PASS,"$14,712M (CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents — includes ~$447M restricted cash, ~3% overstatement vs peers)"
+7,Cash - AVGO,Cash populated from FY2025 Q4 validated financials,PASS,"$16,178M (fiscal_year_end_balance, CashAndCashEquivalentsAtCarryingValue)"
+8,Debt - QCOM,Total Debt populated from FY2025 Q4 validated financials,PASS,"$14,811M (LongTermDebt + DebtCurrent, carrying_value)"
+9,Debt - AMD,Total Debt populated from FY2025 Q4 validated financials,PASS,"$3,222M (DebtLongtermAndShorttermCombinedAmount, carrying_value)"
+10,Debt - NVDA,Total Debt populated from FY2026 Q4 validated financials,PASS,"$8,468M (LongTermDebt including noncurrent + current, carrying_value)"
+11,Debt - INTC,Total Debt populated from FY2025 Q4 validated financials,PASS,"$46,585M (LongTermDebtNoncurrent + DebtCurrent, carrying_value)"
+12,Debt - AVGO,Total Debt populated from FY2025 Q4 with gross-principal limitation,PASS,"$67,120M (DebtInstrumentCarryingAmount — gross principal, ~$2B / ~3% above net carrying value used by other 4 companies)"
+13,Blank Fields,share_price left blank for manual entry,PASS,All 5 tickers have empty share_price
+14,Blank Fields,share_price_date left blank for manual entry,PASS,All 5 tickers have empty share_price_date
+15,Blank Fields,shares_outstanding left blank for manual entry,PASS,All 5 tickers have empty shares_outstanding
+16,Blank Fields,shares_outstanding_source_date left blank for manual entry,PASS,All 5 tickers have empty shares_outstanding_source_date
+17,Blank Fields,market_cap left blank (depends on share_price × shares_outstanding),PASS,Cannot be calculated until manual inputs provided
+18,Blank Fields,enterprise_value left blank (depends on market_cap + debt - cash),PASS,Cannot be calculated until market_cap is populated
+19,Blank Fields,source left blank for manual entry,PASS,User will specify data source (e.g. Yahoo Finance date or 10-K cover page)
+20,Blank Fields,manually_reviewed left blank pending user completion,PASS,User marks Yes after filling and verifying market data
+21,Limitations,Intel cash includes restricted cash — flagged in debt_measure and notes,PASS,debt_measure=carrying_value_includes_restricted_cash
+22,Limitations,Broadcom debt is gross principal — flagged in debt_measure and notes,PASS,debt_measure=gross_principal
+23,Limitations,Other 3 companies use carrying_value — consistent,PASS,"QCOM AMD NVDA all have debt_measure=carrying_value"
+24,Integrity,Company-level outputs not modified,PASS,No changes to data/processed/*_financials_*.csv or *_metrics.csv
+25,Integrity,No SEC pipelines rerun,PASS,Cash and debt read from existing validated CSVs only

@@ -26,6 +26,7 @@ The user is a finance graduate learning Python. Code should be modular, clearly 
 | 9D | Intel pipeline — tag discovery, cleaning, metrics, Excel export, validation | Done |
 | 9E | Broadcom pipeline — tag discovery, cleaning, metrics, Excel export, validation | Done |
 | 9F | Bug fix — classify_entries() standalone Q2/Q3 selection used latest end date instead of latest filing date | Done |
+| 10 | Five-company peer comparison model — consolidated CSV, 9-tab Excel workbook | Done |
 
 ## Stage 9 architecture
 
@@ -62,6 +63,7 @@ A `--test` flag writes output to `data/test_outputs/` and `output/test_outputs/`
 | `src/export_excel.py` | Generates analyst-ready multi-tab Excel workbook |
 | `src/calculate_metrics.py` | Calculates financial ratios, margins, FCF, TTM aggregates |
 | `src/regression_check.py` | Compares test outputs against immutable Qualcomm benchmarks |
+| `src/build_peer_comparison.py` | Consolidates five-company data into peer comparison CSV and 9-tab Excel workbook |
 
 ### Tag-map files
 
@@ -277,6 +279,7 @@ Discovered during Broadcom validation. The `ProfitLoss` XBRL tag has prior-perio
 - `intel_metrics.csv` — 120 rows
 - `broadcom_financials_2026-06-05.csv` — 132 rows, FY2023–FY2025
 - `broadcom_metrics.csv` — 120 rows
+- `semiconductor_peer_metrics.csv` — 1,260 rows, consolidated five-company peer data
 
 ### data/manual_checks/
 - `qualcomm_missing_metrics_2026-06-04.csv` — 3 flagged items
@@ -299,6 +302,7 @@ Discovered during Broadcom validation. The `ProfitLoss` XBRL tag has prior-perio
 - `nvidia_financial_history.xlsx` — 6-tab workbook
 - `intel_financial_history.xlsx` — 6-tab workbook
 - `broadcom_financial_history.xlsx` — 6-tab workbook
+- `semiconductor_peer_comparison.xlsx` — 9-tab peer comparison workbook
 - `q4_logic_audit.csv` — historical reference from Stage 5
 
 ### output/benchmarks/qualcomm/
@@ -315,13 +319,48 @@ Discovered during Broadcom validation. The `ProfitLoss` XBRL tag has prior-perio
 ### archive/pre_q4_fix/
 - Backup of pre-Stage-7 scripts and outputs. Safe to delete once Stage 9 is stable.
 
-## Next objective — Stage 10: Five-company peer model
+## Stage 10: Five-company peer comparison model
 
-All five companies are complete. Potential next steps:
+### What was built
+
+`src/build_peer_comparison.py` reads the 10 validated company-level CSVs (5 financials + 5 metrics) and produces:
+
+- **`data/processed/semiconductor_peer_metrics.csv`** — 1,260 rows, consolidated long-format file with all five companies' financials and calculated metrics. Columns: company, ticker, fiscal_year, fiscal_quarter, metric_name, value, unit, extraction_method, source_reference, derived_from, requires_manual_review, formula.
+- **`output/semiconductor_peer_comparison.xlsx`** — 9-tab workbook:
+  1. **Peer Summary** — latest-quarter snapshot + TTM for each company, with business-model annotations and comparability notes
+  2. **Quarterly Trends** — all 21 metrics × all quarters × all companies in long format
+  3. **Revenue Growth** — quarterly revenue, YoY growth, TTM revenue (companies as columns)
+  4. **Margins** — gross margin, operating margin, FCF margin
+  5. **R&D Intensity** — R&D expense and R&D as % of revenue
+  6. **Balance Sheet** — cash, total debt, net cash/debt
+  7. **Validation** — missing values, manual-review flags, derived-value counts, company-specific limitations, cross-company comparability warnings
+  8. **Data Dictionary** — metric definitions, formulas, extraction-method label explanations
+  9. **Source Audit Trail** — 660 rows, every extracted financial metric with SEC filing URL, extraction method, derived-from, and review status
+
+### Design decisions
+
+- No values were imputed. Missing values display as "N/A" with pink shading.
+- Derived values (Q4 YTD subtraction, FY-end balance sheet) are shaded yellow.
+- Manual-review items (Nvidia CapEx 8-K sourced) are shaded amber.
+- Each company keeps its own fiscal quarters — no calendar-quarter alignment yet.
+- Company-level output files were verified unchanged (zero git diff).
+- Business-model annotations identify: Qualcomm's licensing exposure, Intel's IDM/fab intensity, Broadcom's software revenue mix, Nvidia's scale and FY offset.
+
+### Summary statistics
+
+| Ticker | Financials rows | Metrics rows | Latest quarter | Missing values | Manual review flags |
+|--------|----------------|-------------|----------------|----------------|---------------------|
+| QCOM | 132 | 120 | FY2025 Q4 | 16 | 0 |
+| AMD | 132 | 120 | FY2025 Q4 | 18 | 0 |
+| NVDA | 132 | 120 | FY2026 Q4 | 25 | 3 |
+| INTC | 132 | 120 | FY2025 Q4 | 20 | 0 |
+| AVGO | 132 | 120 | FY2025 Q4 | 16 | 0 |
+
+### Next potential steps
 
 1. Calendar-quarter alignment for cross-company comparison (different FY-end dates)
 2. Non-GAAP adjustments for Intel (impairments) and Broadcom (VMware amortization)
-3. Peer comparison dashboard with business-model annotations (IDM vs fabless)
+3. Charts and visual dashboards
 4. Resolve remaining manual-review items (EPS Q4, Intel Cash Q2/Q3, Nvidia CapEx confirmation)
 
 ## Unresolved issues

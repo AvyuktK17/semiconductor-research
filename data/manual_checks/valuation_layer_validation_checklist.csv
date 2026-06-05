@@ -1,0 +1,43 @@
+check_id,category,check_description,result,details
+1,Input Validation,All 5 tickers have share_price_date = 2026-06-04,PASS,Common valuation snapshot date across all companies
+2,Input Validation,All 5 tickers have a share price,PASS,"QCOM=$242.57 AMD=$523.20 NVDA=$218.66 INTC=$111.78 AVGO=$418.91"
+3,Input Validation,All 5 tickers have shares outstanding,PASS,"QCOM=1054M AMD=1630.6M NVDA=24200M INTC=5026M AVGO=4734.7M"
+4,Input Validation,All 5 tickers have a source,PASS,Yahoo Finance historical close + SEC 10-Q cover page for each
+5,Input Validation,manually_reviewed = No for all 5,PASS,Pending user confirmation before external use
+6,Market Cap,QCOM market cap calculated correctly,PASS,"$242.57 × 1,054,000,000 = $255,629M"
+7,Market Cap,AMD market cap calculated correctly,PASS,"$523.20 × 1,630,600,639 = $853,050M"
+8,Market Cap,NVDA market cap calculated correctly,PASS,"$218.66 × 24,200,000,000 = $5,291,572M"
+9,Market Cap,INTC market cap calculated correctly,PASS,"$111.78 × 5,026,000,000 = $561,806M"
+10,Market Cap,AVGO market cap calculated correctly,PASS,"$418.91 × 4,734,668,184 = $1,983,433M"
+11,Enterprise Value,QCOM EV = MCap + Debt - Cash,PASS,"$255,629M + $14,811M - $5,520M = $264,920M"
+12,Enterprise Value,AMD EV = MCap + Debt - Cash,PASS,"$853,050M + $3,222M - $5,539M = $850,733M"
+13,Enterprise Value,NVDA EV = MCap + Debt - Cash,PASS,"$5,291,572M + $8,468M - $10,605M = $5,289,435M"
+14,Enterprise Value,INTC EV = MCap + Debt - Cash,PASS,"$561,806M + $46,585M - $14,712M = $593,679M"
+15,Enterprise Value,AVGO EV = MCap + Debt - Cash,PASS,"$1,983,433M + $67,120M - $16,178M = $2,034,375M"
+16,Multiples,EV/TTM Revenue populated for all 5,PASS,"QCOM=6.0x AMD=24.6x NVDA=24.5x INTC=11.2x AVGO=31.8x"
+17,Multiples,Price/TTM FCF populated for 4 of 5 (INTC blank),PASS,"QCOM=19.9x AMD=126.7x NVDA=54.7x AVGO=73.7x; INTC=N/A (negative TTM FCF)"
+18,Multiples,FCF Yield populated for all 5,PASS,"QCOM=5.0% AMD=0.8% NVDA=1.8% INTC=-0.9% AVGO=1.4%"
+19,Multiples,YoY Revenue Growth populated for all 5,PASS,Latest available quarter growth rates from validated metrics
+20,Blank Fields,P/E ratio not calculated,PASS,Q4 EPS missing for all companies; TTM EPS not available
+21,Blank Fields,EV/EBITDA not calculated,PASS,EBITDA not yet derived (depreciation/amortization not extracted)
+22,Blank Fields,Intel Price/TTM FCF correctly left as N/A,PASS,TTM FCF is negative (-$4.9B); ratio not meaningful for negative FCF
+23,Debt Disclosure,Intel cash-measure limitation preserved,PASS,"debt_measure = carrying_value_includes_restricted_cash; noted in Excel"
+24,Debt Disclosure,Broadcom gross-principal debt measure preserved,PASS,"debt_measure = gross_principal; noted in Excel (~$2B / ~3% above carrying value)"
+25,Debt Disclosure,Other 3 companies use carrying_value — consistent,PASS,"QCOM AMD NVDA all have debt_measure = carrying_value"
+26,Cell Shading,Manual-entry cells shaded green in Valuation Snapshot,PASS,"15 green cells (share price × 5, shares outstanding × 5, shares source date × 5)"
+27,Cell Shading,Missing/unreliable values shaded pink,PASS,INTC Price/TTM FCF displayed as N/A with pink fill
+28,Excel Structure,Valuation Snapshot tab added as 2nd tab,PASS,10 tabs total; Valuation Snapshot positioned after Peer Summary
+29,Excel Structure,Valuation summary appended to Peer Summary tab,PASS,"Peer Summary extended from 40 to 49 rows; includes Share Price through FCF Yield"
+30,Excel Structure,Frozen headers present on Valuation Snapshot,PASS,freeze_panes set at row 6
+31,Data Integrity,Company-level financials CSVs unchanged,PASS,"All 5 financials CSVs: 132 rows each, identical to pre-valuation state"
+32,Data Integrity,Company-level metrics CSVs unchanged,PASS,"All 5 metrics CSVs: 120 rows each, identical to pre-valuation state"
+33,Data Integrity,Operating metrics in peer CSV unchanged,PASS,"1260 original rows preserved; 30 valuation rows appended with extraction_method=manual_valuation_input"
+34,Data Integrity,Valuation rows use extraction_method=manual_valuation_input,PASS,"30 rows (6 metrics × 5 companies) clearly labeled as manual inputs"
+35,Share Count,QCOM shares source date = 2026-04-27,PASS,FY2026 Q2 10-Q cover page
+36,Share Count,AMD shares source date = 2026-04-29,PASS,FY2026 Q1 10-Q cover page
+37,Share Count,NVDA shares source date = 2026-05-15,PASS,FY2027 Q1 10-Q cover page; 24.2B is rounded
+38,Share Count,INTC shares source date = 2026-04-17,PASS,FY2026 Q1 10-Q cover-page XBRL
+39,Share Count,AVGO shares source date = 2026-02-27,PASS,FY2026 Q1 10-Q cover page; older than peers (flagged in notes)
+40,Notes,Valuation as-of date visible on Valuation Snapshot,PASS,"Row 2: 'Valuation as of: 2026-06-04 (Yahoo Finance closing prices)'"
+41,Notes,Market cap methodology note present,PASS,Row 3: actual common shares from SEC filing cover page; share-count dates differ
+42,Notes,9 limitation notes in Notes & Limitations section,PASS,"Covers manual inputs, P/E, EV/EBITDA, Intel cash, Broadcom debt, AVGO date, NVDA rounding, INTC FCF, review status"

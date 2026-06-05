@@ -1,0 +1,44 @@
+check_id,category,check_description,result,details
+1,Completeness,All five companies present in consolidated CSV,PASS,"QCOM AMD NVDA INTC AVGO — 252 rows each, 1260 total"
+2,Completeness,Correct number of metrics per company,PASS,"132 financials + 120 calculated = 252 per company, consistent across all 5"
+3,Latest Period,QCOM latest quarter is FY2025 Q4,PASS,Revenue and all metrics present for FY2025 Q4
+4,Latest Period,AMD latest quarter is FY2025 Q4,PASS,Revenue and all metrics present for FY2025 Q4
+5,Latest Period,NVDA latest quarter is FY2026 Q4,PASS,FY numbering offset +1 from calendar year correctly preserved
+6,Latest Period,INTC latest quarter is FY2025 Q4,PASS,Revenue and all metrics present for FY2025 Q4
+7,Latest Period,AVGO latest quarter is FY2025 Q4,PASS,Revenue and all metrics present for FY2025 Q4
+8,Fiscal Calendar,NVDA uses FY2024-FY2026 (not FY2023-FY2025),PASS,Nvidia FY offset correctly preserved; no FY2023 data for NVDA
+9,Fiscal Calendar,QCOM does not have FY2026 data,PASS,No data beyond FY2025 for QCOM
+10,Fiscal Calendar,Each company has 12 unique (FY quarter) combinations,PASS,All 5 companies have exactly 12 periods (3 FYs × 4 quarters)
+11,Fiscal Calendar,Fiscal year-ends are not forced to align,PASS,"QCOM=Sep AMD=Dec NVDA=Jan INTC=Dec AVGO=Nov — each company retains own calendar"
+12,Reconciliation,All 660 financials values match source CSVs,PASS,Zero mismatches across 660 financials rows (value-level comparison)
+13,Reconciliation,All 600 metrics values match source CSVs,PASS,Zero mismatches across 600 calculated metrics rows (value-level comparison)
+14,Reconciliation,Total 1260 values reconciled with zero differences,PASS,Every row in consolidated CSV matches its source file exactly
+15,Missing Values,missing_requires_review rows have empty value field,PASS,"18 rows with extraction_method=missing_requires_review, all have blank values"
+16,Missing Values,Calculated metrics with Missing formula have empty values,PASS,"77 calculated metrics flagged Missing, all have blank values — no imputation"
+17,Validation Flags,requires_manual_review=Yes count matches sources,PASS,"21 total: QCOM=3 AMD=4 NVDA=6 INTC=5 AVGO=3 — matches source file counts exactly"
+18,Validation Flags,Nvidia CapEx FY2024 Q1-Q3 flagged as reported_earnings_release,PASS,"3 rows with extraction_method=reported_earnings_release, requires_manual_review=Yes"
+19,Validation Flags,All 15 EPS Q4 entries flagged missing_requires_review,PASS,"5 companies × 3 fiscal years = 15 missing EPS Q4 entries, all correctly flagged"
+20,Validation Flags,Intel Cash FY2025 Q2/Q3 flagged missing,PASS,2 rows with extraction_method=missing_requires_review for Cash and Cash Equivalents
+21,Validation Flags,AMD Total Debt FY2023 Q1 flagged missing,PASS,1 row with extraction_method=missing_requires_review for Total Debt
+22,Distinguishability,Every row has a non-empty extraction_method,PASS,"6 methods: reported_standalone(386) derived_ytd_difference(223) fiscal_year_end_balance(30) reported_earnings_release(3) missing_requires_review(18) calculated(600)"
+23,Distinguishability,No unexpected extraction_method values,PASS,All values are in the defined set of 6 valid methods
+24,Distinguishability,fiscal_year_end_balance rows without derived_from are correct,PASS,"24 balance-sheet snapshot rows (Cash) have no derivation formula in source — this is expected behavior, the method label itself documents provenance"
+25,Cell Shading,Derived values shaded yellow in Source Audit Trail,PASS,253 derived rows have yellow fill
+26,Cell Shading,Missing values shaded pink in Source Audit Trail,PASS,18 missing rows have pink fill
+27,Cell Shading,Nvidia CapEx manual-review rows shaded amber,PASS,3 rows with FFF2CC amber fill (reported_earnings_release + requires_manual_review=Yes)
+28,Cell Shading,Reported values have no fill,PASS,386 reported_standalone rows have no background fill
+29,Company Files,Company-level financials CSVs unchanged,PASS,"All 5 financials CSVs: 132 rows each, zero git diff"
+30,Company Files,Company-level metrics CSVs unchanged,PASS,"All 5 metrics CSVs: 120 rows each, zero git diff"
+31,Company Files,Company-level Excel workbooks unchanged,PASS,All 5 .xlsx files present with original file sizes
+32,Company Files,Qualcomm benchmark files untouched,PASS,data/benchmarks/qualcomm/ and output/benchmarks/qualcomm/ not modified
+33,Excel Structure,All 9 tabs present with correct names,PASS,"Peer Summary, Quarterly Trends, Revenue Growth, Margins, R&D Intensity, Balance Sheet, Validation, Data Dictionary, Source Audit Trail"
+34,Excel Structure,Frozen headers on all tabs,PASS,All 9 tabs have freeze_panes set
+35,Excel Structure,Source Audit Trail has 660 data rows,PASS,"664 total rows (4 header + 660 data), matches 5 × 132 financials"
+36,Comparability,Peer Summary includes business-model annotations,PASS,"QCOM=Fabless+Licensing AMD=Fabless NVDA=Fabless INTC=IDM AVGO=Fabless+Software"
+37,Comparability,Qualcomm licensing exposure noted,PASS,Company note identifies QTL segment inflating consolidated margins
+38,Comparability,Intel manufacturing intensity noted,PASS,"Company note identifies IDM model, $14-26B CapEx, structurally negative FCF"
+39,Comparability,Broadcom software exposure noted,PASS,"Company note identifies ~50/50 semiconductor/software mix post-VMware, FY2024 transition"
+40,Comparability,Nvidia FY2024 CapEx limitation noted,PASS,Company note identifies 8-K sourced CapEx pending manual confirmation
+41,Comparability,Validation tab includes cross-company comparability warnings,PASS,8 warnings covering fiscal misalignment and tag/model inconsistencies
+42,Comparability,Intel restricted cash inconsistency documented,PASS,~$447M / 3% overstatement vs peers noted in Validation tab
+43,Comparability,Broadcom gross principal debt inconsistency documented,PASS,~$2B / 3% overstatement vs peers noted in Validation tab
