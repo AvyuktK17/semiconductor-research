@@ -1,0 +1,121 @@
+company,fiscal_year,fiscal_quarter,metric_name,value,unit,formula
+Qualcomm Incorporated,2023,Q1,Gross Margin,0.57,%,"Gross Profit (5,419,000,000) / Revenue (9,463,000,000)"
+Qualcomm Incorporated,2023,Q1,Operating Margin,0.26,%,"Operating Income (2,465,000,000) / Revenue (9,463,000,000)"
+Qualcomm Incorporated,2023,Q1,Free Cash Flow,2697000000.0,USD,"Operating Cash Flow (3,095,000,000) - Capital Expenditure (398,000,000)"
+Qualcomm Incorporated,2023,Q1,Free-Cash-Flow Margin,0.29,%,"FCF (2,697,000,000) / Revenue (9,463,000,000)"
+Qualcomm Incorporated,2023,Q1,R&D as % of Revenue,0.24,%,"R&D Expense (2,251,000,000) / Revenue (9,463,000,000)"
+Qualcomm Incorporated,2023,Q1,Net Cash (Debt),-12069000000.0,USD,"Cash (4,808,000,000) - Total Debt (16,877,000,000) = net debt"
+Qualcomm Incorporated,2023,Q1,YoY Revenue Growth,,%,Missing: current or prior-year Revenue (FY2022 Q1)
+Qualcomm Incorporated,2023,Q1,TTM Revenue,,USD,Missing: not enough trailing quarters
+Qualcomm Incorporated,2023,Q1,TTM Operating Income,,USD,Missing: not enough trailing quarters
+Qualcomm Incorporated,2023,Q1,TTM Free Cash Flow,,USD,Missing: not enough trailing OCF/CapEx quarters
+Qualcomm Incorporated,2023,Q2,Gross Margin,0.55,%,"Gross Profit (5,122,000,000) / Revenue (9,275,000,000)"
+Qualcomm Incorporated,2023,Q2,Operating Margin,0.23,%,"Operating Income (2,090,000,000) / Revenue (9,275,000,000)"
+Qualcomm Incorporated,2023,Q2,Free Cash Flow,1004000000.0,USD,"Operating Cash Flow (1,457,000,000) - Capital Expenditure (453,000,000)"
+Qualcomm Incorporated,2023,Q2,Free-Cash-Flow Margin,0.11,%,"FCF (1,004,000,000) / Revenue (9,275,000,000)"
+Qualcomm Incorporated,2023,Q2,R&D as % of Revenue,0.24,%,"R&D Expense (2,210,000,000) / Revenue (9,275,000,000)"
+Qualcomm Incorporated,2023,Q2,Net Cash (Debt),-12497000000.0,USD,"Cash (3,488,000,000) - Total Debt (15,985,000,000) = net debt"
+Qualcomm Incorporated,2023,Q2,YoY Revenue Growth,,%,Missing: current or prior-year Revenue (FY2022 Q2)
+Qualcomm Incorporated,2023,Q2,TTM Revenue,,USD,Missing: not enough trailing quarters
+Qualcomm Incorporated,2023,Q2,TTM Operating Income,,USD,Missing: not enough trailing quarters
+Qualcomm Incorporated,2023,Q2,TTM Free Cash Flow,,USD,Missing: not enough trailing OCF/CapEx quarters
+Qualcomm Incorporated,2023,Q3,Gross Margin,0.55,%,"Gross Profit (4,659,000,000) / Revenue (8,451,000,000)"
+Qualcomm Incorporated,2023,Q3,Operating Margin,0.22,%,"Operating Income (1,823,000,000) / Revenue (8,451,000,000)"
+Qualcomm Incorporated,2023,Q3,Free Cash Flow,2351000000.0,USD,"Operating Cash Flow (2,657,000,000) - Capital Expenditure (306,000,000)"
+Qualcomm Incorporated,2023,Q3,Free-Cash-Flow Margin,0.28,%,"FCF (2,351,000,000) / Revenue (8,451,000,000)"
+Qualcomm Incorporated,2023,Q3,R&D as % of Revenue,0.26,%,"R&D Expense (2,222,000,000) / Revenue (8,451,000,000)"
+Qualcomm Incorporated,2023,Q3,Net Cash (Debt),-9357000000.0,USD,"Cash (6,087,000,000) - Total Debt (15,444,000,000) = net debt"
+Qualcomm Incorporated,2023,Q3,YoY Revenue Growth,,%,Missing: current or prior-year Revenue (FY2022 Q3)
+Qualcomm Incorporated,2023,Q3,TTM Revenue,,USD,Missing: not enough trailing quarters
+Qualcomm Incorporated,2023,Q3,TTM Operating Income,,USD,Missing: not enough trailing quarters
+Qualcomm Incorporated,2023,Q3,TTM Free Cash Flow,,USD,Missing: not enough trailing OCF/CapEx quarters
+Qualcomm Incorporated,2023,Q4,Gross Margin,0.55,%,"Gross Profit (4,751,000,000) / Revenue (8,631,000,000)"
+Qualcomm Incorporated,2023,Q4,Operating Margin,0.16,%,"Operating Income (1,410,000,000) / Revenue (8,631,000,000)"
+Qualcomm Incorporated,2023,Q4,Free Cash Flow,3797000000.0,USD,"Operating Cash Flow (4,090,000,000) - Capital Expenditure (293,000,000)"
+Qualcomm Incorporated,2023,Q4,Free-Cash-Flow Margin,0.44,%,"FCF (3,797,000,000) / Revenue (8,631,000,000)"
+Qualcomm Incorporated,2023,Q4,R&D as % of Revenue,0.25,%,"R&D Expense (2,135,000,000) / Revenue (8,631,000,000)"
+Qualcomm Incorporated,2023,Q4,Net Cash (Debt),-6948000000.0,USD,"Cash (8,450,000,000) - Total Debt (15,398,000,000) = net debt"
+Qualcomm Incorporated,2023,Q4,YoY Revenue Growth,,%,Missing: current or prior-year Revenue (FY2022 Q4)
+Qualcomm Incorporated,2023,Q4,TTM Revenue,35820000000.0,USD,Sum of FY2023 Q1 + FY2023 Q2 + FY2023 Q3 + FY2023 Q4
+Qualcomm Incorporated,2023,Q4,TTM Operating Income,7788000000.0,USD,Sum of FY2023 Q1 + FY2023 Q2 + FY2023 Q3 + FY2023 Q4
+Qualcomm Incorporated,2023,Q4,TTM Free Cash Flow,9849000000.0,USD,Sum of quarterly FCF for FY2023 Q1 + FY2023 Q2 + FY2023 Q3 + FY2023 Q4
+Qualcomm Incorporated,2024,Q1,Gross Margin,0.57,%,"Gross Profit (5,623,000,000) / Revenue (9,935,000,000)"
+Qualcomm Incorporated,2024,Q1,Operating Margin,0.29,%,"Operating Income (2,928,000,000) / Revenue (9,935,000,000)"
+Qualcomm Incorporated,2024,Q1,Free Cash Flow,2735000000.0,USD,"Operating Cash Flow (2,949,000,000) - Capital Expenditure (214,000,000)"
+Qualcomm Incorporated,2024,Q1,Free-Cash-Flow Margin,0.28,%,"FCF (2,735,000,000) / Revenue (9,935,000,000)"
+Qualcomm Incorporated,2024,Q1,R&D as % of Revenue,0.21,%,"R&D Expense (2,096,000,000) / Revenue (9,935,000,000)"
+Qualcomm Incorporated,2024,Q1,Net Cash (Debt),-7347000000.0,USD,"Cash (8,133,000,000) - Total Debt (15,480,000,000) = net debt"
+Qualcomm Incorporated,2024,Q1,YoY Revenue Growth,0.05,%,"(Revenue 9,935,000,000 - Prior 9,463,000,000) / |Prior 9,463,000,000|"
+Qualcomm Incorporated,2024,Q1,TTM Revenue,36292000000.0,USD,Sum of FY2023 Q2 + FY2023 Q3 + FY2023 Q4 + FY2024 Q1
+Qualcomm Incorporated,2024,Q1,TTM Operating Income,8251000000.0,USD,Sum of FY2023 Q2 + FY2023 Q3 + FY2023 Q4 + FY2024 Q1
+Qualcomm Incorporated,2024,Q1,TTM Free Cash Flow,9887000000.0,USD,Sum of quarterly FCF for FY2023 Q2 + FY2023 Q3 + FY2023 Q4 + FY2024 Q1
+Qualcomm Incorporated,2024,Q2,Gross Margin,0.56,%,"Gross Profit (5,283,000,000) / Revenue (9,389,000,000)"
+Qualcomm Incorporated,2024,Q2,Operating Margin,0.25,%,"Operating Income (2,340,000,000) / Revenue (9,389,000,000)"
+Qualcomm Incorporated,2024,Q2,Free Cash Flow,3370000000.0,USD,"Operating Cash Flow (3,554,000,000) - Capital Expenditure (184,000,000)"
+Qualcomm Incorporated,2024,Q2,Free-Cash-Flow Margin,0.36,%,"FCF (3,370,000,000) / Revenue (9,389,000,000)"
+Qualcomm Incorporated,2024,Q2,R&D as % of Revenue,0.24,%,"R&D Expense (2,236,000,000) / Revenue (9,389,000,000)"
+Qualcomm Incorporated,2024,Q2,Net Cash (Debt),-6238000000.0,USD,"Cash (9,219,000,000) - Total Debt (15,457,000,000) = net debt"
+Qualcomm Incorporated,2024,Q2,YoY Revenue Growth,0.01,%,"(Revenue 9,389,000,000 - Prior 9,275,000,000) / |Prior 9,275,000,000|"
+Qualcomm Incorporated,2024,Q2,TTM Revenue,36406000000.0,USD,Sum of FY2023 Q3 + FY2023 Q4 + FY2024 Q1 + FY2024 Q2
+Qualcomm Incorporated,2024,Q2,TTM Operating Income,8501000000.0,USD,Sum of FY2023 Q3 + FY2023 Q4 + FY2024 Q1 + FY2024 Q2
+Qualcomm Incorporated,2024,Q2,TTM Free Cash Flow,12253000000.0,USD,Sum of quarterly FCF for FY2023 Q3 + FY2023 Q4 + FY2024 Q1 + FY2024 Q2
+Qualcomm Incorporated,2024,Q3,Gross Margin,0.56,%,"Gross Profit (5,219,000,000) / Revenue (9,393,000,000)"
+Qualcomm Incorporated,2024,Q3,Operating Margin,0.24,%,"Operating Income (2,221,000,000) / Revenue (9,393,000,000)"
+Qualcomm Incorporated,2024,Q3,Free Cash Flow,2665000000.0,USD,"Operating Cash Flow (3,052,000,000) - Capital Expenditure (387,000,000)"
+Qualcomm Incorporated,2024,Q3,Free-Cash-Flow Margin,0.28,%,"FCF (2,665,000,000) / Revenue (9,393,000,000)"
+Qualcomm Incorporated,2024,Q3,R&D as % of Revenue,0.24,%,"R&D Expense (2,259,000,000) / Revenue (9,393,000,000)"
+Qualcomm Incorporated,2024,Q3,Net Cash (Debt),-6784000000.0,USD,"Cash (7,770,000,000) - Total Debt (14,554,000,000) = net debt"
+Qualcomm Incorporated,2024,Q3,YoY Revenue Growth,0.11,%,"(Revenue 9,393,000,000 - Prior 8,451,000,000) / |Prior 8,451,000,000|"
+Qualcomm Incorporated,2024,Q3,TTM Revenue,37348000000.0,USD,Sum of FY2023 Q4 + FY2024 Q1 + FY2024 Q2 + FY2024 Q3
+Qualcomm Incorporated,2024,Q3,TTM Operating Income,8899000000.0,USD,Sum of FY2023 Q4 + FY2024 Q1 + FY2024 Q2 + FY2024 Q3
+Qualcomm Incorporated,2024,Q3,TTM Free Cash Flow,12567000000.0,USD,Sum of quarterly FCF for FY2023 Q4 + FY2024 Q1 + FY2024 Q2 + FY2024 Q3
+Qualcomm Incorporated,2024,Q4,Gross Margin,0.56,%,"Gross Profit (5,777,000,000) / Revenue (10,244,000,000)"
+Qualcomm Incorporated,2024,Q4,Operating Margin,0.25,%,"Operating Income (2,582,000,000) / Revenue (10,244,000,000)"
+Qualcomm Incorporated,2024,Q4,Free Cash Flow,2391000000.0,USD,"Operating Cash Flow (2,647,000,000) - Capital Expenditure (256,000,000)"
+Qualcomm Incorporated,2024,Q4,Free-Cash-Flow Margin,0.23,%,"FCF (2,391,000,000) / Revenue (10,244,000,000)"
+Qualcomm Incorporated,2024,Q4,R&D as % of Revenue,0.22,%,"R&D Expense (2,302,000,000) / Revenue (10,244,000,000)"
+Qualcomm Incorporated,2024,Q4,Net Cash (Debt),-6785000000.0,USD,"Cash (7,849,000,000) - Total Debt (14,634,000,000) = net debt"
+Qualcomm Incorporated,2024,Q4,YoY Revenue Growth,0.19,%,"(Revenue 10,244,000,000 - Prior 8,631,000,000) / |Prior 8,631,000,000|"
+Qualcomm Incorporated,2024,Q4,TTM Revenue,38961000000.0,USD,Sum of FY2024 Q1 + FY2024 Q2 + FY2024 Q3 + FY2024 Q4
+Qualcomm Incorporated,2024,Q4,TTM Operating Income,10071000000.0,USD,Sum of FY2024 Q1 + FY2024 Q2 + FY2024 Q3 + FY2024 Q4
+Qualcomm Incorporated,2024,Q4,TTM Free Cash Flow,11161000000.0,USD,Sum of quarterly FCF for FY2024 Q1 + FY2024 Q2 + FY2024 Q3 + FY2024 Q4
+Qualcomm Incorporated,2025,Q1,Gross Margin,0.56,%,"Gross Profit (6,508,000,000) / Revenue (11,669,000,000)"
+Qualcomm Incorporated,2025,Q1,Operating Margin,0.3,%,"Operating Income (3,555,000,000) / Revenue (11,669,000,000)"
+Qualcomm Incorporated,2025,Q1,Free Cash Flow,4310000000.0,USD,"Operating Cash Flow (4,587,000,000) - Capital Expenditure (277,000,000)"
+Qualcomm Incorporated,2025,Q1,Free-Cash-Flow Margin,0.37,%,"FCF (4,310,000,000) / Revenue (11,669,000,000)"
+Qualcomm Incorporated,2025,Q1,R&D as % of Revenue,0.19,%,"R&D Expense (2,230,000,000) / Revenue (11,669,000,000)"
+Qualcomm Incorporated,2025,Q1,Net Cash (Debt),-5864000000.0,USD,"Cash (8,713,000,000) - Total Debt (14,577,000,000) = net debt"
+Qualcomm Incorporated,2025,Q1,YoY Revenue Growth,0.17,%,"(Revenue 11,669,000,000 - Prior 9,935,000,000) / |Prior 9,935,000,000|"
+Qualcomm Incorporated,2025,Q1,TTM Revenue,40695000000.0,USD,Sum of FY2024 Q2 + FY2024 Q3 + FY2024 Q4 + FY2025 Q1
+Qualcomm Incorporated,2025,Q1,TTM Operating Income,10698000000.0,USD,Sum of FY2024 Q2 + FY2024 Q3 + FY2024 Q4 + FY2025 Q1
+Qualcomm Incorporated,2025,Q1,TTM Free Cash Flow,12736000000.0,USD,Sum of quarterly FCF for FY2024 Q2 + FY2024 Q3 + FY2024 Q4 + FY2025 Q1
+Qualcomm Incorporated,2025,Q2,Gross Margin,0.55,%,"Gross Profit (6,042,000,000) / Revenue (10,979,000,000)"
+Qualcomm Incorporated,2025,Q2,Operating Margin,0.28,%,"Operating Income (3,120,000,000) / Revenue (10,979,000,000)"
+Qualcomm Incorporated,2025,Q2,Free Cash Flow,2340000000.0,USD,"Operating Cash Flow (2,554,000,000) - Capital Expenditure (214,000,000)"
+Qualcomm Incorporated,2025,Q2,Free-Cash-Flow Margin,0.21,%,"FCF (2,340,000,000) / Revenue (10,979,000,000)"
+Qualcomm Incorporated,2025,Q2,R&D as % of Revenue,0.2,%,"R&D Expense (2,216,000,000) / Revenue (10,979,000,000)"
+Qualcomm Incorporated,2025,Q2,Net Cash (Debt),-7420000000.0,USD,"Cash (7,203,000,000) - Total Debt (14,623,000,000) = net debt"
+Qualcomm Incorporated,2025,Q2,YoY Revenue Growth,0.17,%,"(Revenue 10,979,000,000 - Prior 9,389,000,000) / |Prior 9,389,000,000|"
+Qualcomm Incorporated,2025,Q2,TTM Revenue,42285000000.0,USD,Sum of FY2024 Q3 + FY2024 Q4 + FY2025 Q1 + FY2025 Q2
+Qualcomm Incorporated,2025,Q2,TTM Operating Income,11478000000.0,USD,Sum of FY2024 Q3 + FY2024 Q4 + FY2025 Q1 + FY2025 Q2
+Qualcomm Incorporated,2025,Q2,TTM Free Cash Flow,11706000000.0,USD,Sum of quarterly FCF for FY2024 Q3 + FY2024 Q4 + FY2025 Q1 + FY2025 Q2
+Qualcomm Incorporated,2025,Q3,Gross Margin,0.56,%,"Gross Profit (5,759,000,000) / Revenue (10,365,000,000)"
+Qualcomm Incorporated,2025,Q3,Operating Margin,0.27,%,"Operating Income (2,762,000,000) / Revenue (10,365,000,000)"
+Qualcomm Incorporated,2025,Q3,Free Cash Flow,2581000000.0,USD,"Operating Cash Flow (2,875,000,000) - Capital Expenditure (294,000,000)"
+Qualcomm Incorporated,2025,Q3,Free-Cash-Flow Margin,0.25,%,"FCF (2,581,000,000) / Revenue (10,365,000,000)"
+Qualcomm Incorporated,2025,Q3,R&D as % of Revenue,0.21,%,"R&D Expense (2,226,000,000) / Revenue (10,365,000,000)"
+Qualcomm Incorporated,2025,Q3,Net Cash (Debt),-9340000000.0,USD,"Cash (5,448,000,000) - Total Debt (14,788,000,000) = net debt"
+Qualcomm Incorporated,2025,Q3,YoY Revenue Growth,0.1,%,"(Revenue 10,365,000,000 - Prior 9,393,000,000) / |Prior 9,393,000,000|"
+Qualcomm Incorporated,2025,Q3,TTM Revenue,43257000000.0,USD,Sum of FY2024 Q4 + FY2025 Q1 + FY2025 Q2 + FY2025 Q3
+Qualcomm Incorporated,2025,Q3,TTM Operating Income,12019000000.0,USD,Sum of FY2024 Q4 + FY2025 Q1 + FY2025 Q2 + FY2025 Q3
+Qualcomm Incorporated,2025,Q3,TTM Free Cash Flow,11622000000.0,USD,Sum of quarterly FCF for FY2024 Q4 + FY2025 Q1 + FY2025 Q2 + FY2025 Q3
+Qualcomm Incorporated,2025,Q4,Gross Margin,0.55,%,"Gross Profit (6,237,000,000) / Revenue (11,271,000,000)"
+Qualcomm Incorporated,2025,Q4,Operating Margin,0.26,%,"Operating Income (2,918,000,000) / Revenue (11,271,000,000)"
+Qualcomm Incorporated,2025,Q4,Free Cash Flow,3589000000.0,USD,"Operating Cash Flow (3,996,000,000) - Capital Expenditure (407,000,000)"
+Qualcomm Incorporated,2025,Q4,Free-Cash-Flow Margin,0.32,%,"FCF (3,589,000,000) / Revenue (11,271,000,000)"
+Qualcomm Incorporated,2025,Q4,R&D as % of Revenue,0.21,%,"R&D Expense (2,370,000,000) / Revenue (11,271,000,000)"
+Qualcomm Incorporated,2025,Q4,Net Cash (Debt),-9291000000.0,USD,"Cash (5,520,000,000) - Total Debt (14,811,000,000) = net debt"
+Qualcomm Incorporated,2025,Q4,YoY Revenue Growth,0.1,%,"(Revenue 11,271,000,000 - Prior 10,244,000,000) / |Prior 10,244,000,000|"
+Qualcomm Incorporated,2025,Q4,TTM Revenue,44284000000.0,USD,Sum of FY2025 Q1 + FY2025 Q2 + FY2025 Q3 + FY2025 Q4
+Qualcomm Incorporated,2025,Q4,TTM Operating Income,12355000000.0,USD,Sum of FY2025 Q1 + FY2025 Q2 + FY2025 Q3 + FY2025 Q4
+Qualcomm Incorporated,2025,Q4,TTM Free Cash Flow,12820000000.0,USD,Sum of quarterly FCF for FY2025 Q1 + FY2025 Q2 + FY2025 Q3 + FY2025 Q4

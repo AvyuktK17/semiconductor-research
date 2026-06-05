@@ -1,0 +1,239 @@
+metric,fiscal_year,fiscal_quarter,period_start,period_end,filing_date,form_type,value,status,issue
+Capital Expenditure,2015,Q2,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q2 = YTD_Q2 minus YTD_Q1.
+Capital Expenditure,2015,Q3,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q3 = YTD_Q3 minus YTD_Q2.
+Capital Expenditure,2015,Q4,,,,,,Missing — Q4 not filed,Derive from 10-K FY total minus Q3 YTD (9-month cumulative).
+Capital Expenditure,2016,Q1,2014-09-29,2014-12-28,2016-01-27,10-Q,253000000,Reported (standalone Q1 = YTD Q1),Only Q1 is a true standalone quarter for this metric. Q2/Q3 require YTD subtraction.
+Capital Expenditure,2016,Q2,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q2 = YTD_Q2 minus YTD_Q1.
+Capital Expenditure,2016,Q3,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q3 = YTD_Q3 minus YTD_Q2.
+Capital Expenditure,2016,Q4,,,,,,Missing — Q4 not filed,Derive from 10-K FY total minus Q3 YTD (9-month cumulative).
+Capital Expenditure,2017,Q1,2015-09-28,2015-12-27,2017-01-25,10-Q,128000000,Reported (standalone Q1 = YTD Q1),Only Q1 is a true standalone quarter for this metric. Q2/Q3 require YTD subtraction.
+Capital Expenditure,2017,Q2,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q2 = YTD_Q2 minus YTD_Q1.
+Capital Expenditure,2017,Q3,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q3 = YTD_Q3 minus YTD_Q2.
+Capital Expenditure,2017,Q4,,,,,,Missing — Q4 not filed,Derive from 10-K FY total minus Q3 YTD (9-month cumulative).
+Capital Expenditure,2018,Q1,2016-09-26,2016-12-25,2018-01-31,10-Q,129000000,Reported (standalone Q1 = YTD Q1),Only Q1 is a true standalone quarter for this metric. Q2/Q3 require YTD subtraction.
+Capital Expenditure,2018,Q2,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q2 = YTD_Q2 minus YTD_Q1.
+Capital Expenditure,2018,Q3,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q3 = YTD_Q3 minus YTD_Q2.
+Capital Expenditure,2018,Q4,,,,,,Missing — Q4 not filed,Derive from 10-K FY total minus Q3 YTD (9-month cumulative).
+Capital Expenditure,2019,Q1,2017-09-25,2017-12-24,2019-01-30,10-Q,226000000,Reported (standalone Q1 = YTD Q1),Only Q1 is a true standalone quarter for this metric. Q2/Q3 require YTD subtraction.
+Capital Expenditure,2019,Q2,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q2 = YTD_Q2 minus YTD_Q1.
+Capital Expenditure,2019,Q3,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q3 = YTD_Q3 minus YTD_Q2.
+Capital Expenditure,2019,Q4,,,,,,Missing — Q4 not filed,Derive from 10-K FY total minus Q3 YTD (9-month cumulative).
+Capital Expenditure,2020,Q1,2018-10-01,2018-12-30,2020-02-05,10-Q,152000000,Reported (standalone Q1 = YTD Q1),Only Q1 is a true standalone quarter for this metric. Q2/Q3 require YTD subtraction.
+Capital Expenditure,2020,Q2,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q2 = YTD_Q2 minus YTD_Q1.
+Capital Expenditure,2020,Q3,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q3 = YTD_Q3 minus YTD_Q2.
+Capital Expenditure,2020,Q4,,,,,,Missing — Q4 not filed,Derive from 10-K FY total minus Q3 YTD (9-month cumulative).
+Capital Expenditure,2021,Q1,2019-09-30,2019-12-29,2021-02-03,10-Q,296000000,Reported (standalone Q1 = YTD Q1),Only Q1 is a true standalone quarter for this metric. Q2/Q3 require YTD subtraction.
+Capital Expenditure,2021,Q2,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q2 = YTD_Q2 minus YTD_Q1.
+Capital Expenditure,2021,Q3,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q3 = YTD_Q3 minus YTD_Q2.
+Capital Expenditure,2021,Q4,,,,,,Missing — Q4 not filed,Derive from 10-K FY total minus Q3 YTD (9-month cumulative).
+Capital Expenditure,2022,Q1,2020-09-28,2020-12-27,2022-02-02,10-Q,469000000,Reported (standalone Q1 = YTD Q1),Only Q1 is a true standalone quarter for this metric. Q2/Q3 require YTD subtraction.
+Capital Expenditure,2022,Q2,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q2 = YTD_Q2 minus YTD_Q1.
+Capital Expenditure,2022,Q3,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q3 = YTD_Q3 minus YTD_Q2.
+Capital Expenditure,2022,Q4,,,,,,Missing — Q4 not filed,Derive from 10-K FY total minus Q3 YTD (9-month cumulative).
+Capital Expenditure,2023,Q1,2021-09-27,2021-12-26,2023-02-02,10-Q,583000000,Reported (standalone Q1 = YTD Q1),Only Q1 is a true standalone quarter for this metric. Q2/Q3 require YTD subtraction.
+Capital Expenditure,2023,Q2,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q2 = YTD_Q2 minus YTD_Q1.
+Capital Expenditure,2023,Q3,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q3 = YTD_Q3 minus YTD_Q2.
+Capital Expenditure,2023,Q4,,,,,,Missing — Q4 not filed,Derive from 10-K FY total minus Q3 YTD (9-month cumulative).
+Capital Expenditure,2024,Q1,2022-09-26,2022-12-25,2024-01-31,10-Q,398000000,Reported (standalone Q1 = YTD Q1),Only Q1 is a true standalone quarter for this metric. Q2/Q3 require YTD subtraction.
+Capital Expenditure,2024,Q2,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q2 = YTD_Q2 minus YTD_Q1.
+Capital Expenditure,2024,Q3,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q3 = YTD_Q3 minus YTD_Q2.
+Capital Expenditure,2024,Q4,,,,,,Missing — Q4 not filed,Derive from 10-K FY total minus Q3 YTD (9-month cumulative).
+Capital Expenditure,2025,Q1,2023-09-25,2023-12-24,2025-02-05,10-Q,214000000,Reported (standalone Q1 = YTD Q1),Only Q1 is a true standalone quarter for this metric. Q2/Q3 require YTD subtraction.
+Capital Expenditure,2025,Q2,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q2 = YTD_Q2 minus YTD_Q1.
+Capital Expenditure,2025,Q3,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q3 = YTD_Q3 minus YTD_Q2.
+Capital Expenditure,2025,Q4,,,,,,Missing — Q4 not filed,Derive from 10-K FY total minus Q3 YTD (9-month cumulative).
+Capital Expenditure,2026,Q1,2025-09-29,2025-12-28,2026-02-04,10-Q,549000000,Reported (standalone Q1 = YTD Q1),Only Q1 is a true standalone quarter for this metric. Q2/Q3 require YTD subtraction.
+Capital Expenditure,2026,Q1,2024-09-30,2024-12-29,2026-02-04,10-Q,277000000,Reported (standalone Q1 = YTD Q1),Only Q1 is a true standalone quarter for this metric. Q2/Q3 require YTD subtraction.
+Capital Expenditure,2026,Q2,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q2 = YTD_Q2 minus YTD_Q1.
+Capital Expenditure,2026,Q3,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q3 = YTD_Q3 minus YTD_Q2.
+Capital Expenditure,2026,Q4,,,,,,Missing — Q4 not filed,Derive from 10-K FY total minus Q3 YTD (9-month cumulative).
+Cash and Cash Equivalents,2015,Q4,,,,,,Missing — use FY-end snapshot,Use the 10-K fiscal-year-end balance as Q4 ending value.
+Cash and Cash Equivalents,2016,Q4,,,,,,Missing — use FY-end snapshot,Use the 10-K fiscal-year-end balance as Q4 ending value.
+Cash and Cash Equivalents,2017,Q4,,,,,,Missing — use FY-end snapshot,Use the 10-K fiscal-year-end balance as Q4 ending value.
+Cash and Cash Equivalents,2018,Q4,,,,,,Missing — use FY-end snapshot,Use the 10-K fiscal-year-end balance as Q4 ending value.
+Cash and Cash Equivalents,2019,Q4,,,,,,Missing — use FY-end snapshot,Use the 10-K fiscal-year-end balance as Q4 ending value.
+Cash and Cash Equivalents,2020,Q4,,,,,,Missing — use FY-end snapshot,Use the 10-K fiscal-year-end balance as Q4 ending value.
+Cash and Cash Equivalents,2021,Q4,,,,,,Missing — use FY-end snapshot,Use the 10-K fiscal-year-end balance as Q4 ending value.
+Cash and Cash Equivalents,2022,Q4,,,,,,Missing — use FY-end snapshot,Use the 10-K fiscal-year-end balance as Q4 ending value.
+Cash and Cash Equivalents,2023,Q3,,2023-06-25,2023-08-02,10-Q,6087000000,Reported (balance-sheet snapshot),
+Cash and Cash Equivalents,2023,Q4,,,,,,Missing — use FY-end snapshot,Use the 10-K fiscal-year-end balance as Q4 ending value.
+Cash and Cash Equivalents,2024,FY,,2023-09-24,2024-11-06,10-K,8450000000,Reported (fiscal-year-end snapshot),This is the Q4 ending balance — could serve as Q4 value.
+Cash and Cash Equivalents,2024,Q1,,2023-12-24,2024-01-31,10-Q,8133000000,Reported (balance-sheet snapshot),
+Cash and Cash Equivalents,2024,Q2,,2024-03-24,2024-05-01,10-Q,9219000000,Reported (balance-sheet snapshot),
+Cash and Cash Equivalents,2024,Q3,,2024-06-23,2024-07-31,10-Q,7770000000,Reported (balance-sheet snapshot),
+Cash and Cash Equivalents,2025,FY,,2024-09-29,2025-11-05,10-K,7849000000,Reported (fiscal-year-end snapshot),This is the Q4 ending balance — could serve as Q4 value.
+Cash and Cash Equivalents,2025,Q1,,2024-12-29,2025-02-05,10-Q,8713000000,Reported (balance-sheet snapshot),
+Cash and Cash Equivalents,2025,Q2,,2025-03-30,2025-04-30,10-Q,7203000000,Reported (balance-sheet snapshot),
+Cash and Cash Equivalents,2025,Q3,,2025-06-29,2025-07-30,10-Q,5448000000,Reported (balance-sheet snapshot),
+Cash and Cash Equivalents,2026,Q1,,2025-12-28,2026-02-04,10-Q,7205000000,Reported (balance-sheet snapshot),
+Cash and Cash Equivalents,2026,Q2,,2026-03-29,2026-04-29,10-Q,5435000000,Reported (balance-sheet snapshot),
+Cash and Cash Equivalents,2026,Q2,,2025-09-28,2026-04-29,10-Q,5520000000,Reported (balance-sheet snapshot),
+Cash and Cash Equivalents,2026,Q4,,,,,,Missing — use FY-end snapshot,Use the 10-K fiscal-year-end balance as Q4 ending value.
+Diluted EPS,2015,Q4,,,,,,Missing — Q4 not filed,Do NOT derive by subtraction. Use reported quarterly EPS or flag for manual review.
+Diluted EPS,2016,Q4,,,,,,Missing — Q4 not filed,Do NOT derive by subtraction. Use reported quarterly EPS or flag for manual review.
+Diluted EPS,2017,Q4,,,,,,Missing — Q4 not filed,Do NOT derive by subtraction. Use reported quarterly EPS or flag for manual review.
+Diluted EPS,2018,Q4,,,,,,Missing — Q4 not filed,Do NOT derive by subtraction. Use reported quarterly EPS or flag for manual review.
+Diluted EPS,2019,Q4,,,,,,Missing — Q4 not filed,Do NOT derive by subtraction. Use reported quarterly EPS or flag for manual review.
+Diluted EPS,2020,Q4,,,,,,Missing — Q4 not filed,Do NOT derive by subtraction. Use reported quarterly EPS or flag for manual review.
+Diluted EPS,2021,Q4,,,,,,Missing — Q4 not filed,Do NOT derive by subtraction. Use reported quarterly EPS or flag for manual review.
+Diluted EPS,2022,Q4,,,,,,Missing — Q4 not filed,Do NOT derive by subtraction. Use reported quarterly EPS or flag for manual review.
+Diluted EPS,2023,Q3,2022-03-28,2022-06-26,2023-08-02,10-Q,3.29,Reported (standalone quarter),
+Diluted EPS,2023,Q4,,,,,,Missing — Q4 not filed,Do NOT derive by subtraction. Use reported quarterly EPS or flag for manual review.
+Diluted EPS,2024,Q1,2022-09-26,2022-12-25,2024-01-31,10-Q,1.98,Reported (standalone quarter),
+Diluted EPS,2024,Q2,2022-12-26,2023-03-26,2024-05-01,10-Q,1.52,Reported (standalone quarter),
+Diluted EPS,2024,Q3,2023-03-27,2023-06-25,2024-07-31,10-Q,1.6,Reported (standalone quarter),
+Diluted EPS,2024,Q4,,,,,,Missing — Q4 not filed,Do NOT derive by subtraction. Use reported quarterly EPS or flag for manual review.
+Diluted EPS,2025,Q1,2023-09-25,2023-12-24,2025-02-05,10-Q,2.46,Reported (standalone quarter),
+Diluted EPS,2025,Q2,2023-12-25,2024-03-24,2025-04-30,10-Q,2.06,Reported (standalone quarter),
+Diluted EPS,2025,Q3,2025-03-31,2025-06-29,2025-07-30,10-Q,2.43,Reported (standalone quarter),
+Diluted EPS,2025,Q3,2024-03-25,2024-06-23,2025-07-30,10-Q,1.88,Reported (standalone quarter),
+Diluted EPS,2025,Q4,,,,,,Missing — Q4 not filed,Do NOT derive by subtraction. Use reported quarterly EPS or flag for manual review.
+Diluted EPS,2026,Q1,2025-09-29,2025-12-28,2026-02-04,10-Q,2.78,Reported (standalone quarter),
+Diluted EPS,2026,Q1,2024-09-30,2024-12-29,2026-02-04,10-Q,2.83,Reported (standalone quarter),
+Diluted EPS,2026,Q2,2025-12-29,2026-03-29,2026-04-29,10-Q,6.88,Reported (standalone quarter),
+Diluted EPS,2026,Q2,2024-12-30,2025-03-30,2026-04-29,10-Q,2.52,Reported (standalone quarter),
+Diluted EPS,2026,Q4,,,,,,Missing — Q4 not filed,Do NOT derive by subtraction. Use reported quarterly EPS or flag for manual review.
+Net Income,2015,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Net Income,2016,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Net Income,2017,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Net Income,2018,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Net Income,2019,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Net Income,2020,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Net Income,2021,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Net Income,2022,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Net Income,2023,Q3,2022-03-28,2022-06-26,2023-08-02,10-Q,3730000000,Reported (standalone quarter),
+Net Income,2023,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Net Income,2024,Q1,2022-09-26,2022-12-25,2024-01-31,10-Q,2235000000,Reported (standalone quarter),
+Net Income,2024,Q2,2022-12-26,2023-03-26,2024-05-01,10-Q,1704000000,Reported (standalone quarter),
+Net Income,2024,Q3,2023-03-27,2023-06-25,2024-07-31,10-Q,1803000000,Reported (standalone quarter),
+Net Income,2024,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Net Income,2025,Q1,2023-09-25,2023-12-24,2025-02-05,10-Q,2767000000,Reported (standalone quarter),
+Net Income,2025,Q2,2023-12-25,2024-03-24,2025-04-30,10-Q,2326000000,Reported (standalone quarter),
+Net Income,2025,Q3,2025-03-31,2025-06-29,2025-07-30,10-Q,2666000000,Reported (standalone quarter),
+Net Income,2025,Q3,2024-03-25,2024-06-23,2025-07-30,10-Q,2129000000,Reported (standalone quarter),
+Net Income,2025,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Net Income,2026,Q1,2025-09-29,2025-12-28,2026-02-04,10-Q,3004000000,Reported (standalone quarter),
+Net Income,2026,Q1,2024-09-30,2024-12-29,2026-02-04,10-Q,3180000000,Reported (standalone quarter),
+Net Income,2026,Q2,2025-12-29,2026-03-29,2026-04-29,10-Q,7370000000,Reported (standalone quarter),
+Net Income,2026,Q2,2024-12-30,2025-03-30,2026-04-29,10-Q,2812000000,Reported (standalone quarter),
+Net Income,2026,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Operating Cash Flow,2015,Q1,2013-09-30,2013-12-29,2015-01-28,10-Q,2781000000,Reported (standalone Q1 = YTD Q1),Only Q1 is a true standalone quarter for this metric. Q2/Q3 require YTD subtraction.
+Operating Cash Flow,2015,Q2,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q2 = YTD_Q2 minus YTD_Q1.
+Operating Cash Flow,2015,Q3,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q3 = YTD_Q3 minus YTD_Q2.
+Operating Cash Flow,2015,Q4,,,,,,Missing — Q4 not filed,Derive from 10-K FY total minus Q3 YTD (9-month cumulative).
+Operating Cash Flow,2016,Q1,2015-09-28,2015-12-27,2016-01-27,10-Q,2739000000,Reported (standalone Q1 = YTD Q1),Only Q1 is a true standalone quarter for this metric. Q2/Q3 require YTD subtraction.
+Operating Cash Flow,2016,Q1,2014-09-29,2014-12-28,2016-01-27,10-Q,2364000000,Reported (standalone Q1 = YTD Q1),Only Q1 is a true standalone quarter for this metric. Q2/Q3 require YTD subtraction.
+Operating Cash Flow,2016,Q2,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q2 = YTD_Q2 minus YTD_Q1.
+Operating Cash Flow,2016,Q3,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q3 = YTD_Q3 minus YTD_Q2.
+Operating Cash Flow,2016,Q4,,,,,,Missing — Q4 not filed,Derive from 10-K FY total minus Q3 YTD (9-month cumulative).
+Operating Cash Flow,2017,Q2,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q2 = YTD_Q2 minus YTD_Q1.
+Operating Cash Flow,2017,Q3,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q3 = YTD_Q3 minus YTD_Q2.
+Operating Cash Flow,2017,Q4,,,,,,Missing — Q4 not filed,Derive from 10-K FY total minus Q3 YTD (9-month cumulative).
+Operating Cash Flow,2018,Q2,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q2 = YTD_Q2 minus YTD_Q1.
+Operating Cash Flow,2018,Q3,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q3 = YTD_Q3 minus YTD_Q2.
+Operating Cash Flow,2018,Q4,,,,,,Missing — Q4 not filed,Derive from 10-K FY total minus Q3 YTD (9-month cumulative).
+Operating Cash Flow,2019,Q1,2017-09-25,2017-12-24,2019-01-30,10-Q,1762000000,Reported (standalone Q1 = YTD Q1),Only Q1 is a true standalone quarter for this metric. Q2/Q3 require YTD subtraction.
+Operating Cash Flow,2019,Q2,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q2 = YTD_Q2 minus YTD_Q1.
+Operating Cash Flow,2019,Q3,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q3 = YTD_Q3 minus YTD_Q2.
+Operating Cash Flow,2019,Q4,,,,,,Missing — Q4 not filed,Derive from 10-K FY total minus Q3 YTD (9-month cumulative).
+Operating Cash Flow,2020,Q1,2018-10-01,2018-12-30,2020-02-05,10-Q,356000000,Reported (standalone Q1 = YTD Q1),Only Q1 is a true standalone quarter for this metric. Q2/Q3 require YTD subtraction.
+Operating Cash Flow,2020,Q2,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q2 = YTD_Q2 minus YTD_Q1.
+Operating Cash Flow,2020,Q3,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q3 = YTD_Q3 minus YTD_Q2.
+Operating Cash Flow,2020,Q4,,,,,,Missing — Q4 not filed,Derive from 10-K FY total minus Q3 YTD (9-month cumulative).
+Operating Cash Flow,2021,Q1,2019-09-30,2019-12-29,2021-02-03,10-Q,1118000000,Reported (standalone Q1 = YTD Q1),Only Q1 is a true standalone quarter for this metric. Q2/Q3 require YTD subtraction.
+Operating Cash Flow,2021,Q2,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q2 = YTD_Q2 minus YTD_Q1.
+Operating Cash Flow,2021,Q3,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q3 = YTD_Q3 minus YTD_Q2.
+Operating Cash Flow,2021,Q4,,,,,,Missing — Q4 not filed,Derive from 10-K FY total minus Q3 YTD (9-month cumulative).
+Operating Cash Flow,2022,Q1,2020-09-28,2020-12-27,2022-02-02,10-Q,3175000000,Reported (standalone Q1 = YTD Q1),Only Q1 is a true standalone quarter for this metric. Q2/Q3 require YTD subtraction.
+Operating Cash Flow,2022,Q2,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q2 = YTD_Q2 minus YTD_Q1.
+Operating Cash Flow,2022,Q3,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q3 = YTD_Q3 minus YTD_Q2.
+Operating Cash Flow,2022,Q4,,,,,,Missing — Q4 not filed,Derive from 10-K FY total minus Q3 YTD (9-month cumulative).
+Operating Cash Flow,2023,Q1,2021-09-27,2021-12-26,2023-02-02,10-Q,2057000000,Reported (standalone Q1 = YTD Q1),Only Q1 is a true standalone quarter for this metric. Q2/Q3 require YTD subtraction.
+Operating Cash Flow,2023,Q2,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q2 = YTD_Q2 minus YTD_Q1.
+Operating Cash Flow,2023,Q3,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q3 = YTD_Q3 minus YTD_Q2.
+Operating Cash Flow,2023,Q4,,,,,,Missing — Q4 not filed,Derive from 10-K FY total minus Q3 YTD (9-month cumulative).
+Operating Cash Flow,2024,Q1,2022-09-26,2022-12-25,2024-01-31,10-Q,3095000000,Reported (standalone Q1 = YTD Q1),Only Q1 is a true standalone quarter for this metric. Q2/Q3 require YTD subtraction.
+Operating Cash Flow,2024,Q2,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q2 = YTD_Q2 minus YTD_Q1.
+Operating Cash Flow,2024,Q3,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q3 = YTD_Q3 minus YTD_Q2.
+Operating Cash Flow,2024,Q4,,,,,,Missing — Q4 not filed,Derive from 10-K FY total minus Q3 YTD (9-month cumulative).
+Operating Cash Flow,2025,Q1,2023-09-25,2023-12-24,2025-02-05,10-Q,2949000000,Reported (standalone Q1 = YTD Q1),Only Q1 is a true standalone quarter for this metric. Q2/Q3 require YTD subtraction.
+Operating Cash Flow,2025,Q2,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q2 = YTD_Q2 minus YTD_Q1.
+Operating Cash Flow,2025,Q3,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q3 = YTD_Q3 minus YTD_Q2.
+Operating Cash Flow,2025,Q4,,,,,,Missing — Q4 not filed,Derive from 10-K FY total minus Q3 YTD (9-month cumulative).
+Operating Cash Flow,2026,Q1,2025-09-29,2025-12-28,2026-02-04,10-Q,4965000000,Reported (standalone Q1 = YTD Q1),Only Q1 is a true standalone quarter for this metric. Q2/Q3 require YTD subtraction.
+Operating Cash Flow,2026,Q1,2024-09-30,2024-12-29,2026-02-04,10-Q,4587000000,Reported (standalone Q1 = YTD Q1),Only Q1 is a true standalone quarter for this metric. Q2/Q3 require YTD subtraction.
+Operating Cash Flow,2026,Q2,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q2 = YTD_Q2 minus YTD_Q1.
+Operating Cash Flow,2026,Q3,,,,,,Missing — standalone not filed,SEC only reports cumulative YTD for cash-flow items. Derive Q3 = YTD_Q3 minus YTD_Q2.
+Operating Cash Flow,2026,Q4,,,,,,Missing — Q4 not filed,Derive from 10-K FY total minus Q3 YTD (9-month cumulative).
+Operating Income,2015,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Operating Income,2016,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Operating Income,2017,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Operating Income,2018,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Operating Income,2019,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Operating Income,2020,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Operating Income,2021,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Operating Income,2022,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Operating Income,2023,Q3,2022-03-28,2022-06-26,2023-08-02,10-Q,4472000000,Reported (standalone quarter),
+Operating Income,2023,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Operating Income,2024,Q1,2022-09-26,2022-12-25,2024-01-31,10-Q,2465000000,Reported (standalone quarter),
+Operating Income,2024,Q2,2022-12-26,2023-03-26,2024-05-01,10-Q,2090000000,Reported (standalone quarter),
+Operating Income,2024,Q3,2023-03-27,2023-06-25,2024-07-31,10-Q,1823000000,Reported (standalone quarter),
+Operating Income,2024,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Operating Income,2025,Q1,2023-09-25,2023-12-24,2025-02-05,10-Q,2928000000,Reported (standalone quarter),
+Operating Income,2025,Q2,2023-12-25,2024-03-24,2025-04-30,10-Q,2340000000,Reported (standalone quarter),
+Operating Income,2025,Q3,2025-03-31,2025-06-29,2025-07-30,10-Q,2762000000,Reported (standalone quarter),
+Operating Income,2025,Q3,2024-03-25,2024-06-23,2025-07-30,10-Q,2221000000,Reported (standalone quarter),
+Operating Income,2025,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Operating Income,2026,Q1,2025-09-29,2025-12-28,2026-02-04,10-Q,3366000000,Reported (standalone quarter),
+Operating Income,2026,Q1,2024-09-30,2024-12-29,2026-02-04,10-Q,3555000000,Reported (standalone quarter),
+Operating Income,2026,Q2,2025-12-29,2026-03-29,2026-04-29,10-Q,2309000000,Reported (standalone quarter),
+Operating Income,2026,Q2,2024-12-30,2025-03-30,2026-04-29,10-Q,3120000000,Reported (standalone quarter),
+Operating Income,2026,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+R&D Expense,2015,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+R&D Expense,2016,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+R&D Expense,2017,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+R&D Expense,2018,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+R&D Expense,2019,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+R&D Expense,2020,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+R&D Expense,2021,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+R&D Expense,2022,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+R&D Expense,2023,Q3,2022-03-28,2022-06-26,2023-08-02,10-Q,2052000000,Reported (standalone quarter),
+R&D Expense,2023,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+R&D Expense,2024,Q1,2022-09-26,2022-12-25,2024-01-31,10-Q,2251000000,Reported (standalone quarter),
+R&D Expense,2024,Q2,2022-12-26,2023-03-26,2024-05-01,10-Q,2210000000,Reported (standalone quarter),
+R&D Expense,2024,Q3,2023-03-27,2023-06-25,2024-07-31,10-Q,2222000000,Reported (standalone quarter),
+R&D Expense,2024,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+R&D Expense,2025,Q1,2023-09-25,2023-12-24,2025-02-05,10-Q,2096000000,Reported (standalone quarter),
+R&D Expense,2025,Q2,2023-12-25,2024-03-24,2025-04-30,10-Q,2236000000,Reported (standalone quarter),
+R&D Expense,2025,Q3,2025-03-31,2025-06-29,2025-07-30,10-Q,2226000000,Reported (standalone quarter),
+R&D Expense,2025,Q3,2024-03-25,2024-06-23,2025-07-30,10-Q,2259000000,Reported (standalone quarter),
+R&D Expense,2025,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+R&D Expense,2026,Q1,2025-09-29,2025-12-28,2026-02-04,10-Q,2453000000,Reported (standalone quarter),
+R&D Expense,2026,Q1,2024-09-30,2024-12-29,2026-02-04,10-Q,2230000000,Reported (standalone quarter),
+R&D Expense,2026,Q2,2025-12-29,2026-03-29,2026-04-29,10-Q,2463000000,Reported (standalone quarter),
+R&D Expense,2026,Q2,2024-12-30,2025-03-30,2026-04-29,10-Q,2216000000,Reported (standalone quarter),
+R&D Expense,2026,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Revenue,2015,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Revenue,2016,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Revenue,2017,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Revenue,2018,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Revenue,2019,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Revenue,2020,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Revenue,2021,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Revenue,2022,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Revenue,2023,Q3,2022-03-28,2022-06-26,2023-08-02,10-Q,10936000000,Reported (standalone quarter),
+Revenue,2023,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Revenue,2024,Q1,2022-09-26,2022-12-25,2024-01-31,10-Q,9463000000,Reported (standalone quarter),
+Revenue,2024,Q2,2022-12-26,2023-03-26,2024-05-01,10-Q,9275000000,Reported (standalone quarter),
+Revenue,2024,Q3,2023-03-27,2023-06-25,2024-07-31,10-Q,8451000000,Reported (standalone quarter),
+Revenue,2024,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Revenue,2025,Q1,2023-09-25,2023-12-24,2025-02-05,10-Q,9935000000,Reported (standalone quarter),
+Revenue,2025,Q2,2023-12-25,2024-03-24,2025-04-30,10-Q,9389000000,Reported (standalone quarter),
+Revenue,2025,Q3,2025-03-31,2025-06-29,2025-07-30,10-Q,10365000000,Reported (standalone quarter),
+Revenue,2025,Q3,2024-03-25,2024-06-23,2025-07-30,10-Q,9393000000,Reported (standalone quarter),
+Revenue,2025,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.
+Revenue,2026,Q1,2025-09-29,2025-12-28,2026-02-04,10-Q,12252000000,Reported (standalone quarter),
+Revenue,2026,Q1,2024-09-30,2024-12-29,2026-02-04,10-Q,11669000000,Reported (standalone quarter),
+Revenue,2026,Q2,2025-12-29,2026-03-29,2026-04-29,10-Q,10599000000,Reported (standalone quarter),
+Revenue,2026,Q2,2024-12-30,2025-03-30,2026-04-29,10-Q,10979000000,Reported (standalone quarter),
+Revenue,2026,Q4,,,,,,Missing — Q4 not filed,Qualcomm does not file a Q4 10-Q. Derive from 10-K FY minus Q3 YTD.

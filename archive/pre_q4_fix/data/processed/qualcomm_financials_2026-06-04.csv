@@ -1,0 +1,97 @@
+company,fiscal_year,fiscal_quarter,period_start,period_end,filing_date,sec_form_type,metric_name,value,unit,source_reference
+Qualcomm Incorporated,2026,Q2,2025-12-29,2026-03-29,2026-04-29,10-Q,Revenue,10599000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432826000061/0000804328-26-000061-index.htm
+Qualcomm Incorporated,2026,Q1,2025-09-29,2025-12-28,2026-02-04,10-Q,Revenue,12252000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432826000017/0000804328-26-000017-index.htm
+Qualcomm Incorporated,2025,Q3,2025-03-31,2025-06-29,2025-07-30,10-Q,Revenue,10365000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432825000045/0000804328-25-000045-index.htm
+Qualcomm Incorporated,2026,Q2,2024-12-30,2025-03-30,2026-04-29,10-Q,Revenue,10979000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432826000061/0000804328-26-000061-index.htm
+Qualcomm Incorporated,2026,Q1,2024-09-30,2024-12-29,2026-02-04,10-Q,Revenue,11669000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432826000017/0000804328-26-000017-index.htm
+Qualcomm Incorporated,2025,Q3,2024-03-25,2024-06-23,2025-07-30,10-Q,Revenue,9393000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432825000045/0000804328-25-000045-index.htm
+Qualcomm Incorporated,2025,Q2,2023-12-25,2024-03-24,2025-04-30,10-Q,Revenue,9389000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432825000031/0000804328-25-000031-index.htm
+Qualcomm Incorporated,2025,Q1,2023-09-25,2023-12-24,2025-02-05,10-Q,Revenue,9935000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432825000011/0000804328-25-000011-index.htm
+Qualcomm Incorporated,2024,Q3,2023-03-27,2023-06-25,2024-07-31,10-Q,Revenue,8451000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432824000056/0000804328-24-000056-index.htm
+Qualcomm Incorporated,2024,Q2,2022-12-26,2023-03-26,2024-05-01,10-Q,Revenue,9275000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432824000039/0000804328-24-000039-index.htm
+Qualcomm Incorporated,2024,Q1,2022-09-26,2022-12-25,2024-01-31,10-Q,Revenue,9463000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432824000017/0000804328-24-000017-index.htm
+Qualcomm Incorporated,2023,Q3,2022-03-28,2022-06-26,2023-08-02,10-Q,Revenue,10936000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432823000043/0000804328-23-000043-index.htm
+Qualcomm Incorporated,2026,Q2,2025-12-29,2026-03-29,2026-04-29,10-Q,Operating Income,2309000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432826000061/0000804328-26-000061-index.htm
+Qualcomm Incorporated,2026,Q1,2025-09-29,2025-12-28,2026-02-04,10-Q,Operating Income,3366000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432826000017/0000804328-26-000017-index.htm
+Qualcomm Incorporated,2025,Q3,2025-03-31,2025-06-29,2025-07-30,10-Q,Operating Income,2762000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432825000045/0000804328-25-000045-index.htm
+Qualcomm Incorporated,2026,Q2,2024-12-30,2025-03-30,2026-04-29,10-Q,Operating Income,3120000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432826000061/0000804328-26-000061-index.htm
+Qualcomm Incorporated,2026,Q1,2024-09-30,2024-12-29,2026-02-04,10-Q,Operating Income,3555000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432826000017/0000804328-26-000017-index.htm
+Qualcomm Incorporated,2025,Q3,2024-03-25,2024-06-23,2025-07-30,10-Q,Operating Income,2221000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432825000045/0000804328-25-000045-index.htm
+Qualcomm Incorporated,2025,Q2,2023-12-25,2024-03-24,2025-04-30,10-Q,Operating Income,2340000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432825000031/0000804328-25-000031-index.htm
+Qualcomm Incorporated,2025,Q1,2023-09-25,2023-12-24,2025-02-05,10-Q,Operating Income,2928000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432825000011/0000804328-25-000011-index.htm
+Qualcomm Incorporated,2024,Q3,2023-03-27,2023-06-25,2024-07-31,10-Q,Operating Income,1823000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432824000056/0000804328-24-000056-index.htm
+Qualcomm Incorporated,2024,Q2,2022-12-26,2023-03-26,2024-05-01,10-Q,Operating Income,2090000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432824000039/0000804328-24-000039-index.htm
+Qualcomm Incorporated,2024,Q1,2022-09-26,2022-12-25,2024-01-31,10-Q,Operating Income,2465000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432824000017/0000804328-24-000017-index.htm
+Qualcomm Incorporated,2023,Q3,2022-03-28,2022-06-26,2023-08-02,10-Q,Operating Income,4472000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432823000043/0000804328-23-000043-index.htm
+Qualcomm Incorporated,2026,Q2,2025-12-29,2026-03-29,2026-04-29,10-Q,Net Income,7370000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432826000061/0000804328-26-000061-index.htm
+Qualcomm Incorporated,2026,Q1,2025-09-29,2025-12-28,2026-02-04,10-Q,Net Income,3004000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432826000017/0000804328-26-000017-index.htm
+Qualcomm Incorporated,2025,Q3,2025-03-31,2025-06-29,2025-07-30,10-Q,Net Income,2666000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432825000045/0000804328-25-000045-index.htm
+Qualcomm Incorporated,2026,Q2,2024-12-30,2025-03-30,2026-04-29,10-Q,Net Income,2812000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432826000061/0000804328-26-000061-index.htm
+Qualcomm Incorporated,2026,Q1,2024-09-30,2024-12-29,2026-02-04,10-Q,Net Income,3180000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432826000017/0000804328-26-000017-index.htm
+Qualcomm Incorporated,2025,Q3,2024-03-25,2024-06-23,2025-07-30,10-Q,Net Income,2129000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432825000045/0000804328-25-000045-index.htm
+Qualcomm Incorporated,2025,Q2,2023-12-25,2024-03-24,2025-04-30,10-Q,Net Income,2326000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432825000031/0000804328-25-000031-index.htm
+Qualcomm Incorporated,2025,Q1,2023-09-25,2023-12-24,2025-02-05,10-Q,Net Income,2767000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432825000011/0000804328-25-000011-index.htm
+Qualcomm Incorporated,2024,Q3,2023-03-27,2023-06-25,2024-07-31,10-Q,Net Income,1803000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432824000056/0000804328-24-000056-index.htm
+Qualcomm Incorporated,2024,Q2,2022-12-26,2023-03-26,2024-05-01,10-Q,Net Income,1704000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432824000039/0000804328-24-000039-index.htm
+Qualcomm Incorporated,2024,Q1,2022-09-26,2022-12-25,2024-01-31,10-Q,Net Income,2235000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432824000017/0000804328-24-000017-index.htm
+Qualcomm Incorporated,2023,Q3,2022-03-28,2022-06-26,2023-08-02,10-Q,Net Income,3730000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432823000043/0000804328-23-000043-index.htm
+Qualcomm Incorporated,2026,Q2,2025-12-29,2026-03-29,2026-04-29,10-Q,Diluted EPS,6.88,USD/shares,https://www.sec.gov/Archives/edgar/data/804328/000080432826000061/0000804328-26-000061-index.htm
+Qualcomm Incorporated,2026,Q1,2025-09-29,2025-12-28,2026-02-04,10-Q,Diluted EPS,2.78,USD/shares,https://www.sec.gov/Archives/edgar/data/804328/000080432826000017/0000804328-26-000017-index.htm
+Qualcomm Incorporated,2025,Q3,2025-03-31,2025-06-29,2025-07-30,10-Q,Diluted EPS,2.43,USD/shares,https://www.sec.gov/Archives/edgar/data/804328/000080432825000045/0000804328-25-000045-index.htm
+Qualcomm Incorporated,2026,Q2,2024-12-30,2025-03-30,2026-04-29,10-Q,Diluted EPS,2.52,USD/shares,https://www.sec.gov/Archives/edgar/data/804328/000080432826000061/0000804328-26-000061-index.htm
+Qualcomm Incorporated,2026,Q1,2024-09-30,2024-12-29,2026-02-04,10-Q,Diluted EPS,2.83,USD/shares,https://www.sec.gov/Archives/edgar/data/804328/000080432826000017/0000804328-26-000017-index.htm
+Qualcomm Incorporated,2025,Q3,2024-03-25,2024-06-23,2025-07-30,10-Q,Diluted EPS,1.88,USD/shares,https://www.sec.gov/Archives/edgar/data/804328/000080432825000045/0000804328-25-000045-index.htm
+Qualcomm Incorporated,2025,Q2,2023-12-25,2024-03-24,2025-04-30,10-Q,Diluted EPS,2.06,USD/shares,https://www.sec.gov/Archives/edgar/data/804328/000080432825000031/0000804328-25-000031-index.htm
+Qualcomm Incorporated,2025,Q1,2023-09-25,2023-12-24,2025-02-05,10-Q,Diluted EPS,2.46,USD/shares,https://www.sec.gov/Archives/edgar/data/804328/000080432825000011/0000804328-25-000011-index.htm
+Qualcomm Incorporated,2024,Q3,2023-03-27,2023-06-25,2024-07-31,10-Q,Diluted EPS,1.6,USD/shares,https://www.sec.gov/Archives/edgar/data/804328/000080432824000056/0000804328-24-000056-index.htm
+Qualcomm Incorporated,2024,Q2,2022-12-26,2023-03-26,2024-05-01,10-Q,Diluted EPS,1.52,USD/shares,https://www.sec.gov/Archives/edgar/data/804328/000080432824000039/0000804328-24-000039-index.htm
+Qualcomm Incorporated,2024,Q1,2022-09-26,2022-12-25,2024-01-31,10-Q,Diluted EPS,1.98,USD/shares,https://www.sec.gov/Archives/edgar/data/804328/000080432824000017/0000804328-24-000017-index.htm
+Qualcomm Incorporated,2023,Q3,2022-03-28,2022-06-26,2023-08-02,10-Q,Diluted EPS,3.29,USD/shares,https://www.sec.gov/Archives/edgar/data/804328/000080432823000043/0000804328-23-000043-index.htm
+Qualcomm Incorporated,2026,Q2,,2026-03-29,2026-04-29,10-Q,Cash and Cash Equivalents,5435000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432826000061/0000804328-26-000061-index.htm
+Qualcomm Incorporated,2026,Q1,,2025-12-28,2026-02-04,10-Q,Cash and Cash Equivalents,7205000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432826000017/0000804328-26-000017-index.htm
+Qualcomm Incorporated,2026,Q2,,2025-09-28,2026-04-29,10-Q,Cash and Cash Equivalents,5520000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432826000061/0000804328-26-000061-index.htm
+Qualcomm Incorporated,2025,Q3,,2025-06-29,2025-07-30,10-Q,Cash and Cash Equivalents,5448000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432825000045/0000804328-25-000045-index.htm
+Qualcomm Incorporated,2025,Q2,,2025-03-30,2025-04-30,10-Q,Cash and Cash Equivalents,7203000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432825000031/0000804328-25-000031-index.htm
+Qualcomm Incorporated,2025,Q1,,2024-12-29,2025-02-05,10-Q,Cash and Cash Equivalents,8713000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432825000011/0000804328-25-000011-index.htm
+Qualcomm Incorporated,2025,FY,,2024-09-29,2025-11-05,10-K,Cash and Cash Equivalents,7849000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432825000085/0000804328-25-000085-index.htm
+Qualcomm Incorporated,2024,Q3,,2024-06-23,2024-07-31,10-Q,Cash and Cash Equivalents,7770000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432824000056/0000804328-24-000056-index.htm
+Qualcomm Incorporated,2024,Q2,,2024-03-24,2024-05-01,10-Q,Cash and Cash Equivalents,9219000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432824000039/0000804328-24-000039-index.htm
+Qualcomm Incorporated,2024,Q1,,2023-12-24,2024-01-31,10-Q,Cash and Cash Equivalents,8133000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432824000017/0000804328-24-000017-index.htm
+Qualcomm Incorporated,2024,FY,,2023-09-24,2024-11-06,10-K,Cash and Cash Equivalents,8450000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432824000075/0000804328-24-000075-index.htm
+Qualcomm Incorporated,2023,Q3,,2023-06-25,2023-08-02,10-Q,Cash and Cash Equivalents,6087000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432823000043/0000804328-23-000043-index.htm
+Qualcomm Incorporated,2026,Q1,2025-09-29,2025-12-28,2026-02-04,10-Q,Operating Cash Flow,4965000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432826000017/0000804328-26-000017-index.htm
+Qualcomm Incorporated,2026,Q1,2024-09-30,2024-12-29,2026-02-04,10-Q,Operating Cash Flow,4587000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432826000017/0000804328-26-000017-index.htm
+Qualcomm Incorporated,2025,Q1,2023-09-25,2023-12-24,2025-02-05,10-Q,Operating Cash Flow,2949000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432825000011/0000804328-25-000011-index.htm
+Qualcomm Incorporated,2024,Q1,2022-09-26,2022-12-25,2024-01-31,10-Q,Operating Cash Flow,3095000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432824000017/0000804328-24-000017-index.htm
+Qualcomm Incorporated,2023,Q1,2021-09-27,2021-12-26,2023-02-02,10-Q,Operating Cash Flow,2057000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432823000006/0000804328-23-000006-index.htm
+Qualcomm Incorporated,2022,Q1,2020-09-28,2020-12-27,2022-02-02,10-Q,Operating Cash Flow,3175000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000172894922000012/0001728949-22-000012-index.htm
+Qualcomm Incorporated,2021,Q1,2019-09-30,2019-12-29,2021-02-03,10-Q,Operating Cash Flow,1118000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000172894921000022/0001728949-21-000022-index.htm
+Qualcomm Incorporated,2020,Q1,2018-10-01,2018-12-30,2020-02-05,10-Q,Operating Cash Flow,356000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000172894920000011/0001728949-20-000011-index.htm
+Qualcomm Incorporated,2019,Q1,2017-09-25,2017-12-24,2019-01-30,10-Q,Operating Cash Flow,1762000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000172894919000012/0001728949-19-000012-index.htm
+Qualcomm Incorporated,2016,Q1,2015-09-28,2015-12-27,2016-01-27,10-Q,Operating Cash Flow,2739000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000123445216000352/0001234452-16-000352-index.htm
+Qualcomm Incorporated,2016,Q1,2014-09-29,2014-12-28,2016-01-27,10-Q,Operating Cash Flow,2364000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000123445216000352/0001234452-16-000352-index.htm
+Qualcomm Incorporated,2015,Q1,2013-09-30,2013-12-29,2015-01-28,10-Q,Operating Cash Flow,2781000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000123445215000024/0001234452-15-000024-index.htm
+Qualcomm Incorporated,2026,Q1,2025-09-29,2025-12-28,2026-02-04,10-Q,Capital Expenditure,549000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432826000017/0000804328-26-000017-index.htm
+Qualcomm Incorporated,2026,Q1,2024-09-30,2024-12-29,2026-02-04,10-Q,Capital Expenditure,277000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432826000017/0000804328-26-000017-index.htm
+Qualcomm Incorporated,2025,Q1,2023-09-25,2023-12-24,2025-02-05,10-Q,Capital Expenditure,214000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432825000011/0000804328-25-000011-index.htm
+Qualcomm Incorporated,2024,Q1,2022-09-26,2022-12-25,2024-01-31,10-Q,Capital Expenditure,398000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432824000017/0000804328-24-000017-index.htm
+Qualcomm Incorporated,2023,Q1,2021-09-27,2021-12-26,2023-02-02,10-Q,Capital Expenditure,583000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432823000006/0000804328-23-000006-index.htm
+Qualcomm Incorporated,2022,Q1,2020-09-28,2020-12-27,2022-02-02,10-Q,Capital Expenditure,469000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000172894922000012/0001728949-22-000012-index.htm
+Qualcomm Incorporated,2021,Q1,2019-09-30,2019-12-29,2021-02-03,10-Q,Capital Expenditure,296000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000172894921000022/0001728949-21-000022-index.htm
+Qualcomm Incorporated,2020,Q1,2018-10-01,2018-12-30,2020-02-05,10-Q,Capital Expenditure,152000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000172894920000011/0001728949-20-000011-index.htm
+Qualcomm Incorporated,2019,Q1,2017-09-25,2017-12-24,2019-01-30,10-Q,Capital Expenditure,226000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000172894919000012/0001728949-19-000012-index.htm
+Qualcomm Incorporated,2018,Q1,2016-09-26,2016-12-25,2018-01-31,10-Q,Capital Expenditure,129000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000172894918000011/0001728949-18-000011-index.htm
+Qualcomm Incorporated,2017,Q1,2015-09-28,2015-12-27,2017-01-25,10-Q,Capital Expenditure,128000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000123445217000028/0001234452-17-000028-index.htm
+Qualcomm Incorporated,2016,Q1,2014-09-29,2014-12-28,2016-01-27,10-Q,Capital Expenditure,253000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000123445216000352/0001234452-16-000352-index.htm
+Qualcomm Incorporated,2026,Q2,2025-12-29,2026-03-29,2026-04-29,10-Q,R&D Expense,2463000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432826000061/0000804328-26-000061-index.htm
+Qualcomm Incorporated,2026,Q1,2025-09-29,2025-12-28,2026-02-04,10-Q,R&D Expense,2453000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432826000017/0000804328-26-000017-index.htm
+Qualcomm Incorporated,2025,Q3,2025-03-31,2025-06-29,2025-07-30,10-Q,R&D Expense,2226000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432825000045/0000804328-25-000045-index.htm
+Qualcomm Incorporated,2026,Q2,2024-12-30,2025-03-30,2026-04-29,10-Q,R&D Expense,2216000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432826000061/0000804328-26-000061-index.htm
+Qualcomm Incorporated,2026,Q1,2024-09-30,2024-12-29,2026-02-04,10-Q,R&D Expense,2230000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432826000017/0000804328-26-000017-index.htm
+Qualcomm Incorporated,2025,Q3,2024-03-25,2024-06-23,2025-07-30,10-Q,R&D Expense,2259000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432825000045/0000804328-25-000045-index.htm
+Qualcomm Incorporated,2025,Q2,2023-12-25,2024-03-24,2025-04-30,10-Q,R&D Expense,2236000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432825000031/0000804328-25-000031-index.htm
+Qualcomm Incorporated,2025,Q1,2023-09-25,2023-12-24,2025-02-05,10-Q,R&D Expense,2096000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432825000011/0000804328-25-000011-index.htm
+Qualcomm Incorporated,2024,Q3,2023-03-27,2023-06-25,2024-07-31,10-Q,R&D Expense,2222000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432824000056/0000804328-24-000056-index.htm
+Qualcomm Incorporated,2024,Q2,2022-12-26,2023-03-26,2024-05-01,10-Q,R&D Expense,2210000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432824000039/0000804328-24-000039-index.htm
+Qualcomm Incorporated,2024,Q1,2022-09-26,2022-12-25,2024-01-31,10-Q,R&D Expense,2251000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432824000017/0000804328-24-000017-index.htm
+Qualcomm Incorporated,2023,Q3,2022-03-28,2022-06-26,2023-08-02,10-Q,R&D Expense,2052000000,USD,https://www.sec.gov/Archives/edgar/data/804328/000080432823000043/0000804328-23-000043-index.htm
