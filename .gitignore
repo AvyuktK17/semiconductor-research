@@ -4,3 +4,6 @@ __pycache__/
 .DS_Store
 .claude/settings.local.json
 data/raw/*.json
+*.mp4
+data/test_outputs/
+output/test_outputs/
