@@ -1,0 +1,50 @@
+check_id,category,check_description,result,details
+1,Structure,CSV has all 12 required columns,PASS,"company, ticker, date, source_type, source_reference, theme, claim, supporting_excerpt, factual_or_interpretive, confidence, human_reviewed, notes"
+2,Structure - NVDA,8 Nvidia claims populated,PASS,"7 factual (high confidence), 1 interpretive (medium confidence)"
+3,Structure - AMD,8 AMD claims populated,PASS,"7 factual (6 high / 1 medium confidence), 1 interpretive (medium confidence)"
+4,Structure - QCOM,8 Qualcomm claims populated,PASS,"7 factual (high confidence), 1 interpretive (medium confidence)"
+5,Structure,24 total claims across 3 companies,PASS,"NVDA: 8, AMD: 8, QCOM: 8"
+6,Sources - NVDA,All NVDA claims reference the FY2026 10-K filing (2026-02-25),PASS,source_type=10-K; source_reference points to EDGAR filing index
+7,Sources - AMD,All AMD claims reference the FY2025 10-K filing (2026-02-04),PASS,source_type=10-K; source_reference points to EDGAR filing index
+8,Sources - QCOM,All QCOM claims reference the FY2025 10-K filing (2025-11-05),PASS,source_type=10-K; source_reference points to EDGAR filing index
+9,Sources,Every factual claim has a non-empty source_reference,PASS,All 21 factual claims have 10-K URLs
+10,Sources,Every claim has a supporting_excerpt from the filing,PASS,Excerpts are direct quotes from MD&A or financial statements
+11,Themes - NVDA,AI demand covered,PASS,"Data Center revenue grew 68% YoY, driven by accelerated computing and AI"
+12,Themes - NVDA,Product exposure covered,PASS,"Compute & Networking = 90% of revenue; Blackwell replacing Hopper"
+13,Themes - NVDA,Margins covered,PASS,"Gross margin declined due to Hopper-to-Blackwell transition and $4.5B H20 charge"
+14,Themes - NVDA,R&D strategy covered,PASS,"R&D up 43% to $18.5B; cumulative $76.7B since inception"
+15,Themes - NVDA,Customer concentration covered,PASS,"One direct customer = 13% of revenue; indirect customers may be 10%+"
+16,Themes - NVDA,Regulation covered,PASS,"China revenue fell to $19.7B from $25.0B despite 65% total growth"
+17,Themes - NVDA,Capital allocation covered,PASS,"$60B buyback authorization; $40.4B repurchased in FY2026"
+18,Themes - NVDA,Comparability covered,PASS,"Revenue scale 4-10x peers; EV/Revenue multiple implies high growth expectations"
+19,Themes - NVDA,CapEx theme not covered,NOT COVERED,"Nvidia CapEx is relatively small ($2-5B/year) for a fabless company. Less material than for Intel."
+20,Themes - AMD,AI demand covered,PASS,"Data Center revenue grew 32% YoY to $16.6B driven by EPYC and Instinct MI350"
+21,Themes - AMD,Product exposure covered,PASS,"Three segments: Data Center (48%), Client and Gaming (42%), Embedded (10%)"
+22,Themes - AMD,Margins covered,PASS,"Gross margin improved to 50% from 49% despite ~$440M MI308 export-control charges"
+23,Themes - AMD,R&D strategy covered,PASS,"R&D up 25% to $8.1B; driven by headcount growth supporting AI strategy"
+24,Themes - AMD,Customer concentration covered,PASS,"AR concentration: one customer ~11%, another ~24%. Revenue concentration not separately disclosed."
+25,Themes - AMD,Regulation covered,PASS,"MI308 export controls; ~$800M total inventory charges; partial licenses obtained"
+26,Themes - AMD,Capital allocation covered,PASS,"$14B repurchase authorization; $1.3B repurchased in FY2025; $9.4B remaining"
+27,Themes - AMD,Comparability covered,PASS,"24.6x EV/Revenue similar to NVDA's 24.5x despite slower growth; diversification valued"
+28,Themes - AMD,CapEx theme not covered,NOT COVERED,"AMD CapEx is small (~$500M-1B/year) as a fabless company. Less material than for Intel."
+29,Themes - QCOM,AI demand covered,PASS,"QCT revenue grew 16% YoY; handset growth driven by premium Snapdragon with on-device AI; IoT +22%"
+30,Themes - QCOM,Product exposure covered,PASS,"QTL licensing at 72% EBT margin — structurally distinct from semiconductor peers"
+31,Themes - QCOM,Margins covered,PASS,"Gross margin declined 55% to 56% due to lower QTL proportion in revenue mix"
+32,Themes - QCOM,R&D strategy covered,PASS,"R&D $9.0B (20% of revenue), approximately flat YoY; mature portfolio vs peers' AI ramp"
+33,Themes - QCOM,Customer concentration covered,PASS,"Apple, Samsung, Xiaomi each 10%+ of revenue; Apple modem insourcing risk explicitly disclosed"
+34,Themes - QCOM,Regulation covered,PASS,"$5.7B OBBB tax charge in Q4 FY2025 — explains anomalous -$3.1B Q4 net income"
+35,Themes - QCOM,Capital allocation covered,PASS,"$12.6B total return ($8.8B buybacks + $3.8B dividends); most aggressive returner among peers"
+36,Themes - QCOM,Comparability covered,PASS,"6.0x EV/Revenue dramatically below peers; highest FCF yield (5.0%); Apple risk + limited DC AI"
+37,Themes - QCOM,CapEx theme not covered,NOT COVERED,"Qualcomm CapEx is small (~$1-2B/year) as a fabless company. Less material than for Intel."
+38,Labels,Interpretive claims labeled separately,PASS,"3 interpretive claims (NVDA + AMD + QCOM comparability); all confidence=medium"
+39,Labels,human_reviewed = No for all 24 rows,PASS,No claims auto-marked as reviewed
+40,Flags - NVDA,Customer concentration notes indirect-customer uncertainty,PASS,"Actual end-customer concentration may be higher than direct-customer disclosure"
+41,Flags - NVDA,Comparability claim flags conflicting evidence,PASS,"Gross margin compressing (negative) vs revenue growth strong (positive)"
+42,Flags - AMD,Customer concentration flagged as AR-based not revenue-based,PASS,"Disclosure is accounts receivable concentration, not revenue — different measure. Confidence=medium."
+43,Flags - AMD,Comparability claim flags conflicting evidence,PASS,"Similar EV/Revenue to NVDA but slower growth and lower margins; P/TTM FCF much higher"
+44,Flags - QCOM,Apple modem insourcing risk flagged for manual review,PASS,"10-K explicitly states Apple will increasingly use own modem — timeline and magnitude uncertain"
+45,Flags - QCOM,Q4 FY2025 net income anomaly explained,PASS,"$5.7B OBBB tax charge is non-cash; links to validated financial data flag for -$3.1B Q4 net income"
+46,Flags - QCOM,Comparability claim flags conflicting evidence,PASS,"Lowest EV/Revenue (6.0x) and highest FCF yield (5.0%) — could be value or value trap. Bull: auto+IoT diversification. Bear: Apple loss + QTL legal risk."
+47,Integrity,Validated financial outputs not modified,PASS,No changes to financials CSVs or metrics CSVs or valuation_inputs.csv
+48,Integrity,Peer comparison workbook not modified,PASS,semiconductor_peer_comparison.xlsx unchanged
+49,Integrity,Prior NVDA and AMD claims unchanged by QCOM additions,PASS,All 16 original NVDA+AMD rows preserved exactly

@@ -1,6 +1,6 @@
 # Project Status — Semiconductor Research Terminal
 
-Last updated: 2026-06-05 (all five pipelines complete — checkpoint)
+Last updated: 2026-06-06 (all analytical work complete; memo drafted; ready for dashboard and packaging)
 
 ## Project objective
 
@@ -27,6 +27,9 @@ The user is a finance graduate learning Python. Code should be modular, clearly 
 | 9E | Broadcom pipeline — tag discovery, cleaning, metrics, Excel export, validation | Done |
 | 9F | Bug fix — classify_entries() standalone Q2/Q3 selection used latest end date instead of latest filing date | Done |
 | 10 | Five-company peer comparison model — consolidated CSV, 9-tab Excel workbook | Done |
+| 10V | Valuation layer — market data, EV, multiples, Valuation Snapshot tab | Done |
+| 10Q | Qualitative claims — all 5 companies populated (40 claims) | Done — human-reviewed |
+| 10M | Analyst memo — 1,032-word peer comparison at memo/semiconductor_sector_memo.md | Done |
 
 ## Stage 9 architecture
 
@@ -356,12 +359,78 @@ Discovered during Broadcom validation. The `ProfitLoss` XBRL tag has prior-perio
 | INTC | 132 | 120 | FY2025 Q4 | 20 | 0 |
 | AVGO | 132 | 120 | FY2025 Q4 | 16 | 0 |
 
-### Next potential steps
+### Valuation layer (Stage 10V — complete)
 
-1. Calendar-quarter alignment for cross-company comparison (different FY-end dates)
-2. Non-GAAP adjustments for Intel (impairments) and Broadcom (VMware amortization)
-3. Charts and visual dashboards
-4. Resolve remaining manual-review items (EPS Q4, Intel Cash Q2/Q3, Nvidia CapEx confirmation)
+- `data/manual_inputs/valuation_inputs.csv` — share prices (2026-06-04), shares outstanding from SEC cover pages, market cap, EV
+- `src/add_valuation_layer.py` — computes EV/TTM Revenue, P/TTM FCF, FCF Yield; adds Valuation Snapshot tab and Peer Summary extension
+- `manually_reviewed = Yes` — user confirmed
+- Intel: `debt_measure = carrying_value_includes_restricted_cash` (~$447M / 3% overstatement)
+- Broadcom: `debt_measure = gross_principal` (~$2B / 3% above net carrying value)
+- P/E and EV/EBITDA intentionally not calculated (EPS Q4 missing; EBITDA not derived)
+
+### Qualitative claims (Stage 10Q — in progress)
+
+**Status:** All five companies populated (8 claims each, 40 total). **Complete — pending human review.**
+
+**Files:**
+- `data/processed/qualitative_claims.csv` — the claims table
+- `data/manual_checks/qualitative_claims_review_checklist.csv` — validation checklist
+
+**Columns:** company, ticker, date, source_type, source_reference, theme, claim, supporting_excerpt, factual_or_interpretive, confidence, human_reviewed, notes
+
+**Themes (use for every company):** AI demand, product exposure, margins, R&D strategy, CapEx, customer concentration, regulation, capital allocation, comparability
+
+**Rules for adding claims:**
+1. Use official sources only (10-K, 10-Q, 8-K, earnings release)
+2. Every factual claim must have a source_reference (SEC EDGAR URL)
+3. Excerpts must be short direct quotes
+4. Label each claim factual or interpretive
+5. Set human_reviewed = No on all new rows
+6. Flag weak or conflicting evidence with confidence = low or medium and explain in notes
+7. Do not modify existing NVDA/AMD/QCOM rows
+8. Do not modify validated financial outputs or valuation inputs
+9. CapEx theme is most material for Intel (IDM); was intentionally skipped for fabless companies
+
+**Intel sources:** FY2025 10-K (filed 2026-01-23, period ending 2025-12-27)
+**Broadcom sources:** FY2025 10-K (filed 2025-12-18, period ending 2025-11-02); Q2 FY2026 earnings release 8-K (filed 2026-06-03)
+
+**Status:** All 40 claims human-reviewed (human_reviewed = Yes). Audit passed: no duplicates, no missing source references, 35 high-confidence / 5 medium-confidence, 37 factual / 3 interpretive.
+
+## Handoff for next session
+
+### What is complete
+
+1. **Five-company operating peer model** — SEC EDGAR XBRL extraction, quarterly financials, Q4 derivation, calculated metrics (margins, FCF, YoY growth, TTM), regression-tested against immutable Qualcomm benchmarks.
+2. **Valuation layer** — market data, enterprise value, EV/TTM Revenue, P/TTM FCF, FCF Yield for all five companies. User-confirmed.
+3. **Qualitative claims database** — 40 claims (8 per company), sourced from 10-K/10-Q/8-K filings with direct quotes and SEC URLs. All human-reviewed.
+4. **Analyst memo** — 1,032-word peer comparison covering operating, valuation, company-specific, risks, data limitations, and AI workflow sections.
+
+### Key files for next stage
+
+| File | Purpose |
+|------|---------|
+| `data/processed/semiconductor_peer_metrics.csv` | 1,260 rows — consolidated five-company financials + calculated metrics |
+| `data/processed/qualitative_claims.csv` | 40 rows — sourced qualitative claims with excerpts and review status |
+| `data/manual_inputs/valuation_inputs.csv` | Share prices, shares outstanding, market cap, EV for all 5 companies |
+| `output/semiconductor_peer_comparison.xlsx` | 9-tab peer comparison workbook |
+| `memo/semiconductor_sector_memo.md` | Analyst-style peer comparison memo |
+
+### Next tasks
+
+1. Build a Claude Artifact dashboard (interactive visualization of peer data)
+2. Update `README.md` for the public repository
+3. Package the repository for publication
+
+### Carried-forward limitations
+
+1. **Fiscal year-ends differ** — QCOM (Sep), INTC/AMD (Dec), NVDA (Jan), AVGO (Nov). Calendar-quarter alignment not yet implemented.
+2. **Q4 diluted EPS missing** — all 5 companies, 15 instances. Requires earnings press releases.
+3. **Nvidia FY2024 CapEx Q1–Q3** — sourced from official 8-K press releases, not XBRL. Cross-validates against FY total. Pending final manual confirmation.
+4. **Intel cash tag** — includes ~$447M restricted cash (~3% overstatement vs peers).
+5. **Intel non-recurring charges** — FY2024: $7.0B restructuring, $3.1B goodwill impairments, $9.9B deferred tax allowance. FY2025: $2.2B restructuring, 15% headcount cut. GAAP margins not comparable without non-GAAP adjustment.
+6. **Intel IDM CapEx** — $11–23B/year vs $0.5–6B for fabless peers. FCF and FCF-based multiples are structurally incomparable.
+7. **Broadcom debt measure** — `DebtInstrumentCarryingAmount` (gross principal $67.1B) is ~$2B / ~3% above carrying value used by other 4 companies.
+8. **Broadcom FY2024** — 53-week VMware transition year (370 days). Revenue +44% was primarily acquisition-driven. FY2023→FY2024 comparison unreliable.
 
 ## Unresolved issues
 
@@ -373,7 +442,7 @@ Discovered during Broadcom validation. The `ProfitLoss` XBRL tag has prior-perio
 
 4. **Diluted EPS Q4** — Missing for all five companies (15 instances total). Cannot be derived from XBRL data. Requires earnings press releases as an independent source.
 
-5. **Qualcomm FY2025 Q4 Net Income = −$3.1B** — Arithmetic is correct but the large Q4 loss likely reflects a one-time charge. Not verified against 10-K notes.
+5. **Qualcomm FY2025 Q4 Net Income = −$3.1B (EXPLAINED)** — Caused by a $5.7B non-cash income tax charge to establish a valuation allowance on federal deferred tax assets, triggered by the One Big Beautiful Bill Act (OBBB) enacted July 4, 2025. Documented in qualitative claims (QCOM regulation theme). Not an operational loss.
 
 6. **Cross-company peer comparison** — Fiscal year-end dates differ significantly (Sep, Dec, Jan, Nov). Direct FY-label comparison is misleading. Calendar-quarter alignment is not yet implemented.
 
